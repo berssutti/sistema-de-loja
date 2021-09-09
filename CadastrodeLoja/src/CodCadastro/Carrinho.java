@@ -4,15 +4,15 @@ public class Carrinho {
 	
 	private Produto compras[];
 	private float preçoTotal;
-	
-	
-	public Carrinho(Produto comp[], float pt) {
-		
-		compras = comp;
-		preçoTotal = pt;
-	}
 
 	
+	public Carrinho(Produto[] compras, float preçoTotal) {
+		super();
+		this.compras = compras;
+		this.preçoTotal = preçoTotal;
+	}
+	
+
 	public Produto[] getCompras() {
 		return compras;
 	}

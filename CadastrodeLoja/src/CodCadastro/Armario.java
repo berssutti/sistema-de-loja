@@ -7,17 +7,18 @@ public class Armario extends Produto implements CRUD {
 	private String tipo;
 	private String material;
 	private int qtdPorta;
-	
-	
-	public Armario(int qg, int qp, float med, String t, String mat ) {
-		qrdGaveta = qg;
-		qtdPorta = qp;
-		medidas = med;
-		tipo = t;
-		material = mat;
+
+
+	public Armario(int qrdGaveta, float medidas, String tipo, String material, int qtdPorta) {
+		super();
+		this.qrdGaveta = qrdGaveta;
+		this.medidas = medidas;
+		this.tipo = tipo;
+		this.material = material;
+		this.qtdPorta = qtdPorta;
 	}
 
-	
+
 	@Override
 	public void cadastrar() {
 		// TODO Auto-generated method stub

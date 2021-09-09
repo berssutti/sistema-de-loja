@@ -4,14 +4,15 @@ public class Telefone {
 	
 	private String ddd;
 	private String numero;
-	
-	
-	public Telefone(String regn, String num) {
-		ddd = regn;
-		numero = num;
-	}
 
 	
+	public Telefone(String ddd, String numero) {
+		super();
+		this.ddd = ddd;
+		this.numero = numero;
+	}
+	
+
 	public String getDdd() {
 		return ddd;
 	}

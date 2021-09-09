@@ -7,17 +7,17 @@ public class Mesa extends Produto implements CRUD {
 	private String tipo;
 	private String material;
 	private float peso;
+
 	
-	
-	public Mesa(float med, float ps, String t, String mat, float p) {
-		
-		medidas = med;
-		pesoSuportavel = ps;
-		tipo = t;
-		material = mat;
-		peso = p;
+	public Mesa(float medidas, float pesoSuportavel, String tipo, String material, float peso) {
+		super();
+		this.medidas = medidas;
+		this.pesoSuportavel = pesoSuportavel;
+		this.tipo = tipo;
+		this.material = material;
+		this.peso = peso;
 	}
-	
+
 	
 	@Override
 	public void cadastrar() {

@@ -9,14 +9,15 @@ public class Cadeira extends Produto implements CRUD {
 	private float pesoSuportavel;
 	
 	
-	public Cadeira(float med, String t, float p, float ps) {
-		medidas = med;
-		tipo = t;
-		peso = p;
-		pesoSuportavel	= ps;
+	public Cadeira(float medidas, String tipo, float peso, float pesoSuportavel) {
+		super();
+		this.medidas = medidas;
+		this.tipo = tipo;
+		this.peso = peso;
+		this.pesoSuportavel = pesoSuportavel;
 	}
-	
-	
+
+
 	@Override
 	public void cadastrar() {
 		// TODO Auto-generated method stub

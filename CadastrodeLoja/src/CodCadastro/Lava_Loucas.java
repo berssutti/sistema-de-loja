@@ -8,14 +8,14 @@ public class Lava_Loucas extends Produto implements CRUD {
 	private String descricao;
 	private float consumodeEnergia;
 
-	
-	public Lava_Loucas(int qs, float p, float volts, float ce, String desc) {
-		
-		qtdServico = qs;
-		peso = p;
-		voltagem = volts;
-		descricao = desc;
-		consumodeEnergia = ce;
+
+	public Lava_Loucas(int qtdServico, float peso, float voltagem, String descricao, float consumodeEnergia) {
+		super();
+		this.qtdServico = qtdServico;
+		this.peso = peso;
+		this.voltagem = voltagem;
+		this.descricao = descricao;
+		this.consumodeEnergia = consumodeEnergia;
 	}
 
 	

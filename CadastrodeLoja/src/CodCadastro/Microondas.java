@@ -1,24 +1,23 @@
 package CodCadastro;
 
 public class Microondas extends Produto implements CRUD{
-	
+
 	private float volume;
 	private float peso;
 	private float voltagem;
 	private float potencia;
 	private float consumodeEnergia;
-	
-	
 
-	public Microondas(float vol, float p, float volts, float pot, float ce) {
-		
-		volume = vol;
-		peso = p;
-		voltagem = volts;
-		potencia = pot;
-		consumodeEnergia = ce;
+
+	public Microondas(float volume, float peso, float voltagem, float potencia, float consumodeEnergia) {
+		super();
+		this.volume = volume;
+		this.peso = peso;
+		this.voltagem = voltagem;
+		this.potencia = potencia;
+		this.consumodeEnergia = consumodeEnergia;
 	}
-	
+
 	
 	@Override
 	public void cadastrar() {

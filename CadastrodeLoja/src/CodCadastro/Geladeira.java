@@ -6,15 +6,17 @@ public class Geladeira extends Produto implements CRUD {
 	private float peso;
 	private float voltagem;
 	private float consumodeEnergia;
-	
-	public Geladeira(float v, float p, float volts, float ce) {
-		volume = v;
-		peso = p;
-		voltagem = volts;
-		consumodeEnergia = ce;
+
+
+	public Geladeira(float volume, float peso, float voltagem, float consumodeEnergia) {
+		super();
+		this.volume = volume;
+		this.peso = peso;
+		this.voltagem = voltagem;
+		this.consumodeEnergia = consumodeEnergia;
 	}
-	
-	
+
+
 	@Override
 	public void cadastrar() {
 		// TODO Auto-generated method stub

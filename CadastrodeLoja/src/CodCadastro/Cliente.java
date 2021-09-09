@@ -7,18 +7,18 @@ public class Cliente implements CRUD {
 	private String rg;
 	private Telefone ddd;
 	private Telefone numero;
-	
-	
-	public Cliente(String n, String c, String r, Telefone regn, Telefone num) {
-		
-		nome = n;
-		cpf = c;
-		rg = r;
-		ddd = regn;
-		numero = num;
-	}
 
 	
+	public Cliente(String nome, String cpf, String rg, Telefone ddd, Telefone numero) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.ddd = ddd;
+		this.numero = numero;
+	}
+
+
 	@Override
 	public void cadastrar() {
 		// TODO Auto-generated method stub

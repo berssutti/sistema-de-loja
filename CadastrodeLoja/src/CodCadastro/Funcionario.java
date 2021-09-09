@@ -9,19 +9,19 @@ public class Funcionario implements CRUD{
 	private float salario;
 	private Telefone ddd;
 	private Telefone numero;
+
 	
-	
-	public Funcionario(String n, String c, String r, String cg, float sal, Telefone regn, Telefone num) {
-		
-		nome = n;
-		cpf = c;
-		rg = r;
-		cargo = cg;
-		salario = sal;
-		ddd = regn;
-		numero = num;
+	public Funcionario(String nome, String cpf, String rg, String cargo, float salario, Telefone ddd, Telefone numero) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.cargo = cargo;
+		this.salario = salario;
+		this.ddd = ddd;
+		this.numero = numero;
 	}
-	
+
 	
 	@Override
 	public void cadastrar() {
