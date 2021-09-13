@@ -3,13 +3,13 @@ package CodCadastro;
 public class Cadeira extends Produto implements CRUD {
 	
 	
-	private float medidas;
+	private String medidas;
 	private String tipo;
 	private float peso;
 	private float pesoSuportavel;
 	
 	
-	public Cadeira(float medidas, String tipo, float peso, float pesoSuportavel) {
+	public Cadeira(String medidas, String tipo, float peso, float pesoSuportavel) {
 		super();
 		this.medidas = medidas;
 		this.tipo = tipo;
@@ -17,6 +17,10 @@ public class Cadeira extends Produto implements CRUD {
 		this.pesoSuportavel = pesoSuportavel;
 	}
 
+	
+	public String toString() {
+		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
+	}
 
 	@Override
 	public void cadastrar() {
@@ -46,11 +50,11 @@ public class Cadeira extends Produto implements CRUD {
 	}
 
 	
-	public float getMedidas() {
+	public String getMedidas() {
 		return medidas;
 	}
 
-	public void setMedidas(float medidas) {
+	public void setMedidas(String medidas) {
 		this.medidas = medidas;
 	}
 

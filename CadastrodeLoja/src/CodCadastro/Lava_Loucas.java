@@ -18,6 +18,10 @@ public class Lava_Loucas extends Produto implements CRUD {
 		this.consumodeEnergia = consumodeEnergia;
 	}
 
+
+	public String toString() {
+		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
+	}
 	
 	@Override
 	public void cadastrar() {

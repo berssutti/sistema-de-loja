@@ -7,21 +7,23 @@ public class Funcionario implements CRUD{
 	private String rg;
 	private String cargo;
 	private float salario;
-	private Telefone ddd;
 	private Telefone numero;
 
 	
-	public Funcionario(String nome, String cpf, String rg, String cargo, float salario, Telefone ddd, Telefone numero) {
+	public Funcionario(String nome, String cpf, String rg, String cargo, float salario, Telefone numero) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;
 		this.cargo = cargo;
 		this.salario = salario;
-		this.ddd = ddd;
 		this.numero = numero;
 	}
 
+	
+	public String toString() {
+		return "Nome do funcionario: " + getNome() + ", cpf: " + getCpf() + ", " + getNumero() + ", cargo: " + getCargo();
+	}
 	
 	@Override
 	public void cadastrar() {
@@ -86,14 +88,6 @@ public class Funcionario implements CRUD{
 
 	public void setSalario(float salario) {
 		this.salario = salario;
-	}
-
-	public Telefone getDdd() {
-		return ddd;
-	}
-
-	public void setDdd(Telefone ddd) {
-		this.ddd = ddd;
 	}
 
 	public Telefone getNumero() {

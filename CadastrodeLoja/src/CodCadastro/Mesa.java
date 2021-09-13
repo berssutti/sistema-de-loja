@@ -2,14 +2,14 @@ package CodCadastro;
 
 public class Mesa extends Produto implements CRUD {
 	
-	private float medidas;
+	private String medidas;
 	private float pesoSuportavel;
 	private String tipo;
 	private String material;
 	private float peso;
 
 	
-	public Mesa(float medidas, float pesoSuportavel, String tipo, String material, float peso) {
+	public Mesa(String medidas, float pesoSuportavel, String tipo, String material, float peso) {
 		super();
 		this.medidas = medidas;
 		this.pesoSuportavel = pesoSuportavel;
@@ -18,6 +18,10 @@ public class Mesa extends Produto implements CRUD {
 		this.peso = peso;
 	}
 
+	
+	public String toString() {
+		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
+	}
 	
 	@Override
 	public void cadastrar() {
@@ -44,11 +48,11 @@ public class Mesa extends Produto implements CRUD {
 	}
 
 	
-	public float getMedidas() {
+	public String getMedidas() {
 		return medidas;
 	}
 
-	public void setMedidas(float medidas) {
+	public void setMedidas(String medidas) {
 		this.medidas = medidas;
 	}
 
