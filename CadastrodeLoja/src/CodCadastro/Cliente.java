@@ -5,20 +5,22 @@ public class Cliente implements CRUD {
 	private String nome;
 	private String cpf;
 	private String rg;
-	private Telefone ddd;
 	private Telefone numero;
 
 	
-	public Cliente(String nome, String cpf, String rg, Telefone ddd, Telefone numero) {
+	public Cliente(String nome, String cpf, String rg, Telefone numero) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;
-		this.ddd = ddd;
 		this.numero = numero;
 	}
 
-
+	public String toString() {
+		return "Nome do cliente: " + getNome() + ", cpf: " + getCpf() + ", " + getNumero() ;
+	}
+	
+	
 	@Override
 	public void cadastrar() {
 		// TODO Auto-generated method stub
@@ -71,16 +73,6 @@ public class Cliente implements CRUD {
 	public void setRg(String rg) {
 		this.rg = rg;
 	}
-	
-	public Telefone getDdd() {
-		return ddd;
-	}
-
-
-	public void setDdd(Telefone ddd) {
-		this.ddd = ddd;
-	}
-
 
 	public Telefone getNumero() {
 		return numero;

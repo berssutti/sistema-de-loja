@@ -6,12 +6,20 @@ public class Telefone {
 	private String numero;
 
 	
+	public Telefone() {
+		
+	}
+	
 	public Telefone(String ddd, String numero) {
 		super();
 		this.ddd = ddd;
 		this.numero = numero;
 	}
 	
+	
+	public String toString() {
+		return "Telefone: (" + ddd + ") " + numero;
+	}
 
 	public String getDdd() {
 		return ddd;

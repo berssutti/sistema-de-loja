@@ -18,6 +18,10 @@ public class Microondas extends Produto implements CRUD{
 		this.consumodeEnergia = consumodeEnergia;
 	}
 
+
+	public String toString() {
+		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
+	}
 	
 	@Override
 	public void cadastrar() {
@@ -76,7 +80,6 @@ public class Microondas extends Produto implements CRUD{
 	public void setPotencia(float potencia) {
 		this.potencia = potencia;
 	}
-
 
 	public float getConsumodeEnergia() {
 		return consumodeEnergia;

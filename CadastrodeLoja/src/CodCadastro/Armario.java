@@ -3,19 +3,24 @@ package CodCadastro;
 public class Armario extends Produto implements CRUD {
 
 	private int qrdGaveta;
-	private float medidas;
+	private String medidas;
 	private String tipo;
 	private String material;
 	private int qtdPorta;
 
 
-	public Armario(int qrdGaveta, float medidas, String tipo, String material, int qtdPorta) {
+	public Armario(int qrdGaveta, String medidas, String tipo, String material, int qtdPorta) {
 		super();
 		this.qrdGaveta = qrdGaveta;
 		this.medidas = medidas;
 		this.tipo = tipo;
 		this.material = material;
 		this.qtdPorta = qtdPorta;
+	}
+
+	
+	public String toString() {
+		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
 	}
 
 
@@ -57,12 +62,12 @@ public class Armario extends Produto implements CRUD {
 	}
 
 
-	public float getMedidas() {
+	public String getMedidas() {
 		return medidas;
 	}
 
 
-	public void setMedidas(float medidas) {
+	public void setMedidas(String medidas) {
 		this.medidas = medidas;
 	}
 
