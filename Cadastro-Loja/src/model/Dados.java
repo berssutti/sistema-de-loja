@@ -1,32 +1,31 @@
 package model;
 
-
 public class Dados {
 	
-	static Cliente cliente[];
+	private Cliente[] cliente = new Cliente[50];
 	private int qtdClientes = 0;
-	static Funcionario funcionario[];
+	private Funcionario[] funcionario = new Funcionario[50];
 	private int qtdAFuncionarios = 0;
-	static Telefone telefone[];
+	private Telefone[] telefone = new Telefone[50];
 	private int qtdTelefones = 0;
-	static Armario armario[];
+	private Armario[] armario =  new Armario[50];
 	private int qtdArmarios = 0;
-	static Geladeira geladeira[];
+	private Geladeira[] geladeira = new Geladeira[50];
 	private int qtdGeladeiras = 0;
-	static Mesa mesa[];
+	private Mesa[] mesa = new Mesa[50];
 	private int qtdMesas = 0;
-	static Microondas microondas[];
+	private Microondas[] microondas = new Microondas[50];
 	private int qtdMicroondas = 0;
-	static Cadeira cadeira[];
+	private Cadeira[] cadeira =  new Cadeira[50];
 	private int qtdCadeiras = 0;
-	static Lava_Loucas lavaLoucas[];
+	private Lava_Loucas[] lavaLoucas =  new Lava_Loucas[50];
 	private int qtdlavaLoucas = 0;
 	
 	
 	public void addDados() {
 
 		for(int i = 0; i < 5; i++) {
-			telefone[i] = new Telefone(Integer.toString((i+1)*100),Integer.toString((i+1)*1000000));
+			telefone[i] = new Telefone(Integer.toString((i+1)*10),Integer.toString((i+1)*1000000));
 			cliente[i] = new Cliente("Cliente"+i, "CPF"+i, "RG"+i, telefone[i]);
 			funcionario[i] = new Funcionario("Funcionario"+i, "CPF"+ i*2, "RG"+i*2, "Atendente",333.50f, telefone[i]);
 			armario[i] = new Armario(10, "209x10", "Gamer", "madeira", 4);
@@ -91,35 +90,47 @@ public class Dados {
 	}
 
 
-	public static Cliente[] getCliente() {
+	public Cliente[] getCliente() {
 		return cliente;
 	}
 
 
-	public static void setCliente(Cliente[] cliente) {
-		Dados.cliente = cliente;
+	public void setCliente(Cliente[] cliente) {
+		this.cliente = cliente;
 	}
 
 
 	public int getQtdClientes() {
 		return qtdClientes;
 	}
+	
+	
+	public void inserirEditarAluno(Cliente cliente, int pos) {
+		this.cliente[pos] = cliente;
+		if(pos == qtdClientes) qtdClientes++;
+	}
 
-
+	
 	public void setQtdClientes(int qtdClientes) {
 		this.qtdClientes = qtdClientes;
 	}
 
 
-	public static Funcionario[] getFuncionario() {
+	public Funcionario[] getFuncionario() {
 		return funcionario;
 	}
 
 
-	public static void setFuncionario(Funcionario[] funcionario) {
-		Dados.funcionario = funcionario;
+	public void setFuncionario(Funcionario[] funcionario) {
+		this.funcionario = funcionario;
 	}
-
+	
+	
+	public void inserirEditaProf(Funcionario p, int pos) {
+		this.funcionario[pos] = p;
+		if(pos == qtdAFuncionarios) qtdAFuncionarios++;
+	}
+	
 
 	public int getQtdAFuncionarios() {
 		return qtdAFuncionarios;
@@ -131,13 +142,13 @@ public class Dados {
 	}
 
 
-	public static Telefone[] getTelefone() {
+	public Telefone[] getTelefone() {
 		return telefone;
 	}
 
 
-	public static void setTelefone(Telefone[] telefone) {
-		Dados.telefone = telefone;
+	public void setTelefone(Telefone[] telefone) {
+		this.telefone = telefone;
 	}
 
 
@@ -151,13 +162,13 @@ public class Dados {
 	}
 
 
-	public static Armario[] getArmario() {
+	public Armario[] getArmario() {
 		return armario;
 	}
 
 
-	public static void setArmario(Armario[] armario) {
-		Dados.armario = armario;
+	public void setArmario(Armario[] armario) {
+		this.armario = armario;
 	}
 
 
@@ -171,13 +182,13 @@ public class Dados {
 	}
 
 
-	public static Geladeira[] getGeladeira() {
+	public Geladeira[] getGeladeira() {
 		return geladeira;
 	}
 
 
-	public static void setGeladeira(Geladeira[] geladeira) {
-		Dados.geladeira = geladeira;
+	public void setGeladeira(Geladeira[] geladeira) {
+		this.geladeira = geladeira;
 	}
 
 
@@ -191,13 +202,13 @@ public class Dados {
 	}
 
 
-	public static Mesa[] getMesa() {
+	public Mesa[] getMesa() {
 		return mesa;
 	}
 
 
-	public static void setMesa(Mesa[] mesa) {
-		Dados.mesa = mesa;
+	public void setMesa(Mesa[] mesa) {
+		this.mesa = mesa;
 	}
 
 
@@ -211,13 +222,13 @@ public class Dados {
 	}
 
 
-	public static Microondas[] getMicroondas() {
+	public Microondas[] getMicroondas() {
 		return microondas;
 	}
 
 
-	public static void setMicroondas(Microondas[] microondas) {
-		Dados.microondas = microondas;
+	public void setMicroondas(Microondas[] microondas) {
+		this.microondas = microondas;
 	}
 
 
@@ -231,13 +242,13 @@ public class Dados {
 	}
 
 
-	public static Cadeira[] getCadeira() {
+	public Cadeira[] getCadeira() {
 		return cadeira;
 	}
 
 
-	public static void setCadeira(Cadeira[] cadeira) {
-		Dados.cadeira = cadeira;
+	public void setCadeira(Cadeira[] cadeira) {
+		this.cadeira = cadeira;
 	}
 
 
@@ -251,13 +262,13 @@ public class Dados {
 	}
 
 
-	public static Lava_Loucas[] getLavaLoucas() {
+	public Lava_Loucas[] getLavaLoucas() {
 		return lavaLoucas;
 	}
 
 
-	public static void setLavaLoucas(Lava_Loucas[] lavaLoucas) {
-		Dados.lavaLoucas = lavaLoucas;
+	public void setLavaLoucas(Lava_Loucas[] lavaLoucas) {
+		this.lavaLoucas = lavaLoucas;
 	}
 
 
