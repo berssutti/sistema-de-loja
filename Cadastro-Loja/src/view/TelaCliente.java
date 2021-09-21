@@ -1,6 +1,7 @@
 package view;
 
 import control.*;
+
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,41 +19,42 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 	private JLabel titulo;
 	private JButton cadastroCliente;
 	private JButton refreshCliente;
-	private static ControlDados dados;
+	private ControlDados dados;
 	private JList<String> listaClientesCadastrados;
 	private String[] listaNomes = new String[50];
 
 	public void mostrarDados(ControlDados dados){
+		
+		this.dados = dados;
+		
+		listaNomes = new ControlCliente(dados).getNomeCliente();
+		listaClientesCadastrados = new JList<String>(listaNomes);
+		janela = new JFrame("Clientes");
+		titulo = new JLabel("Clientes Cadastrados");
+		cadastroCliente = new JButton("Cadastrar");
+		refreshCliente = new JButton("Refresh");
+		
+		titulo.setFont(new Font("Calibri", Font.BOLD, 20));
+		titulo.setBounds(90, 10, 250, 30);
+		listaClientesCadastrados.setBounds(20, 50, 350, 120);
+		listaClientesCadastrados.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
+		listaClientesCadastrados.setVisibleRowCount(10);
+		
+		cadastroCliente.setBounds(70, 177, 100, 30);
+		refreshCliente.setBounds(200, 177, 100, 30);
 
-			listaNomes = new ControlCliente(dados).getNomeCliente();
-			listaClientesCadastrados = new JList<String>(listaNomes);
-			janela = new JFrame("Clientes");
-			titulo = new JLabel("Clientes Cadastrados");
-			cadastroCliente = new JButton("Cadastrar");
-			refreshCliente = new JButton("Refresh");
+		janela.setLayout(null);
 
-			titulo.setFont(new Font("Calibri", Font.BOLD, 20));
-			titulo.setBounds(90, 10, 250, 30);
-			listaClientesCadastrados.setBounds(20, 50, 350, 120);
-			listaClientesCadastrados.setSelectionMode(ListSelectionModel.SINGLE_INTERVAL_SELECTION);
-			listaClientesCadastrados.setVisibleRowCount(10);
+		janela.add(titulo);
+		janela.add(listaClientesCadastrados);
+		janela.add(cadastroCliente);
+		janela.add(refreshCliente);
+		janela.setSize(400, 300);
+		janela.setVisible(true);
 
-			cadastroCliente.setBounds(70, 177, 100, 30);
-			refreshCliente.setBounds(200, 177, 100, 30);
-
-			janela.setLayout(null);
-
-			janela.add(titulo);
-			janela.add(listaClientesCadastrados);
-			janela.add(cadastroCliente);
-			janela.add(refreshCliente);
-
-			janela.setSize(400, 250);
-			janela.setVisible(true);
-
-			cadastroCliente.addActionListener(this);
-			refreshCliente.addActionListener(this);
-			listaClientesCadastrados.addListSelectionListener(this);
+		cadastroCliente.addActionListener(this);
+		refreshCliente.addActionListener(this);
+		listaClientesCadastrados.addListSelectionListener(this);
 	
 	}
 
@@ -60,7 +62,8 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 	public void valueChanged(ListSelectionEvent e) {
 		
 		if(e.getValueIsAdjusting() && e.getSource() == listaClientesCadastrados) {
-			new TelaDetalheCliente();
+			new TelaDetalheCliente().inserirEditar(2, dados, this, 
+					listaClientesCadastrados.getSelectedIndex());
 		}
 		
 	}
@@ -70,7 +73,7 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 
 		//Cadastro de novo cliente
 		if(e.getSource() == cadastroCliente)
-			new TelaDetalheCliente();
+			new TelaDetalheCliente().inserirEditar(1, dados, this, 0);
 		
 		// Atualiza a lista de nomes de cliente mostrada no JList
 		if(e.getSource() == refreshCliente) {

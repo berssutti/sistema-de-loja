@@ -17,7 +17,7 @@ public class ControlFuncionario {
 		this.qtdFuncionarios = dados.getQtdFuncionarios();
 	}
 
-	public String[] getNomeProf() {
+	public String[] getNomeFuncionario() {
 		String[] s = new String[qtdFuncionarios];
 		for(int i = 0; i < qtdFuncionarios; i++) {
 			s[i] = funcionario[i].getNome();

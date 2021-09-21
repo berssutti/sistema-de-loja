@@ -29,7 +29,7 @@ public class TelaMenu implements ActionListener{
 		janela.add(funcionario);
 		janela.add(produto);
 		
-		janela.setSize(400, 250);
+		janela.setSize(400, 300);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
 	}
@@ -47,9 +47,9 @@ public class TelaMenu implements ActionListener{
 		
 		if( e.getSource() == cliente)
 			new TelaCliente().mostrarDados(dados);
-		/*
-		 * if( e.getSource() == funcionario) new TelaFuncionario();
-		 * 
+		
+		 if( e.getSource() == funcionario) new TelaFuncionario().mostrarDados(dados);
+		/* 
 		 * if( e.getSource() == produto) new TelaProduto();
 		 */
 	}
