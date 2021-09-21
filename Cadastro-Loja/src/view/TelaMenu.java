@@ -46,7 +46,7 @@ public class TelaMenu implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if( e.getSource() == cliente)
-			new TelaCliente().mostrarDados();
+			new TelaCliente().mostrarDados(dados);
 		/*
 		 * if( e.getSource() == funcionario) new TelaFuncionario();
 		 * 

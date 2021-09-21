@@ -1,9 +1,9 @@
 package view;
 
+import control.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import control.*;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -22,7 +22,7 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 	private JList<String> listaClientesCadastrados;
 	private String[] listaNomes = new String[50];
 
-	public void mostrarDados(){
+	public void mostrarDados(ControlDados dados){
 
 			listaNomes = new ControlCliente(dados).getNomeCliente();
 			listaClientesCadastrados = new JList<String>(listaNomes);
