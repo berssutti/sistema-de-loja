@@ -61,13 +61,13 @@ public class TelaDetalheCliente implements ActionListener{
 		
 		labelNome.setBounds(30, 20, 150, 25);
 		valorNome.setBounds(180, 20, 180, 25);	
-		labelCPF.setBounds(30, 80, 150, 25);
-		valorCPF.setBounds(180, 80, 180, 25);
-		labelRG.setBounds(30, 110, 150, 25);
-		valorRG.setBounds(180, 110, 180, 25);
-		labelTelefone.setBounds(30, 140, 150, 25);
-		valorDDD.setBounds(180, 140, 28, 25);
-		valorTelefone.setBounds(210, 140, 65, 25);
+		labelCPF.setBounds(30, 50, 150, 25);
+		valorCPF.setBounds(180, 50, 180, 25);
+		labelRG.setBounds(30, 80, 150, 25);
+		valorRG.setBounds(180, 80, 180, 25);
+		labelTelefone.setBounds(30, 110, 150, 25);
+		valorDDD.setBounds(180, 110, 28, 25);
+		valorTelefone.setBounds(210, 110, 65, 25);
 		
 
 		//Coloca os campos relacionados a endereco se cliente

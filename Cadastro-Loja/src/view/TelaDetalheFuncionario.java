@@ -63,7 +63,7 @@ public class TelaDetalheFuncionario implements ActionListener {
 			valorDDD = new JTextField(3);
 			valorTelefone = new JTextField(10);
 
-			botaoSalvar.setBounds(245, 175, 115, 30);
+			botaoSalvar.setBounds(245, 210, 115, 30);
 		}
 		
 		labelNome.setBounds(30, 20, 150, 25);

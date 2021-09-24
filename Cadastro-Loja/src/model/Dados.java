@@ -126,7 +126,7 @@ public class Dados {
 	}
 	
 	
-	public void inserirEditaProf(Funcionario p, int pos) {
+	public void inserirEditarProf(Funcionario p, int pos) {
 		this.funcionario[pos] = p;
 		if(pos == qtdAFuncionarios) qtdAFuncionarios++;
 	}

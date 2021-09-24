@@ -32,7 +32,7 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 		janela = new JFrame("Clientes");
 		titulo = new JLabel("Clientes Cadastrados");
 		cadastroCliente = new JButton("Cadastrar");
-		refreshCliente = new JButton("Refresh");
+		refreshCliente = new JButton("Atualizar");
 		
 		titulo.setFont(new Font("Calibri", Font.BOLD, 20));
 		titulo.setBounds(90, 10, 250, 30);

@@ -45,13 +45,15 @@ public class TelaMenu implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		if( e.getSource() == cliente)
+		if(e.getSource() == cliente)
 			new TelaCliente().mostrarDados(dados);
 		
-		 if( e.getSource() == funcionario) new TelaFuncionario().mostrarDados(dados);
-		/* 
-		 * if( e.getSource() == produto) new TelaProduto();
-		 */
+		 if(e.getSource() == funcionario) 
+			new TelaFuncionario().mostrarDados(dados);
+		 
+		 if(e.getSource() == produto) 
+			new TelaProduto().mostrarProduto();
+		 
 	}
 
 }
