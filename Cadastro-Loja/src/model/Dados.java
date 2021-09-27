@@ -29,7 +29,7 @@ public class Dados {
 			cliente[i] = new Cliente("Cliente"+i, "CPF"+i, "RG"+i, telefone[i]);
 			funcionario[i] = new Funcionario("Funcionario"+i, "CPF"+ i*2, "RG"+i*2, "Atendente",333.50f, telefone[i]);
 			armario[i] = new Armario(10, "209x10", "Gamer", "madeira", 4);
-			armario[i].setNome("Armario");
+			armario[i].setNome("Armario"+i);
 			armario[i].setDescricao("Para jogos");
 			armario[i].setGarantia("1 ano");
 			armario[i].setId("1118890");
@@ -37,7 +37,7 @@ public class Dados {
 			armario[i].setPreco(398f);
 			armario[i].setQuantidadeemEstoque(12);
 			geladeira[i] = new Geladeira(25.3f, 288f, 34f, 45f);
-			geladeira[i].setNome("Geladeira");
+			geladeira[i].setNome("Geladeira"+i);
 			geladeira[i].setDescricao("Para jogos");
 			geladeira[i].setGarantia("1 ano");
 			geladeira[i].setId("1718890");
@@ -45,7 +45,7 @@ public class Dados {
 			geladeira[i].setPreco(398f);
 			geladeira[i].setQuantidadeemEstoque(12);
 			microondas[i] = new Microondas(34.4f,36.5f,90.0f,190.0f,43.5f);
-			microondas[i].setNome("Microondas");
+			microondas[i].setNome("Microondas"+i);
 			microondas[i].setDescricao("Para jogos");
 			microondas[i].setGarantia("1 ano");
 			microondas[i].setId("4456767");
@@ -53,7 +53,7 @@ public class Dados {
 			microondas[i].setPreco(398f);
 			microondas[i].setQuantidadeemEstoque(12);
 			cadeira[i] = new Cadeira("34x40", "gamer", 45.6f, 89.4f);
-			cadeira[i].setNome("Cadeira");
+			cadeira[i].setNome("Cadeira"+i);
 			cadeira[i].setDescricao("Para jogos");
 			cadeira[i].setGarantia("1 ano");
 			cadeira[i].setId("1108890");
@@ -61,7 +61,7 @@ public class Dados {
 			cadeira[i].setPreco(398f);
 			cadeira[i].setQuantidadeemEstoque(12);
 			lavaLoucas[i] = new Lava_Loucas(24, 45f,53f,"lava loucas sujas",34);
-			lavaLoucas[i].setNome("Lava loucas");
+			lavaLoucas[i].setNome("Lava loucas"+i);
 			lavaLoucas[i].setDescricao("Para jogos");
 			lavaLoucas[i].setGarantia("1 ano");
 			lavaLoucas[i].setId("1116890");
@@ -69,7 +69,7 @@ public class Dados {
 			lavaLoucas[i].setPreco(398f);
 			lavaLoucas[i].setQuantidadeemEstoque(12);
 			mesa[i] = new Mesa("20x29", 24, "Gamer", "madeira", 90.6f);
-			mesa[i].setNome("Mesa");
+			mesa[i].setNome("Mesa"+i);
 			mesa[i].setDescricao("Para jogos");
 			mesa[i].setGarantia("1 ano");
 			mesa[i].setId("1118860");

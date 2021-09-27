@@ -21,7 +21,7 @@ public class TelaMenu implements ActionListener{
 		cliente.setBounds(140, 50, 120, 30);
 		funcionario.setBounds(140, 100, 120, 30);
 		produto.setBounds(140, 150, 120, 30);
-		
+	
 		janela.setLayout(null);
 		
 		janela.add(titulo);
@@ -30,6 +30,7 @@ public class TelaMenu implements ActionListener{
 		janela.add(produto);
 		
 		janela.setSize(400, 300);
+		//janela.getContentPane().setBackground(new Color(147,112,219));
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
 	}
@@ -52,7 +53,7 @@ public class TelaMenu implements ActionListener{
 			new TelaFuncionario().mostrarDados(dados);
 		 
 		 if(e.getSource() == produto) 
-			new TelaProduto().mostrarProduto();
+			new TelaMenuProduto().mostrarProdutos();
 		 
 	}
 
