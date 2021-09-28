@@ -268,13 +268,13 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			new TelaDetalheProduto().inserirEditar(6, dados, this, 0);
 		
 
-		// Atualiza a lista de nomes de alunos mostrada no JList
+		// Atualiza a lista de nomes de produtos mostrada no JList
 		if(e.getSource() == refreshCadeira) {
 			listaCadeirasCadastradas.setListData(new ControlCadeira(dados).getNomeCadeira());			
 			listaCadeirasCadastradas.updateUI();
 		}
 
-		// Atualiza a lista de nomes de professores mostrada no JList
+		// Atualiza a lista de nomes de produtos mostrada no JList
 		if(e.getSource() == refreshMesa) {
 			listaMesasCadastradas.setListData(new ControlMesa(dados).getNomeMesa());
 			listaMesasCadastradas.updateUI();
@@ -284,7 +284,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			listaArmariosCadastrados.updateUI();
 		}
 
-		// Atualiza a lista de nomes de professores mostrada no JList
+		// Atualiza a lista de nomes de produtos mostrada no JList
 		if(e.getSource() == refreshGeladeira) {
 			listaGeladeirasCadastradas.setListData(new ControlGeladeira(dados).getNomeGeladeira());
 			listaGeladeirasCadastradas.updateUI();
@@ -294,7 +294,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			listaMicroondasCadastrados.updateUI();
 		}
 
-		// Atualiza a lista de nomes de professores mostrada no JList
+		// Atualiza a lista de nomes de produtos mostrada no JList
 		if(e.getSource() == refreshLavaLoucas) {
 			listaLavaLoucasCadastradas.setListData(new ControlLavaLoucas(dados).getNomeLavaLoucas());
 			listaLavaLoucasCadastradas.updateUI();
@@ -307,32 +307,32 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 		Object src = e.getSource();
 
 		if(e.getValueIsAdjusting() && src == listaCadeirasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(3, dados, this, 
+			new TelaDetalheProduto().inserirEditar(7, dados, this, 
 					listaCadeirasCadastradas.getSelectedIndex());
 		}
 
 		if(e.getValueIsAdjusting() && src == listaMesasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(4, dados, this, 
+			new TelaDetalheProduto().inserirEditar(8, dados, this, 
 					listaMesasCadastradas.getSelectedIndex());
 		}
 		
 		if(e.getValueIsAdjusting() && src == listaArmariosCadastrados) {
-			new TelaDetalheProduto().inserirEditar(3, dados, this, 
+			new TelaDetalheProduto().inserirEditar(9, dados, this, 
 					listaArmariosCadastrados.getSelectedIndex());
 		}
 
 		if(e.getValueIsAdjusting() && src == listaGeladeirasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(4, dados, this, 
+			new TelaDetalheProduto().inserirEditar(10, dados, this, 
 					listaGeladeirasCadastradas.getSelectedIndex());
 		}
 		
 		if(e.getValueIsAdjusting() && src == listaMicroondasCadastrados) {
-			new TelaDetalheProduto().inserirEditar(3, dados, this, 
+			new TelaDetalheProduto().inserirEditar(11, dados, this, 
 					listaMicroondasCadastrados.getSelectedIndex());
 		}
 
 		if(e.getValueIsAdjusting() && src == listaLavaLoucasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(4, dados, this, 
+			new TelaDetalheProduto().inserirEditar(12, dados, this, 
 					listaLavaLoucasCadastradas.getSelectedIndex());
 		}
 	}

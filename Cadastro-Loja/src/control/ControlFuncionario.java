@@ -88,6 +88,10 @@ public class ControlFuncionario {
 		return funcionario[i].getSalario();
 	}
 	
+	public String getCargo (int i) {
+		return funcionario[i].getCargo();
+	}
+	
 	/*
 	 * public Dados getDados() { return dados; }
 	 * 

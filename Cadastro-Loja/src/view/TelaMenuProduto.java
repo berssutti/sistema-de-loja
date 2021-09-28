@@ -31,7 +31,7 @@ public class TelaMenuProduto implements ActionListener {
 		armario = new JButton("Armario");
 		microondas = new JButton("microondas");
 		geladeira = new JButton("geladeira");
-		lavaLoucas = new JButton("Lava Loucas");
+		lavaLoucas = new JButton("Lava Louças");
 		
 		titulo.setFont(new Font("Calibri", Font.BOLD, 18));
 		titulo.setBounds(90, 10, 250, 40);
