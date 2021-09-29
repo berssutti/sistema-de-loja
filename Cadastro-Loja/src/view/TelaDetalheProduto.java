@@ -184,25 +184,38 @@ public class TelaDetalheProduto implements ActionListener{
 			valorNome = new JTextField(dados.getlavaLoucas()[pos].getNome(), 200);
 			valorQtdemEstoque = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getQuantidadeemEstoque()),200);
 			valorGarantia = new JTextField(dados.getlavaLoucas()[pos].getGarantia(),200);
-			valorDescricao = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getDescricao()), 200);
+			valorDescricao = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getDescricao()), 200); 
 			valorID = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getId()), 200);
 			valorMarca = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getMarca()), 200);
 			valorPreco = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getPreco()), 200);
 			valorQtdServico = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getQtdServico()), 200);
+			valorConsumodeEnergia = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getConsumodeEnergia()), 200);
 			valorPeso = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getPeso()), 200);
 			valorVoltagem = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getVoltagem()), 200);
-			valorConsumodeEnergia = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getConsumodeEnergia()), 200);
 			
-		} else { //Não preenche com dados
-
+		} else if(op == 1 ||op == 2 ||op == 3 ||op == 4 ||op == 5 ||op == 6) { //Não preenche com dados
+			
+			valorGarantia = new JTextField(200);
 			valorNome = new JTextField(200);
 			valorQtdemEstoque = new JTextField(200);
 			valorDescricao = new JTextField(200);
 			valorID = new JTextField(200);
 			valorMarca = new JTextField(200);
 			valorPreco = new JTextField(200);
-			valorGarantia = new JTextField(200);
-			botaoSalvar.setBounds(245, 175, 115, 30);
+			valorQtdServico = new JTextField(200);
+			valorConsumodeEnergia = new JTextField(200);
+			valorPeso = new JTextField(200); 
+			valorVoltagem = new JTextField(200);
+			valorPotencia = new JTextField(200);
+			valorVolume = new JTextField(200);
+			valorQtdPorta = new JTextField(200);
+			valorQtdGaveta = new JTextField(200);
+			valorMaterial = new JTextField(200);
+			valorTipo = new JTextField(200);
+			valorMedidas = new JTextField(200);
+			valorPesoSuportavel = new JTextField(200);
+			botaoSalvar.setBounds(245, 400, 115, 30);
+			 
 		}
 
 		labelNome.setBounds(30, 20, 150, 25);
@@ -241,7 +254,7 @@ public class TelaDetalheProduto implements ActionListener{
 		 */
 		
 		//Coloca os campos relacionados a cadeira
-		if (op == 1 || op == 7  ) {
+		if (op == 7 || op == 1 ) {
 			
 			labelMedidas.setBounds(30, 230, 150, 25);
 			valorMedidas.setBounds(180, 230, 180, 25);
@@ -264,7 +277,7 @@ public class TelaDetalheProduto implements ActionListener{
 		}
 
 		//Coloca campos relacionados a valor mesa
-		if (op == 2 || op == 8 ) {
+		if ( op == 8|| op == 2                                                                                                           ) {
 			labelMedidas.setBounds(30, 230, 150, 25);
 			valorMedidas.setBounds(180, 230, 180, 25);
 			labelTipo.setBounds(30, 260, 150, 25);
@@ -290,7 +303,7 @@ public class TelaDetalheProduto implements ActionListener{
 		}
 		
 		//Coloca campos relacionados a valor armario
-		if (op == 3|| op == 9  ) {
+		if (op == 9 || op == 3  ) {
 			labelMedidas.setBounds(30, 230, 150, 25);
 			valorMedidas.setBounds(180, 230, 180, 25);
 			labelTipo.setBounds(30, 260, 150, 25);
@@ -316,7 +329,7 @@ public class TelaDetalheProduto implements ActionListener{
 		}
 		
 		//Coloca campos relacionados a valor geladeira
-		if (op == 4 || op == 10 ) {
+		if ( op == 10|| op == 4  ) {
 			labelVolume.setBounds(30, 230, 150, 25);
 			valorVolume.setBounds(180, 230, 180, 25);
 			labelVoltagem.setBounds(30, 260, 150, 25);
@@ -338,7 +351,7 @@ public class TelaDetalheProduto implements ActionListener{
 		}
 		
 		//Coloca campos relacionados a valor microondas
-		if (op == 5 || op == 11 ) {
+		if (op == 11 || op == 5 ) {
 			labelVolume.setBounds(30, 230, 150, 25);
 			valorVolume.setBounds(180, 230, 180, 25);
 			labelVoltagem.setBounds(30, 260, 150, 25);
@@ -364,7 +377,7 @@ public class TelaDetalheProduto implements ActionListener{
 		}
 		
 		//Coloca campos relacionados a valor lava louças
-		if (op == 6 || op == 12 ) {
+		if ( op == 12 || op == 6 ) {
 			labelQtdServico.setBounds(30, 230, 150, 25);
 			valorQtdServico.setBounds(180, 230, 180, 25);
 			labelVoltagem.setBounds(30, 260, 150, 25);
@@ -426,6 +439,7 @@ public class TelaDetalheProduto implements ActionListener{
 		if(src == botaoSalvar) {
 			try {
 				boolean res;
+				
 				if(opcao == 1) //cadastro de nova cadeira
 					novoDado[0] = Integer.toString(dados.getQtdCadeira());
 				else if (opcao == 2) // cadastro de nova mesa
@@ -442,18 +456,52 @@ public class TelaDetalheProduto implements ActionListener{
 					novoDado[0] = Integer.toString(posicao);
 
 				novoDado[1] =  valorNome.getText();
-				novoDado[3] =  valor.getText();
+				novoDado[2] =  valorQtdemEstoque.getText();
+				novoDado[3] =  valorDescricao.getText();
 				novoDado[4] =  valorID.getText();
-				novoDado[5] =  valorDDD.getText();
-				novoDado[6] =  valorTelefone.getText();
-				novoDado[7] =  valorTelefone.getText();
+				novoDado[5] =  valorMarca.getText();
+				novoDado[6] =  valorPreco.getText();
+				novoDado[7] =  valorGarantia.getText();
 
-				if (opcao == 1 || opcao == 3) {
-					novoDado[2] =  valorEnd.getText();
-					res = dados.inserirEditarAluno(novoDado);
-				} else {
-					novoDado[2] =  valorHoraAula.getText();
-					res = dados.inserirEditarProf(novoDado);
+				if (opcao == 1 || opcao == 7) {//cadeira
+					novoDado[8] =  valorMedidas.getText();
+					novoDado[9] = valorTipo.getText();
+					novoDado[10] = valorPeso.getText();
+					novoDado[11] = valorPesoSuportavel.getText();
+					res = dados.inserirEditarCadeira(novoDado);
+				} else if (opcao == 2 || opcao == 8){//mesa
+					novoDado[8] =  valorMedidas.getText();
+					novoDado[9] =  valorTipo.getText();
+					novoDado[10] =  valorMaterial.getText();
+					novoDado[11] =  valorPeso.getText();
+					novoDado[12] =  valorPesoSuportavel.getText();
+					res = dados.inserirEditarMesa(novoDado);
+				}else if (opcao == 3 || opcao == 9){//armario
+					novoDado[8] =  valorMedidas.getText();
+					novoDado[9] =  valorTipo.getText();
+					novoDado[10] =  valorMaterial.getText();
+					novoDado[11] =  valorQtdGaveta.getText();
+					novoDado[12] =  valorQtdPorta.getText();
+					res = dados.inserirEditarArmario(novoDado);
+				}else if (opcao == 4 || opcao == 10){//microondas
+					novoDado[8] =  valorVolume.getText();
+					novoDado[9] =  valorVoltagem.getText();
+					novoDado[10] =  valorPotencia.getText();
+					novoDado[11] =  valorConsumodeEnergia.getText();
+					novoDado[12] =  valorPeso.getText();
+					res = dados.inserirEditarGeladeira(novoDado);
+				}else if (opcao == 5 || opcao == 11){//geladeira
+					novoDado[8] =  valorVolume.getText();
+					novoDado[9] =  valorVoltagem.getText();
+					novoDado[10] =  valorConsumodeEnergia.getText();
+					novoDado[11] =  valorPeso.getText();
+					res = dados.inserirEditarMicroondas(novoDado);
+				}else if (opcao == 6 || opcao == 12){//lava louças
+					novoDado[8] =  valorQtdServico.getText();
+					novoDado[9] =  valorVoltagem.getText();
+					novoDado[10] =  valorConsumodeEnergia.getText();
+					novoDado[11] =  valorPeso.getText();
+					res = dados.inserirEditarLavaLoucas(novoDado);
 				}
 
 				if(res) {
@@ -471,14 +519,38 @@ public class TelaDetalheProduto implements ActionListener{
 		if(src == botaoExcluir) {
 			boolean res = false;
 
-			if (opcao == 3) {//exclui aluno
-				res = dados.removerAluno(posicao);
+			if (opcao == 7) {//exclui cadeira
+				res = dados.removerCadeira(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusaoAluno(); 
 			}
 				
-			if (opcao == 4){ //exclui professor
-				res = dados.removerProfessor(posicao);
+			if (opcao == 8){ //exclui mesa
+				res = dados.removerMesa(posicao);
+				if (res) mensagemSucessoExclusao(); 
+				else mensagemErroExclusaoProf(); 
+			}
+			
+			if (opcao == 9){ //exclui armario
+				res = dados.removerArmario(posicao);
+				if (res) mensagemSucessoExclusao(); 
+				else mensagemErroExclusaoProf(); 
+			}
+			
+			if (opcao == 10){ //exclui geladeira
+				res = dados.removerGeladeira(posicao);
+				if (res) mensagemSucessoExclusao(); 
+				else mensagemErroExclusaoProf(); 
+			}
+			
+			if (opcao == 11){ //exclui microondas
+				res = dados.removerMicroondas(posicao);
+				if (res) mensagemSucessoExclusao(); 
+				else mensagemErroExclusaoProf(); 
+			}
+			
+			if (opcao == 12){ //exclui lava louças
+				res = dados.removerLavaLoucas(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusaoProf(); 
 			}

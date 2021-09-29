@@ -38,8 +38,8 @@ public class TelaMenuProduto implements ActionListener {
 		cadeira.setBounds(130, 50, 135, 20);
 		mesa.setBounds(130, 80, 135, 20);
 		armario.setBounds(130, 110, 135, 20);
-		microondas.setBounds(130, 140, 135, 20);
-		geladeira.setBounds(130, 170, 135, 20);
+		geladeira.setBounds(130, 140, 135, 20);
+		microondas.setBounds(130, 170, 135, 20);
 		lavaLoucas.setBounds(130, 200, 135, 20);
 		
 		janela.setLayout(null);
