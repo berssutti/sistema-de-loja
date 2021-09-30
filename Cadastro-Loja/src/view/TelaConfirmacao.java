@@ -6,28 +6,39 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import control.*;
 
 public class TelaConfirmacao implements ActionListener {
 	
 	private JFrame janela;
-	private JLabel pergunta;
+	private JLabel perguntaCliente;
+	private JLabel perguntaProduto;
 	private JButton comprarProduto;
 	private JButton naoComprarProduto;
-	private ControlDados dados;
+	int opcao;
 	
-	public void mostrarTela() {
+	public void mostrarTela(int opcao) {
+		
+		this.opcao = opcao;
+		
 		janela = new JFrame("Confirmação");
-		pergunta = new JLabel("Deseja selecionar esse cliente ?");
+		perguntaCliente = new JLabel("Deseja selecionar esse cliente ?");
+		perguntaProduto =  new JLabel("Deseja selecionar esse produto ?");
 		comprarProduto = new JButton("Sim");
 		naoComprarProduto = new JButton("Não");
 		
-		pergunta.setFont(new Font("Calibri", Font.BOLD, 16));
-		pergunta.setBounds(70, 10, 250, 30);
+		perguntaCliente.setFont(new Font("Calibri", Font.BOLD, 16));
+		perguntaCliente.setBounds(70, 10, 250, 30);
+		perguntaProduto.setFont(new Font("Calibri", Font.BOLD, 16));
+		perguntaProduto.setBounds(70, 10, 250, 30);
 		comprarProduto.setBounds(50, 60, 100, 30);
 		naoComprarProduto.setBounds(190, 60, 100, 30);
 		
-		janela.add(pergunta);
+		if(opcao == 1)
+			janela.add(perguntaCliente);
+			
+		if (opcao == 2) 
+			janela.add(perguntaProduto);
+		
 		janela.add(comprarProduto);
 		janela.add(naoComprarProduto);
 		janela.setLayout(null);
@@ -42,11 +53,15 @@ public class TelaConfirmacao implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		//Sim
-		if(e.getSource() == comprarProduto) {
-			new TelaComprarProduto().inserirEditar(1, dados, this, 0);
+		//Sim, vai para os produtos
+		if(e.getSource() == comprarProduto && opcao == 1) {
+			new TelaComprarProduto().mostrarDados();
 		}
-
+		//Sim, finaliza a compra
+		if(e.getSource() == comprarProduto && opcao == 2) {
+			new TelaCompraFinalizada().mostrarTela();
+		}
+		
 		
 		//Não
 		if(e.getSource() == naoComprarProduto) 
