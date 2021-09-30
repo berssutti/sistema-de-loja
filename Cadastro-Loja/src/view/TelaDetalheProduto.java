@@ -93,7 +93,7 @@ public class TelaDetalheProduto implements ActionListener{
 
 		opcao = op;
 		posicao = pos;
-		this.dados = dados;
+		//this.dados = dados;
 
 		if (op == 1) s = "Cadastro de Cadeira";
 		if (op == 2) s = "Cadastro de Mesa";
@@ -193,7 +193,7 @@ public class TelaDetalheProduto implements ActionListener{
 			valorPeso = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getPeso()), 200);
 			valorVoltagem = new JTextField(String.valueOf(dados.getlavaLoucas()[pos].getVoltagem()), 200);
 			
-		} else if(op == 1 ||op == 2 ||op == 3 ||op == 4 ||op == 5 ||op == 6) { //Não preenche com dados
+		} else { //Não preenche com dados
 			
 			valorGarantia = new JTextField(200);
 			valorNome = new JTextField(200);
@@ -438,7 +438,7 @@ public class TelaDetalheProduto implements ActionListener{
 		Object src = e.getSource();
 		if(src == botaoSalvar) {
 			try {
-				boolean res;
+				boolean res = false;
 				
 				if(opcao == 1) //cadastro de nova cadeira
 					novoDado[0] = Integer.toString(dados.getQtdCadeira());

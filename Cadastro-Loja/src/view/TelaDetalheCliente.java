@@ -33,9 +33,11 @@ public class TelaDetalheCliente implements ActionListener{
 	
 	public void inserirEditar(int opcao, ControlDados dados, 
 			TelaCliente cliente, int posicao) {
+		
 		this.opcao = opcao;
 		this.posicao = posicao;
 		this.dados = dados;
+
 		
 		if (opcao == 1) s = "Cadastro de Cliente";
 		if (opcao == 2) s = "Detalhe de Cliente";
@@ -135,7 +137,7 @@ public class TelaDetalheCliente implements ActionListener{
 		if(e.getSource() == botaoExcluir) {
 			boolean res = false;
 
-			if (opcao == 3) {//exclui cliente
+			if (opcao == 2) {//exclui cliente
 				res = dados.removerCliente(posicao);
 				if (res) mensagemSucessoExclusao(); 
 			}

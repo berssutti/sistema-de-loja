@@ -13,6 +13,7 @@ public class TelaMenu implements ActionListener{
 	private static JButton cliente = new JButton("Cliente");
 	private static JButton funcionario = new JButton("Funcionario");
 	private static JButton produto = new JButton("Produto");
+	private static JButton carrinho = new JButton("Carrinho");
 	public static ControlDados dados = new ControlDados();
 	
 	public TelaMenu() {
@@ -21,13 +22,15 @@ public class TelaMenu implements ActionListener{
 		cliente.setBounds(140, 50, 120, 30);
 		funcionario.setBounds(140, 100, 120, 30);
 		produto.setBounds(140, 150, 120, 30);
-	
+		carrinho.setBounds(140, 200, 120, 30);
+		
 		janela.setLayout(null);
 		
 		janela.add(titulo);
 		janela.add(cliente);
 		janela.add(funcionario);
 		janela.add(produto);
+		janela.add(carrinho);
 		
 		janela.setSize(400, 300);
 		//janela.getContentPane().setBackground(new Color(147,112,219));
@@ -41,6 +44,7 @@ public class TelaMenu implements ActionListener{
 		cliente.addActionListener(menu);
 		funcionario.addActionListener(menu);
 		produto.addActionListener(menu);
+		carrinho.addActionListener(menu);
 	}
 
 	@Override
@@ -54,6 +58,9 @@ public class TelaMenu implements ActionListener{
 		 
 		 if(e.getSource() == produto) 
 			new TelaMenuProduto().mostrarProdutos();
+		 
+		 if(e.getSource() == carrinho) 
+				new TelaCarrinho().mostrarDados(dados);
 		 
 	}
 

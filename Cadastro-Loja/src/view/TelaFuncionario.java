@@ -32,7 +32,7 @@ public class TelaFuncionario implements ActionListener, ListSelectionListener {
 		janela = new JFrame("Funcionarios");
 		titulo = new JLabel("Funcionario Cadastrados");
 		cadastroFuncionario = new JButton("Cadastrar");
-		refreshFuncionario = new JButton("Refresh");
+		refreshFuncionario = new JButton("Atualizar");
 		
 		titulo.setFont(new Font("Calibri", Font.BOLD, 20));
 		titulo.setBounds(90, 10, 250, 30);

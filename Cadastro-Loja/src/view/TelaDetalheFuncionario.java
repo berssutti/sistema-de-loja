@@ -152,7 +152,7 @@ public class TelaDetalheFuncionario implements ActionListener {
 		if(e.getSource() == botaoExcluir) {
 			boolean res = false;
 
-			if (opcao == 3) {//exclui cliente
+			if (opcao == 2) {//exclui cliente
 				res = dados.removerFuncionario(posicao);
 				if (res) mensagemSucessoExclusao(); 
 			}

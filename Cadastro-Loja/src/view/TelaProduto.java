@@ -3,7 +3,6 @@ package view;
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,7 +11,6 @@ import javax.swing.JOptionPane;
 import javax.swing.ListSelectionModel;
 import javax.swing.event.ListSelectionEvent;
 import javax.swing.event.ListSelectionListener;
-
 import control.*;
 
 public class TelaProduto implements ActionListener, ListSelectionListener {
@@ -37,7 +35,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 	private JList<String> listaMicroondasCadastrados;
 	private JList<String> listaGeladeirasCadastradas;
 	private JList<String> listaLavaLoucasCadastradas;
-	private static ControlDados dados;
+	private ControlDados dados;
 	private String[] listaNomes = new String[50];
 
 	public void mostrarProdutos(ControlDados dados, int op){
@@ -50,7 +48,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			janela = new JFrame("Cadeiras");
 			titulo = new JLabel("Cadeiras Cadastrados");
 			cadastroCadeira = new JButton("Cadastrar");
-			refreshCadeira = new JButton("Refresh");
+			refreshCadeira = new JButton("Atualizar");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
