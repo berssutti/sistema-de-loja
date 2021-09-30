@@ -81,7 +81,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			janela = new JFrame("Mesaessores");
 			titulo = new JLabel("Mesaessores Cadastrados");
 			cadastroMesa = new JButton("Cadastrar");
-			refreshMesa = new JButton("Refresh");
+			refreshMesa = new JButton("Atualizar");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
@@ -113,7 +113,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			janela = new JFrame("Armarios");
 			titulo = new JLabel("Armarios Cadastrados");
 			cadastroArmario = new JButton("Cadastrar");
-			refreshArmario = new JButton("Refresh");
+			refreshArmario = new JButton("Atualizar");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
@@ -144,7 +144,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			janela = new JFrame("Geladeiras");
 			titulo = new JLabel("Geladeiras Cadastrados");
 			cadastroGeladeira = new JButton("Cadastrar");
-			refreshGeladeira = new JButton("Refresh");
+			refreshGeladeira = new JButton("Atualizar");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
@@ -175,7 +175,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			janela = new JFrame("Microondass");
 			titulo = new JLabel("Microondass Cadastrados");
 			cadastroMicroondas = new JButton("Cadastrar");
-			refreshMicroondas = new JButton("Refresh");
+			refreshMicroondas = new JButton("Atualizar");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
@@ -206,7 +206,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			janela = new JFrame("LavaLoucass");
 			titulo = new JLabel("LavaLoucass Cadastrados");
 			cadastroLavaLoucas = new JButton("Cadastrar");
-			refreshLavaLoucas = new JButton("Refresh");
+			refreshLavaLoucas = new JButton("Atualizar");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);

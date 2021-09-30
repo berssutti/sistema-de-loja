@@ -83,7 +83,7 @@ public class TelaDetalheProduto implements ActionListener{
 	private JButton botaoExcluir = new JButton("Excluir");
 	private JButton botaoSalvar = new JButton("Salvar");
 	private String[] novoDado = new String[9];
-	private static ControlDados dados;
+	private ControlDados dados;
 	private int posicao;
 	private int opcao;
 	private String s;
@@ -93,7 +93,7 @@ public class TelaDetalheProduto implements ActionListener{
 
 		opcao = op;
 		posicao = pos;
-		//this.dados = dados;
+		this.dados = dados;
 
 		if (op == 1) s = "Cadastro de Cadeira";
 		if (op == 2) s = "Cadastro de Mesa";
