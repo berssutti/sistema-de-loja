@@ -35,7 +35,7 @@ public class TelaEscolherProduto implements ListSelectionListener {
 		this.dados = dados;
 		
 		switch (op) {
-		case 1:// Mostrar dados de Armarios cadastrados (JList)
+		case 1:// Mostrar dados de Armarios cadastrados 
 			listaNomes = new ControlCadeira(dados).getNomeCadeira();
 			listaCadeirasCadastradas = new JList<String>(listaNomes);
 			janela = new JFrame("Cadeiras");
@@ -58,7 +58,7 @@ public class TelaEscolherProduto implements ListSelectionListener {
 			listaCadeirasCadastradas.addListSelectionListener(this);
 
 			break;
-		case 2:// Mostrar dados de Mesaessores cadastrados (JList)
+		case 2:// Mostrar dados de Mesas cadastradas
 			listaNomes = new ControlMesa(dados).getNomeMesa();
 			listaMesasCadastradas = new JList<String>(listaNomes);
 			janela = new JFrame("Mesaessores");

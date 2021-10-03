@@ -60,7 +60,7 @@ public class Dados {
 			cadeira[i].setMarca("IKEA");
 			cadeira[i].setPreco(398f);
 			cadeira[i].setQuantidadeemEstoque(12);
-			lavaLoucas[i] = new Lava_Loucas(24, 45f,53f,"lava loucas sujas",34);
+			lavaLoucas[i] = new Lava_Loucas(24, 45f,53f,34);
 			lavaLoucas[i].setNome("Lava loucas"+i);
 			lavaLoucas[i].setDescricao("Para jogos");
 			lavaLoucas[i].setGarantia("1 ano");
@@ -105,9 +105,9 @@ public class Dados {
 	}
 	
 	
-	public void inserirEditarAluno(Cliente cliente, int pos) {
+	public void inserirEditarCliente(Cliente cliente, int pos) {
 		this.cliente[pos] = cliente;
-		if(pos == qtdClientes) qtdClientes++;
+	    if(pos == qtdClientes) qtdClientes++;
 	}
 
 	
@@ -126,7 +126,7 @@ public class Dados {
 	}
 	
 	
-	public void inserirEditarProf(Funcionario p, int pos) {
+	public void inserirEditarFuncionario(Funcionario p, int pos) {
 		this.funcionario[pos] = p;
 		if(pos == qtdAFuncionarios) qtdAFuncionarios++;
 	}
@@ -170,7 +170,11 @@ public class Dados {
 	public void setArmario(Armario[] armario) {
 		this.armario = armario;
 	}
-
+	
+	public void inserirEditarArmario(Armario p, int pos) {
+		this.armario[pos] = p;
+		if(pos == qtdArmarios) qtdArmarios++;
+	}
 
 	public int getQtdArmarios() {
 		return qtdArmarios;
@@ -191,7 +195,13 @@ public class Dados {
 		this.geladeira = geladeira;
 	}
 
+	
+	public void inserirEditarGeladeira(Geladeira p, int pos) {
+		this.geladeira[pos] = p;
+		if(pos == qtdGeladeiras) qtdGeladeiras++;
+	}
 
+	
 	public int getQtdGeladeiras() {
 		return qtdGeladeiras;
 	}
@@ -211,6 +221,10 @@ public class Dados {
 		this.mesa = mesa;
 	}
 
+	public void inserirEditarMesa(Mesa p, int pos) {
+		this.mesa[pos] = p;
+		if(pos == qtdMesas) qtdMesas++;
+	}
 
 	public int getQtdMesas() {
 		return qtdMesas;
@@ -231,7 +245,13 @@ public class Dados {
 		this.microondas = microondas;
 	}
 
+	
+	public void inserirEditarMicroondas(Microondas p, int pos) {
+		this.microondas[pos] = p;
+		if(pos == qtdMicroondas) qtdMicroondas++;
+	}
 
+	
 	public int getQtdMicroondas() {
 		return qtdMicroondas;
 	}
@@ -251,7 +271,13 @@ public class Dados {
 		this.cadeira = cadeira;
 	}
 
+	
+	public void inserirEditarCadeira(Cadeira p, int pos) {
+		this.cadeira[pos] = p;
+		if(pos == qtdCadeiras) qtdCadeiras++;
+	}
 
+	
 	public int getQtdCadeiras() {
 		return qtdCadeiras;
 	}
@@ -266,7 +292,13 @@ public class Dados {
 		return lavaLoucas;
 	}
 
+	
+	public void inserirEditarLavaLoucas(Lava_Loucas p, int pos) {
+		this.lavaLoucas[pos] = p;
+		if(pos == qtdlavaLoucas) qtdlavaLoucas++;
+	}
 
+	
 	public void setLavaLoucas(Lava_Loucas[] lavaLoucas) {
 		this.lavaLoucas = lavaLoucas;
 	}

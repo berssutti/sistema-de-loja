@@ -1,6 +1,6 @@
 package model;
 
-public class Funcionario implements CRUD{
+public class Funcionario{
 
 	private String nome;
 	private String cpf;
@@ -20,35 +20,6 @@ public class Funcionario implements CRUD{
 		this.numero = numero;
 	}
 
-	
-	public String toString() {
-		return "Nome do funcionario: " + getNome() + ", cpf: " + getCpf() + ", " + getNumero() + ", cargo: " + getCargo();
-	}
-	
-	@Override
-	public void cadastrar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void ler() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void editar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void deletar() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	
 	public String getNome() {
 		return nome;

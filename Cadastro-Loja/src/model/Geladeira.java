@@ -1,12 +1,11 @@
 package model;
 
-public class Geladeira extends Produto implements CRUD {
+public class Geladeira extends Produto {
 	
 	private float volume;
 	private float peso;
 	private float voltagem;
 	private float consumodeEnergia;
-
 
 	public Geladeira(float volume, float peso, float voltagem, float consumodeEnergia) {
 		super();
@@ -14,40 +13,24 @@ public class Geladeira extends Produto implements CRUD {
 		this.peso = peso;
 		this.voltagem = voltagem;
 		this.consumodeEnergia = consumodeEnergia;
+		
 	}
 
-	
+	public Geladeira(String nome, int quantidadeemEstoque, String garantia, String descriacao,
+			String Marca, float preco, String id, float volume, float peso, float voltagem, float consumodeEnergia) {
+		super();
+		this.volume = volume;
+		this.peso = peso;
+		this.voltagem = voltagem;
+		this.consumodeEnergia = consumodeEnergia;
+		
+	}
+
+
 	public String toString() {
 		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
 	}
 
-	@Override
-	public void cadastrar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void ler() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void editar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void deletar() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 
 	public float getVolume() {
 		return volume;

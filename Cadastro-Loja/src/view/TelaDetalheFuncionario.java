@@ -129,13 +129,17 @@ public class TelaDetalheFuncionario implements ActionListener {
 				else // edicao de dado existente
 					novoDado[0] = Integer.toString(posicao);
 
-				novoDado[1] =  valorNome.getText();
-				novoDado[2] =  valorCPF.getText();
-				novoDado[3] =  valorRG.getText();
-				novoDado[4] =  valorCargo.getText();
-				novoDado[5] =  valorSalario.getText();
-				novoDado[6] =  valorDDD.getText();
-				novoDado[7] =  valorTelefone.getText();
+				novoDado[1] = valorNome.getText();
+				novoDado[2] = valorCPF.getText();
+				novoDado[3] = valorRG.getText();
+				novoDado[4] = valorCargo.getText();
+				novoDado[5] = valorSalario.getText();
+				novoDado[6] = valorDDD.getText();
+				novoDado[7] = valorTelefone.getText();
+				
+				if (opcao == 1 || opcao == 2) {
+					res = dados.inserirEditarFuncionario(novoDado);
+				} 
 				
 				if(res) {
 					mensagemSucessoCadastro();
@@ -152,7 +156,7 @@ public class TelaDetalheFuncionario implements ActionListener {
 		if(e.getSource() == botaoExcluir) {
 			boolean res = false;
 
-			if (opcao == 2) {//exclui cliente
+			if (opcao == 2) {//exclui funcionario
 				res = dados.removerFuncionario(posicao);
 				if (res) mensagemSucessoExclusao(); 
 			}

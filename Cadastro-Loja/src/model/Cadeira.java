@@ -1,6 +1,6 @@
 package model;
 
-public class Cadeira extends Produto implements CRUD {
+public class Cadeira extends Produto {
 	
 	
 	private String medidas;
@@ -16,39 +16,16 @@ public class Cadeira extends Produto implements CRUD {
 		this.peso = peso;
 		this.pesoSuportavel = pesoSuportavel;
 	}
-
 	
-	public String toString() {
-		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
+	public Cadeira(String nome, int quantidadeemEstoque, String garantia, String descriacao,
+			String Marca, float preco, String id, String medidas, String tipo, float peso, float pesoSuportavel) {
+		super();
+		this.medidas = medidas;
+		this.tipo = tipo;
+		this.peso = peso;
+		this.pesoSuportavel = pesoSuportavel;
 	}
-
-	@Override
-	public void cadastrar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void ler() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void editar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void deletar() {
-		// TODO Auto-generated method stub
-		
-	}
-
+	
 	
 	public String getMedidas() {
 		return medidas;

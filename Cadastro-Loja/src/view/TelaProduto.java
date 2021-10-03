@@ -245,25 +245,25 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 		
 		//Cadastro de novo aluno
 		if(e.getSource() == cadastroCadeira)
-			new TelaDetalheProduto().inserirEditar(1, dados, this, 0);
+			new TelaDetalheProduto().cadastrarEditarProduto(1, dados, this, 0);
 
 		//Cadastro de novo professor
 		if(e.getSource() == cadastroMesa)
-			new TelaDetalheProduto().inserirEditar(2, dados, this, 0);
+			new TelaDetalheProduto().cadastrarEditarProduto(2, dados, this, 0);
 		
 		if(e.getSource() == cadastroArmario)
-			new TelaDetalheProduto().inserirEditar(3, dados, this, 0);
+			new TelaDetalheProduto().cadastrarEditarProduto(3, dados, this, 0);
 
 		//Cadastro de novo professor
 		if(e.getSource() == cadastroGeladeira)
-			new TelaDetalheProduto().inserirEditar(4, dados, this, 0);
+			new TelaDetalheProduto().cadastrarEditarProduto(4, dados, this, 0);
 		
 		if(e.getSource() == cadastroMicroondas)
-			new TelaDetalheProduto().inserirEditar(5, dados, this, 0);
+			new TelaDetalheProduto().cadastrarEditarProduto(5, dados, this, 0);
 
 		//Cadastro de novo professor
 		if(e.getSource() == cadastroLavaLoucas)
-			new TelaDetalheProduto().inserirEditar(6, dados, this, 0);
+			new TelaDetalheProduto().cadastrarEditarProduto(6, dados, this, 0);
 		
 
 		// Atualiza a lista de nomes de produtos mostrada no JList
@@ -305,32 +305,32 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 		Object src = e.getSource();
 
 		if(e.getValueIsAdjusting() && src == listaCadeirasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(7, dados, this, 
+			new TelaDetalheProduto().cadastrarEditarProduto(7, dados, this, 
 					listaCadeirasCadastradas.getSelectedIndex());
 		}
 
 		if(e.getValueIsAdjusting() && src == listaMesasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(8, dados, this, 
+			new TelaDetalheProduto().cadastrarEditarProduto(8, dados, this, 
 					listaMesasCadastradas.getSelectedIndex());
 		}
 		
 		if(e.getValueIsAdjusting() && src == listaArmariosCadastrados) {
-			new TelaDetalheProduto().inserirEditar(9, dados, this, 
+			new TelaDetalheProduto().cadastrarEditarProduto(9, dados, this, 
 					listaArmariosCadastrados.getSelectedIndex());
 		}
 
 		if(e.getValueIsAdjusting() && src == listaGeladeirasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(10, dados, this, 
+			new TelaDetalheProduto().cadastrarEditarProduto(10, dados, this, 
 					listaGeladeirasCadastradas.getSelectedIndex());
 		}
 		
 		if(e.getValueIsAdjusting() && src == listaMicroondasCadastrados) {
-			new TelaDetalheProduto().inserirEditar(11, dados, this, 
+			new TelaDetalheProduto().cadastrarEditarProduto(11, dados, this, 
 					listaMicroondasCadastrados.getSelectedIndex());
 		}
 
 		if(e.getValueIsAdjusting() && src == listaLavaLoucasCadastradas) {
-			new TelaDetalheProduto().inserirEditar(12, dados, this, 
+			new TelaDetalheProduto().cadastrarEditarProduto(12, dados, this, 
 					listaLavaLoucasCadastradas.getSelectedIndex());
 		}
 	}

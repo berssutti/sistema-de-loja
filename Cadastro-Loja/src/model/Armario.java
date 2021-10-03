@@ -1,6 +1,6 @@
 package model;
 
-public class Armario extends Produto implements CRUD {
+public class Armario extends Produto {
 
 	private int qrdGaveta;
 	private String medidas;
@@ -17,40 +17,21 @@ public class Armario extends Produto implements CRUD {
 		this.material = material;
 		this.qtdPorta = qtdPorta;
 	}
+	
+	public Armario(String nome, int quantidadeemEstoque, String garantia, String descriacao,
+			String Marca, float preco, String id, int qrdGaveta, String medidas, String tipo, String material, int qtdPorta) {
+		super();
+		this.qrdGaveta = qrdGaveta;
+		this.medidas = medidas;
+		this.tipo = tipo;
+		this.material = material;
+		this.qtdPorta = qtdPorta;
+	}
 
 	
 	public String toString() {
 		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
 	}
-
-
-	@Override
-	public void cadastrar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void ler() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void editar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-
-	@Override
-	public void deletar() {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	
 	public int getQrdGaveta() {
 		return qrdGaveta;

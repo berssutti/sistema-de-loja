@@ -117,11 +117,14 @@ public class TelaDetalheCliente implements ActionListener{
 					novoDado[0] = Integer.toString(posicao);
 
 				novoDado[1] =  valorNome.getText();
-				novoDado[3] =  valorCPF.getText();
-				novoDado[4] =  valorRG.getText();
-				novoDado[5] =  valorDDD.getText();
-				novoDado[6] =  valorTelefone.getText();
+				novoDado[2] =  valorCPF.getText();
+				novoDado[3] =  valorRG.getText();
+				novoDado[4] =  valorDDD.getText();
+				novoDado[5] =  valorTelefone.getText();
 				
+				if (opcao == 1 || opcao == 2) {
+					res = dados.inserirEditarCliente(novoDado);
+				} 
 				if(res) {
 					mensagemSucessoCadastro();
 				}
@@ -145,6 +148,7 @@ public class TelaDetalheCliente implements ActionListener{
 		}
 		
 	}
+	
 	public void mensagemSucessoExclusao() {
 		JOptionPane.showMessageDialog(null, "Os dados foram excluidos com sucesso!", null, 
 				JOptionPane.INFORMATION_MESSAGE);

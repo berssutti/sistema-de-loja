@@ -1,6 +1,6 @@
 package model;
 
-public class Lava_Loucas extends Produto implements CRUD {
+public class Lava_Loucas extends Produto {
 	
 	private int qtdServico;
 	private float peso;
@@ -9,42 +9,26 @@ public class Lava_Loucas extends Produto implements CRUD {
 	private float consumodeEnergia;
 
 
-	public Lava_Loucas(int qtdServico, float peso, float voltagem, String descricao, float consumodeEnergia) {
+	public Lava_Loucas(int qtdServico, float peso, float voltagem, float consumodeEnergia) {
 		super();
 		this.qtdServico = qtdServico;
 		this.peso = peso;
 		this.voltagem = voltagem;
-		this.descricao = descricao;
+		this.consumodeEnergia = consumodeEnergia;
+	}
+	
+	public Lava_Loucas(String nome, int quantidadeemEstoque, String garantia, String descriacao,
+			String Marca, float preco, String id, int qtdServico, float peso, float voltagem, float consumodeEnergia) {
+		super();
+		this.qtdServico = qtdServico;
+		this.peso = peso;
+		this.voltagem = voltagem;
 		this.consumodeEnergia = consumodeEnergia;
 	}
 
 
 	public String toString() {
 		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
-	}
-	
-	@Override
-	public void cadastrar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void ler() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void editar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void deletar() {
-		// TODO Auto-generated method stub
-		
 	}
 	
 	

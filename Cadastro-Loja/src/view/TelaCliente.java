@@ -23,11 +23,10 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 	private JList<String> listaClientesCadastrados;
 	private String[] listaNomes = new String[50];
 
-
+	// mostrar clientes cadastrados
 	public void mostrarDados(ControlDados dados){
 		
 		this.dados = dados;
-
 		
 		listaNomes = new ControlCliente(dados).getNomeCliente();
 		listaClientesCadastrados = new JList<String>(listaNomes);
@@ -43,14 +42,14 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 		cadastroCliente.setBounds(70, 177, 100, 30);
 		refreshCliente.setBounds(200, 177, 100, 30);
 		janela.setLayout(null);
-
+		
 		janela.add(tituloCliente);
 		janela.add(cadastroCliente);
 		janela.add(refreshCliente);
 		janela.add(listaClientesCadastrados);
 		janela.setSize(400, 300);
 		janela.setVisible(true);
-
+		
 		cadastroCliente.addActionListener(this);
 		refreshCliente.addActionListener(this);
 		listaClientesCadastrados.addListSelectionListener(this);

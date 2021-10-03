@@ -1,6 +1,6 @@
 package model;
 
-public class Mesa extends Produto implements CRUD {
+public class Mesa extends Produto {
 	
 	private String medidas;
 	private float pesoSuportavel;
@@ -17,36 +17,23 @@ public class Mesa extends Produto implements CRUD {
 		this.material = material;
 		this.peso = peso;
 	}
+	
+
+	public Mesa(String nome, int quantidadeemEstoque, String garantia, String descriacao,
+			String Marca, float preco, String id, String medidas, float pesoSuportavel, String tipo, String material, float peso) {
+		super();
+		this.medidas = medidas;
+		this.pesoSuportavel = pesoSuportavel;
+		this.tipo = tipo;
+		this.material = material;
+		this.peso = peso;
+	}
 
 	
 	public String toString() {
 		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
 	}
 	
-	@Override
-	public void cadastrar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void ler() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void editar() {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void deletar() {
-		// TODO Auto-generated method stub
-		
-	}
-
 	
 	public String getMedidas() {
 		return medidas;

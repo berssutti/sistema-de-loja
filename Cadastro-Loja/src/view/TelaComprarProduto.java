@@ -20,7 +20,7 @@ public class TelaComprarProduto implements ActionListener {
 	private JButton microondas;
 	private JButton geladeira;
 	private JButton lavaLoucas;
-	public static ControlDados dados = new ControlDados();
+	public ControlDados dados = new ControlDados();
 	
 	public void mostrarDados() {
 		
