@@ -30,11 +30,6 @@ public class Mesa extends Produto {
 	}
 
 	
-	public String toString() {
-		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
-	}
-	
-	
 	public String getMedidas() {
 		return medidas;
 	}

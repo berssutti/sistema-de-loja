@@ -27,11 +27,6 @@ public class Geladeira extends Produto {
 	}
 
 
-	public String toString() {
-		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
-	}
-
-
 	public float getVolume() {
 		return volume;
 	}

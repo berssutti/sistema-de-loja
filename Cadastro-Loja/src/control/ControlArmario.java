@@ -7,15 +7,13 @@ public class ControlArmario {
 	private Armario[] armario;
 	private int qtdArmarios;
 
-	/*
-	 * public ControlArmario() { dados.addDados(); }
-	 */
 	public ControlArmario(ControlDados dados) {
 		armario = dados.getArmario();
 		qtdArmarios = dados.getQtdArmario();
 
 	}
-
+	
+	// Armazena os nomes em um vetor de string
 	public String[] getNomeArmario() {
 		String[] s = new String[qtdArmarios];
 		for (int i = 0; i < qtdArmarios; i++) {
@@ -24,32 +22,5 @@ public class ControlArmario {
 
 		return s;
 	}
-
-
-	public int getQtd() {
-		return qtdArmarios;
-	}
-
-	public void setQtd(int qtdArmarios) {
-		this.qtdArmarios = qtdArmarios;
-	}
-
-	public String getNome(int i) {
-		return armario[i].getNome();
-	}
-
-
-	public void setQtdArmarios(int qtdArmarios) {
-		this.qtdArmarios = qtdArmarios;
-	}
-
-	/*
-	 * public Dados getDados() { return dados; } public void setDados(Dados dados) {
-	 * this.dados = dados; }
-	 * 
-	 * public Armario[] getArmario() { return this.dados.getArmario(); }
-	 * 
-	 * public int getQtdArmario() { return this.dados.getQtdArmarios(); }
-	 */
 
 }

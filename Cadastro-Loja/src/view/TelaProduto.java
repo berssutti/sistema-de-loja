@@ -75,7 +75,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 
 			break;
 
-		case 2:// Mostrar dados de Mesaessores cadastrados (JList)
+		case 2:// Mostrar dados de Mesas cadastradas 
 			listaNomes = new ControlMesa(dados).getNomeMesa();
 			listaMesasCadastradas = new JList<String>(listaNomes);
 			janela = new JFrame("Mesaessores");
@@ -107,7 +107,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			refreshMesa.addActionListener(this);
 			listaMesasCadastradas.addListSelectionListener(this);
 			break;
-		case 3:
+		case 3:// Mostrar dados de Armarios cadastradas 
 			listaNomes = new ControlArmario(dados).getNomeArmario();
 			listaArmariosCadastrados = new JList<String>(listaNomes);
 			janela = new JFrame("Armarios");
@@ -138,7 +138,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			refreshArmario.addActionListener(this);
 			listaArmariosCadastrados.addListSelectionListener(this);
 			break;
-		case 4:
+		case 4:// Mostrar dados de Geladeiras cadastradas 
 			listaNomes = new ControlGeladeira(dados).getNomeGeladeira();
 			listaGeladeirasCadastradas = new JList<String>(listaNomes);
 			janela = new JFrame("Geladeiras");
@@ -169,7 +169,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			refreshGeladeira.addActionListener(this);
 			listaGeladeirasCadastradas.addListSelectionListener(this);
 			break;
-		case 5:
+		case 5:// Mostrar dados de Microondas cadastradas 
 			listaNomes = new ControlMicroondas(dados).getNomeMicroondas();
 			listaMicroondasCadastrados = new JList<String>(listaNomes);
 			janela = new JFrame("Microondass");
@@ -200,11 +200,11 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			refreshMicroondas.addActionListener(this);
 			listaMicroondasCadastrados.addListSelectionListener(this);
 			break;
-		case 6:
+		case 6:// Mostrar dados de Lava Louças cadastradas 
 			listaNomes = new ControlLavaLoucas(dados).getNomeLavaLoucas();
 			listaLavaLoucasCadastradas = new JList<String>(listaNomes);
-			janela = new JFrame("LavaLoucass");
-			titulo = new JLabel("LavaLoucass Cadastrados");
+			janela = new JFrame("Lava Louças");
+			titulo = new JLabel("Lava Louças Cadastradas");
 			cadastroLavaLoucas = new JButton("Cadastrar");
 			refreshLavaLoucas = new JButton("Atualizar");
 

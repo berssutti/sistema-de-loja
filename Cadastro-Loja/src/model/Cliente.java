@@ -1,6 +1,5 @@
 package model;
 
-import java.util.*;
 
 public class Cliente {
 
@@ -8,10 +7,11 @@ public class Cliente {
 	private String cpf;
 	private String rg;
 	private Telefone numero;
-	private List<Produto> carrinho;
+	private String[] carrinho =  new String[50];
+	private int qtdProdutosCarrinho = 2;
 
 
-	public Cliente(String nome, String cpf, String rg, Telefone numero, List<Produto> carrinho) {
+	public Cliente(String nome, String cpf, String rg, Telefone numero, String[] carrinho) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
@@ -20,8 +20,18 @@ public class Cliente {
 		this.carrinho = carrinho;
 	}
 	
-	public void addCarrinho(Produto produto) {
-		this.carrinho.add(produto);
+	public Cliente(String nome, String cpf, String rg, Telefone numero) {
+		super();
+		this.nome = nome;
+		this.cpf = cpf;
+		this.rg = rg;
+		this.numero = numero;
+	}
+	
+	public void addCarrinho(String produto, int posicao) {
+		
+		this.carrinho[posicao] = produto;
+		qtdProdutosCarrinho++;
 	}
 	
 
@@ -57,12 +67,20 @@ public class Cliente {
 		this.numero = numero;
 	}
 	
-	public List<Produto> getCarrinho() {
+	public String[] getCarrinho() {
 		return carrinho;
 	}
 
-	public void setCarrinho(List<Produto> carrinho) {
+	public void setCarrinho(String[] carrinho) {
 		this.carrinho = carrinho;
+	}
+
+	public int getQtdProdutosCarrinho() {
+		return qtdProdutosCarrinho;
+	}
+
+	public void setQtdProdutosCarrinho(int qtdProdutosCarrinho) {
+		this.qtdProdutosCarrinho = qtdProdutosCarrinho;
 	}
 
 }

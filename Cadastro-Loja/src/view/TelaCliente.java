@@ -61,7 +61,7 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 	public void valueChanged(ListSelectionEvent e) {
 		
 		if(e.getValueIsAdjusting() && e.getSource() == listaClientesCadastrados) {
-			new TelaDetalheCliente().inserirEditar(2, dados, this, 
+			new TelaDetalheCliente().cadastrarEditar(2, dados, this, 
 					listaClientesCadastrados.getSelectedIndex());
 		}
 	
@@ -73,7 +73,7 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 
 		//Cadastro de novo cliente
 		if(e.getSource() == cadastroCliente)
-			new TelaDetalheCliente().inserirEditar(1, dados, this, 0);
+			new TelaDetalheCliente().cadastrarEditar(1, dados, this, 0);
 		
 		// Atualiza a lista de nomes de cliente mostrada no JList
 		if(e.getSource() == refreshCliente) {

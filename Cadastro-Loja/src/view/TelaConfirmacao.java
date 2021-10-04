@@ -6,6 +6,8 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import control.*; 
 import model.*;
 public class TelaConfirmacao implements ActionListener {
@@ -21,7 +23,8 @@ public class TelaConfirmacao implements ActionListener {
 	private int controlSelecionado;
 	private ControlDados dados = new ControlDados(); 
 	private Produto produtoComprado;
-	// Para Cliente
+	
+	//Para cliente
 	public void mostrarTela(int opcao, int clienteSelecionado ) {
 		this.clienteSelecionado = clienteSelecionado;
 		this.opcao = opcao;
@@ -58,33 +61,37 @@ public class TelaConfirmacao implements ActionListener {
 		
 		comprarProduto = new JButton("Sim");
 		naoComprarProduto = new JButton("Não");
-		
 		perguntaCliente.setFont(new Font("Calibri", Font.BOLD, 16));
-		perguntaCliente.setBounds(70, 10, 500, 30);
+		perguntaCliente.setBounds(50, 10, 250, 30);
+		
 		if(perguntaProduto != null) {
 			perguntaProduto.setFont(new Font("Calibri", Font.BOLD, 16));
-			perguntaProduto.setBounds(70, 10, 500, 30);
+			perguntaProduto.setBounds(50, 10, 350, 30);
 		}
+		
 		comprarProduto.setBounds(50, 60, 100, 30);
 		naoComprarProduto.setBounds(190, 60, 100, 30);
 		
-		if(opcao == 1) 
+		if(opcao == 1) {
 			janela.add(perguntaCliente);
+			janela.setSize(360, 150);
+		}
 			
-		if (opcao == 2) 
+		if (opcao == 2) {
 			janela.add(perguntaProduto);
-		
+			janela.setSize(400, 150);
+		}
 		janela.add(comprarProduto);
 		janela.add(naoComprarProduto);
 		janela.setLayout(null);
-		janela.setSize(600, 150);
 		janela.setVisible(true); 
 		
 		comprarProduto.addActionListener(this);
 		naoComprarProduto.addActionListener(this);
 		
 	}
-	// Para produto
+	
+	//Para produto
 	public void mostrarTela(int opcao, int clienteSelecionado, int produtoSelecionado, int controlSelecionado ) {
 		this.produtoSelecionado = produtoSelecionado;
 		this.controlSelecionado = controlSelecionado;
@@ -99,16 +106,19 @@ public class TelaConfirmacao implements ActionListener {
 		//Sim, vai para os produtos
 		if(e.getSource() == comprarProduto && opcao == 1) {
 			
+			janela.dispose();
 			new TelaComprarProduto().mostrarDados(clienteSelecionado);
 		}
+		
 		//Sim, finaliza a compra
 		if(e.getSource() == comprarProduto && opcao == 2) {
-			dados.getCliente()[clienteSelecionado].addCarrinho(produtoComprado);
-			
-			
-			new TelaCompraFinalizada().mostrarTela();
+			dados.getCliente()[clienteSelecionado].addCarrinho(produtoComprado.getNome(),
+					dados.getCliente()[clienteSelecionado].getQtdProdutosCarrinho());
+			janela.dispose();
+			JOptionPane.showMessageDialog(null, "Compra finalizada com sucesso!", null, 
+					JOptionPane.INFORMATION_MESSAGE);
+			janela.dispose();
 		}
-		
 		
 		//Não
 		if(e.getSource() == naoComprarProduto) 

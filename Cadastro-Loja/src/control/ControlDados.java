@@ -9,23 +9,24 @@ public class ControlDados {
 		dados.addDados();
 	}
   
-  // a posicao 0 do vetor dadosAlunos indica onde os dados devem ser inseridos
-	public boolean inserirEditarCliente(String[] dadosCliente) {
-		//if (dadosCliente[2].length() > 11  || dadosCliente[3].length() > 8 || dadosCliente[4].length() > 3 || dadosCliente[5].length() > 9 ||
-		//		dadosCliente[2].length() < 11  || dadosCliente[3].length() < 8 || dadosCliente[4].length() < 3 || dadosCliente[5].length() < 9) {
-			//return false;		
-		//} else {
+		
+	public boolean cadastrarEditarCliente(String[] dadosCliente) {
+		// Condição para editar e cadastrar cliente
+//		if (dadosCliente[2].length() > 11  || dadosCliente[3].length() > 8 || dadosCliente[4].length() > 3 || dadosCliente[5].length() > 9 ||
+//				dadosCliente[2].length() < 11  || dadosCliente[3].length() < 8 || dadosCliente[4].length() < 3 || dadosCliente[5].length() < 9) {
+//				return false;		
+//		} else {
 			Cliente c = new Cliente(dadosCliente[1], dadosCliente[2], dadosCliente[3], new
-			Telefone(dadosCliente[4], dadosCliente[5]), dadosCliente[6]); 
+			Telefone(dadosCliente[4], dadosCliente[5])); 
 			dados.inserirEditarCliente(c, Integer.parseInt(dadosCliente[0]));
 			  				 
 			return true;
-		//}
+//		}
 		
 	}
 
 	
-		public boolean removerCliente(int i) {
+		public boolean deletarCliente(int i) {
 			String clienteRemovido = dados.getCliente()[i].getNome();
 
 			if(i == (dados.getQtdClientes() - 1)) { // O cliente a ser removido está no final do array
@@ -49,20 +50,21 @@ public class ControlDados {
 		}
 		
 		
-		public boolean inserirEditarFuncionario(String[] dadosFuncionario) {
-			//if(!dadosFuncionario[2].matches("[0-9]+") || !dadosFuncionario[3].matches("[0-9]+") || 
-			//		!dadosFuncionario[6].matches("[0-9]+")) {
-			//	return false;
-			//} else {
+		public boolean cadastrarEditarFuncionario(String[] dadosFuncionario) {
+			// Condição para editar e cadastrar cliente
+//			if(!dadosFuncionario[2].matches("[0-9]+") || !dadosFuncionario[3].matches("[0-9]+") || 
+//					!dadosFuncionario[6].matches("[0-9]+")) {
+//				return false;
+//			} else {
 				Funcionario p = new Funcionario(dadosFuncionario[1], dadosFuncionario[2],
 						dadosFuncionario[3],dadosFuncionario[4],Float.parseFloat(dadosFuncionario[5]), 
 						new Telefone(dadosFuncionario[6],dadosFuncionario[7]));
 					dados.inserirEditarFuncionario(p, Integer.parseInt(dadosFuncionario[0]));
 					return true;
-			//}
+//			}
 		}
 		
-		public boolean removerFuncionario(int i) {
+		public boolean deletarFuncionario(int i) {
 			String funcionarioRemovido = dados.getFuncionario()[i].getNome();
 			
 			if(i == (dados.getQtdAFuncionarios() - 1)) { // O funcionario a ser removido está no final do array
@@ -86,22 +88,22 @@ public class ControlDados {
 		}
 		
 		
-		public boolean inserirEditarGeladeira(String[] dadosGeladeira) {
-		//	if(!dadosGeladeira[2].matches("[0-9]+") || !dadosGeladeira[3].matches("[0-9]+") || 
-		//			!dadosGeladeira[4].matches("[0-9]+")) {
-		//		return false;
-		//	} else {
+		public boolean cadastrarEditarGeladeira(String[] dadosGeladeira) {
+//			if(!dadosGeladeira[2].matches("[0-9]+") || !dadosGeladeira[3].matches("[0-9]+") || 
+//					!dadosGeladeira[4].matches("[0-9]+")) {
+//				return false;
+//			} else {
 				
-				  Geladeira a = new Geladeira(dadosGeladeira[1], Integer.parseInt(dadosGeladeira[2]),
-				  				  dadosGeladeira[3], dadosGeladeira[4], dadosGeladeira[5], Float.parseFloat(dadosGeladeira[6]),
-				  				  dadosGeladeira[7], Float.parseFloat(dadosGeladeira[8]), Float.parseFloat(dadosGeladeira[9]),
-				  				  Float.parseFloat(dadosGeladeira[10]),Float.parseFloat(dadosGeladeira[11]));
-				  dados.inserirEditarGeladeira(a,Integer.parseInt(dadosGeladeira[0]));	  				 
-				  return true;
-		//		}
+				Geladeira a = new Geladeira(dadosGeladeira[1], Integer.parseInt(dadosGeladeira[2]), 
+						dadosGeladeira[3], dadosGeladeira[4], dadosGeladeira[5], Float.parseFloat(dadosGeladeira[6]),
+						dadosGeladeira[7], Float.parseFloat(dadosGeladeira[8]), Float.parseFloat(dadosGeladeira[9]),
+						Float.parseFloat(dadosGeladeira[10]),Float.parseFloat(dadosGeladeira[11]));
+				dados.inserirEditarGeladeira(a,Integer.parseInt(dadosGeladeira[0]));	  				 
+				return true;
+//			}
 		}
 		
-		public boolean removerGeladeira(int i) {
+		public boolean deletarGeladeira(int i) {
 			String GeladeiraRemovida = dados.getGeladeira()[i].getNome();
 
 			if(i == (dados.getQtdGeladeiras() - 1)) { // O Geladeira a ser removido está no final do array
@@ -124,21 +126,21 @@ public class ControlDados {
 			}
 		}
 		
-		public boolean inserirEditarMicroondas(String[] dadosMicroondas) {
-		//	if(!dadosMicroondas[2].matches("[0-9]+") || !dadosMicroondas[3].matches("[0-9]+") || 
-		//			!dadosMicroondas[4].matches("[0-9]+")) {
-		//		return false;
-		//	} else {
+		public boolean cadastrarEditarMicroondas(String[] dadosMicroondas) {
+//			if(!dadosMicroondas[2].matches("[0-9]+") || !dadosMicroondas[3].matches("[0-9]+") || 
+//					!dadosMicroondas[4].matches("[0-9]+")) {
+//				return false;
+//			} else {
 			  Microondas a = new Microondas(dadosMicroondas[1], Integer.parseInt(dadosMicroondas[2]),
 	  				  dadosMicroondas[3], dadosMicroondas[4], dadosMicroondas[5], Float.parseFloat(dadosMicroondas[6]),
 	  				  dadosMicroondas[7], Float.parseFloat(dadosMicroondas[8]), Float.parseFloat(dadosMicroondas[9]),
 	  				  Float.parseFloat(dadosMicroondas[10]),Float.parseFloat(dadosMicroondas[11]), Float.parseFloat(dadosMicroondas[12]));
 			  dados.inserirEditarMicroondas(a,Integer.parseInt(dadosMicroondas[0]));	  				 
 			  return true;
-			//	}
+//			}
 		}
 		
-		public boolean removerMicroondas(int i) {
+		public boolean deletarMicroondas(int i) {
 			String MicroondasRemovido = dados.getMicroondas()[i].getNome();
 
 			if(i == (dados.getQtdMicroondas() - 1)) { // O Microondas a ser removido está no final do array
@@ -161,11 +163,11 @@ public class ControlDados {
 			}
 		}
 		
-		public boolean inserirEditarLavaLoucas(String[] dadosLavaLoucas) {
-			//if(!dadosLavaLoucas[2].matches("[0-9]+") || !dadosLavaLoucas[3].matches("[0-9]+") || 
-			//		!dadosLavaLoucas[4].matches("[0-9]+")) {
-			//	return false;
-			//} else {
+		public boolean cadastrarEditarLavaLoucas(String[] dadosLavaLoucas) {
+//			if(!dadosLavaLoucas[2].matches("[0-9]+") || !dadosLavaLoucas[3].matches("[0-9]+") || 
+//					!dadosLavaLoucas[4].matches("[0-9]+")) {
+//				return false;
+//			} else {
 				 Lava_Loucas a = new Lava_Loucas(dadosLavaLoucas[1], Integer.parseInt(dadosLavaLoucas[2]),
 		  				  dadosLavaLoucas[3], dadosLavaLoucas[4], dadosLavaLoucas[5], Float.parseFloat(dadosLavaLoucas[6]),
 		  				  dadosLavaLoucas[7], Integer.parseInt(dadosLavaLoucas[8]), Float.parseFloat(dadosLavaLoucas[9]),
@@ -173,16 +175,16 @@ public class ControlDados {
 				 dados.inserirEditarLavaLoucas(a,Integer.parseInt(dadosLavaLoucas[0]));
 				 return true;
 		}
-			//}
+//			}
 		
-		public boolean removerLavaLoucas(int i) {
+		public boolean deletarLavaLoucas(int i) {
 			String LavaLoucasRemovido = dados.getLavaLoucas()[i].getNome();
 
-			if(i == (dados.getQtdlavaLoucas() - 1)) { // O LavaLoucas a ser removido está no final do array
+			if(i == (dados.getQtdlavaLoucas() - 1)) { // O Lava Louças a ser removido está no final do array
 				dados.setQtdlavaLoucas(dados.getQtdlavaLoucas() - 1);
 				dados.getLavaLoucas()[dados.getQtdlavaLoucas()] = null;
 				return true;
-			} else { // o LavaLoucas a ser removido está no meio do array
+			} else { // o Lava Louças a ser removido está no meio do array
 				int cont = 0;
 				while(dados.getLavaLoucas()[cont].getNome().compareTo(LavaLoucasRemovido) != 0) {
 					cont++;
@@ -198,28 +200,28 @@ public class ControlDados {
 			}
 		}
 		
-		public boolean inserirEditarMesa(String[] dadosMesa) {
-			//if(!dadosMesa[2].matches("[0-9]+") || !dadosMesa[3].matches("[0-9]+") || 
-			//		!dadosMesa[4].matches("[0-9]+")) {
-			//	return false;
-			//} else {
+		public boolean cadastrarEditarMesa(String[] dadosMesa) {
+//			if(!dadosMesa[2].matches("[0-9]+") || !dadosMesa[3].matches("[0-9]+") || 
+//					!dadosMesa[4].matches("[0-9]+")) {
+//				return false;
+//			} else {
 			Mesa a = new Mesa(dadosMesa[1], Integer.parseInt(dadosMesa[2]),
 		  				  dadosMesa[3], dadosMesa[4], dadosMesa[5], Float.parseFloat(dadosMesa[6]),
 		  				  dadosMesa[7], dadosMesa[8], Float.parseFloat(dadosMesa[9]),
 		  				  dadosMesa[10],dadosMesa[11], Float.parseFloat(dadosMesa[12]));
 			dados.inserirEditarMesa(a, Integer.parseInt(dadosMesa[0]));
 			return true;
-			//	}
+//				}
 		}
 		
-		public boolean removerMesa(int i) {
+		public boolean deletarMesa(int i) {
 			String MesaRemovido = dados.getMesa()[i].getNome();
 
-			if(i == (dados.getQtdMesas() - 1)) { // O Mesa a ser removido está no final do array
+			if(i == (dados.getQtdMesas() - 1)) { // A Mesa a ser removida está no final do array
 				dados.setQtdMesas(dados.getQtdMesas() - 1);
 				dados.getMesa()[dados.getQtdMesas()] = null;
 				return true;
-			} else { // o Mesa a ser removido está no meio do array
+			} else { // A Mesa a ser removida está no meio do array
 				int cont = 0;
 				while(dados.getMesa()[cont].getNome().compareTo(MesaRemovido) != 0) {
 					cont++;
@@ -235,29 +237,29 @@ public class ControlDados {
 			}
 		}
 		
-		public boolean inserirEditarCadeira(String[] dadosCadeira) {
-			//if(!dadosCadeira[2].matches("[0-9]+") || !dadosCadeira[3].matches("[0-9]+") || 
-			//		!dadosCadeira[4].matches("[0-9]+")) {
-			//	return false;
-			//} else {
+		public boolean cadastrarEditarCadeira(String[] dadosCadeira) {
+//			if(!dadosCadeira[2].matches("[0-9]+") || !dadosCadeira[3].matches("[0-9]+") || 
+//					!dadosCadeira[4].matches("[0-9]+")) {
+//				return false;
+//			} else {
 			Cadeira a = new Cadeira(dadosCadeira[1], Integer.parseInt(dadosCadeira[2]),
 		  				  dadosCadeira[3], dadosCadeira[4], dadosCadeira[5], Float.parseFloat(dadosCadeira[6]),
 		  				  dadosCadeira[7], dadosCadeira[8],dadosCadeira[9],
 		  				 Float.parseFloat(dadosCadeira[10]), Float.parseFloat(dadosCadeira[11]));
 			dados.inserirEditarCadeira(a, Integer.parseInt(dadosCadeira[0]));
 			return true;
-				//}
+//				}
 			
 		}
 		
-		public boolean removerCadeira(int i) {
+		public boolean deletarCadeira(int i) {
 			String CadeiraRemovido = dados.getCadeira()[i].getNome();
 
-			if(i == (dados.getQtdCadeiras() - 1)) { // O Cadeira a ser removido está no final do array
+			if(i == (dados.getQtdCadeiras() - 1)) { // A Cadeira a ser removida está no final do array
 				dados.setQtdCadeiras(dados.getQtdCadeiras() - 1);
 				dados.getCadeira()[dados.getQtdCadeiras()] = null;
 				return true;
-			} else { // o Cadeira a ser removido está no meio do array
+			} else { // A Cadeira a ser removida está no meio do array
 				int cont = 0;
 				while(dados.getCadeira()[cont].getNome().compareTo(CadeiraRemovido) != 0) {
 					cont++;
@@ -273,21 +275,21 @@ public class ControlDados {
 			}
 		}
 		
-		public boolean inserirEditarArmario(String[] dadosArmario) {
-			//if(!dadosArmario[2].matches("[0-9]+") || !dadosArmario[3].matches("[0-9]+") || 
-			//		!dadosArmario[4].matches("[0-9]+")) {
-			//	return false;
-			//} else {
+		public boolean cadastrarEditarArmario(String[] dadosArmario) {
+//			if(!dadosArmario[2].matches("[0-9]+") || !dadosArmario[3].matches("[0-9]+") || 
+//					!dadosArmario[4].matches("[0-9]+")) {
+//				return false;
+//			} else {
 			Armario a = new Armario(dadosArmario[1], Integer.parseInt(dadosArmario[2]),
 		  				  dadosArmario[3], dadosArmario[4], dadosArmario[5], Float.parseFloat(dadosArmario[6]),
 		  				  dadosArmario[7], Integer.parseInt(dadosArmario[8]), dadosArmario[9],
 		  				  dadosArmario[10], dadosArmario[11], Integer.parseInt(dadosArmario[12]));
 			dados.inserirEditarArmario(a, Integer.parseInt(dadosArmario[0]));
 			return true;
-			//	}
+//				}
 		}
 		
-		public boolean removerArmario(int i) {
+		public boolean deletarArmario(int i) {
 			String ArmarioRemovido = dados.getArmario()[i].getNome();
 
 			if(i == (dados.getQtdArmarios() - 1)) { // O Armario a ser removido está no final do array

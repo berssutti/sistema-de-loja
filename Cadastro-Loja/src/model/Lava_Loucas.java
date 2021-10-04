@@ -25,11 +25,6 @@ public class Lava_Loucas extends Produto {
 		this.voltagem = voltagem;
 		this.consumodeEnergia = consumodeEnergia;
 	}
-
-
-	public String toString() {
-		return "Nome do pruduto: " + getNome() + ", descricao: " + getDescricao() + ", preco: " + getPreco();
-	}
 	
 	
 	public int getQtdServico() {

@@ -16,10 +16,6 @@ public class Telefone {
 		this.numero = numero;
 	}
 	
-	
-	public String toString() {
-		return "Telefone: (" + ddd + ") " + numero;
-	}
 
 	public String getDdd() {
 		return ddd;

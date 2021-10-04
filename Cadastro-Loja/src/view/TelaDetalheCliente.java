@@ -1,5 +1,6 @@
 package view;
 
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 
 import java.awt.event.ActionListener;
@@ -18,6 +19,7 @@ public class TelaDetalheCliente implements ActionListener{
 	
 	private JFrame janela;
 	private JList<String> produtosComprados;
+	private JLabel compras;
 	private JLabel labelNome = new JLabel("Nome: ");
 	private JTextField valorNome;
 	private JLabel labelCPF = new JLabel("CPF: ");
@@ -31,20 +33,18 @@ public class TelaDetalheCliente implements ActionListener{
 	private JButton botaoSalvar = new JButton("Salvar");
 	private String[] novoDado = new String[9];
 	private ControlDados dados;
-	private List<String> listaNomes;
 	private int posicao;
 	private int opcao;
 	private String s;
-	private List<Produto> listaProdutos;
 	private String[] listaNomesProdutos;
 	
-	public void inserirEditar(int opcao, ControlDados dados, 
+	public void cadastrarEditar(int opcao, ControlDados dados, 
 			TelaCliente cliente, int posicao) {
 		
 		this.opcao = opcao;
 		this.posicao = posicao;
 		this.dados = dados;
-
+		listaNomesProdutos = dados.getCliente()[posicao].getCarrinho();
 		
 		if (opcao == 1) s = "Cadastro de Cliente";
 		if (opcao == 2) s = "Detalhe de Cliente";
@@ -53,12 +53,8 @@ public class TelaDetalheCliente implements ActionListener{
 		
 		if (opcao == 2) {
 			
-			listaProdutos = dados.getCliente()[posicao].getCarrinho();
-			listaProdutos.forEach(prod -> {
-				listaNomes.add(prod.getNome());
-			});
-			listaNomesProdutos = (String[]) listaNomes.toArray();
 			produtosComprados = new JList<String>(listaNomesProdutos);
+			compras = new JLabel("Produtos Comprados");
 			valorNome = new JTextField(dados.getCliente()[posicao].getNome(), 200);
 			valorCPF = new JTextField(String.valueOf(dados.getCliente()[posicao].getCpf()), 200);
 			valorRG = new JTextField(String.valueOf(dados.getCliente()[posicao].getRg()), 200);
@@ -84,12 +80,17 @@ public class TelaDetalheCliente implements ActionListener{
 		labelTelefone.setBounds(30, 110, 150, 25);
 		valorDDD.setBounds(180, 110, 28, 25);
 		valorTelefone.setBounds(210, 110, 65, 25);
-		
 
-		//Coloca os campos relacionados a endereco se cliente
+		//Coloca os campos relacionados ao cliente
 		if (opcao == 2 ) {
-			botaoSalvar.setBounds(120, 175, 115, 30);
-			botaoExcluir.setBounds(245, 175, 115, 30);
+			compras.setFont(new Font("Calibri", Font.BOLD, 16));
+			compras.setBounds(120, 160, 160, 30);
+			produtosComprados.setBounds(40, 190, 300, 120);
+			botaoSalvar.setBounds(120, 340, 115, 30);
+			botaoExcluir.setBounds(245, 340, 115, 30);
+			produtosComprados.setVisibleRowCount(10);
+			this.janela.add(compras);
+			this.janela.add(produtosComprados);
 			this.janela.add(botaoExcluir);
 
 		}
@@ -104,10 +105,9 @@ public class TelaDetalheCliente implements ActionListener{
 		this.janela.add(valorDDD);
 		this.janela.add(valorTelefone);
 		this.janela.add(botaoSalvar);
-
 		this.janela.setLayout(null);
 
-		this.janela.setSize(400, 300);
+		this.janela.setSize(400, 430);
 		this.janela.setVisible(true);
 
 		botaoSalvar.addActionListener(this);
@@ -119,7 +119,7 @@ public class TelaDetalheCliente implements ActionListener{
 	
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		
+	
 		if(e.getSource() == botaoSalvar) {
 			try {
 				boolean res = false;
@@ -135,10 +135,9 @@ public class TelaDetalheCliente implements ActionListener{
 				novoDado[3] =  valorRG.getText();
 				novoDado[4] =  valorDDD.getText();
 				novoDado[5] =  valorTelefone.getText();
-				//novoDado[6] =  valorCompra.getText();
 				
 				if (opcao == 1 || opcao == 2) {
-					res = dados.inserirEditarCliente(novoDado);
+					res = dados.cadastrarEditarCliente(novoDado);
 				} 
 				if(res) {
 					mensagemSucessoCadastro();
@@ -152,14 +151,13 @@ public class TelaDetalheCliente implements ActionListener{
 			}
 		}
 
+		 //exclui cliente
 		if(e.getSource() == botaoExcluir) {
 			boolean res = false;
-
-			if (opcao == 2) {//exclui cliente
-				res = dados.removerCliente(posicao);
+			if (opcao == 2) {
+				res = dados.deletarCliente(posicao);
 				if (res) mensagemSucessoExclusao(); 
-			}
-			
+			}	
 		}
 		
 	}
@@ -177,11 +175,9 @@ public class TelaDetalheCliente implements ActionListener{
 	}
 
 	public void mensagemErroCadastro() {
-		JOptionPane.showMessageDialog(null,"ERRO AO SALVAR OS DADOS!\n "
-				+ "Pode ter ocorrido um dos dois erros a seguir:  \n"
-				+ "1. Nem todos os campos foram preenchidos \n"
-				+ "2. CPF, RG, DDD e telefone não contém apenas números", null, 
+		JOptionPane.showMessageDialog(null,"ERRO AO SALVAR OS DADOS!\n ", null,
 				JOptionPane.ERROR_MESSAGE);
+		janela.dispose();
 	}
 	
 }

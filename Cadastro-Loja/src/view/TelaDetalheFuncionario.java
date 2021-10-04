@@ -138,7 +138,7 @@ public class TelaDetalheFuncionario implements ActionListener {
 				novoDado[7] = valorTelefone.getText();
 				
 				if (opcao == 1 || opcao == 2) {
-					res = dados.inserirEditarFuncionario(novoDado);
+					res = dados.cadastrarEditarFuncionario(novoDado);
 				} 
 				
 				if(res) {
@@ -157,7 +157,7 @@ public class TelaDetalheFuncionario implements ActionListener {
 			boolean res = false;
 
 			if (opcao == 2) {//exclui funcionario
-				res = dados.removerFuncionario(posicao);
+				res = dados.deletarFuncionario(posicao);
 				if (res) mensagemSucessoExclusao(); 
 			}
 			

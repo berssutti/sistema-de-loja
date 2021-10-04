@@ -232,26 +232,7 @@ public class TelaDetalheProduto implements ActionListener{
 		valorPreco.setBounds(180, 170, 180, 25);
 		labelGarantia.setBounds(30, 200, 150, 25);
 		valorGarantia.setBounds(180, 200, 180, 25);
-		
-		/*
-		 * labelVolume.setBounds(180, 110, 180, 25); valorVolume.setBounds(180, 110,
-		 * 180, 25); labelPeso.setBounds(180, 110, 180, 25); valorPeso.setBounds(180,
-		 * 110, 180, 25); labelVoltagem.setBounds(180, 110, 180, 25);
-		 * valorVoltagem.setBounds(180, 110, 180, 25); labelPotencia.setBounds(180, 110,
-		 * 180, 25); valorPotencia.setBounds(180, 110, 180, 25);
-		 * labelConsumodeEnergia.setBounds(180, 110, 180, 25);
-		 * valorConsumodeEnergia.setBounds(180, 110, 180, 25);
-		 * labelMedidas.setBounds(30, 300, 180, 25); valorMedidas.setBounds(180, 300,
-		 * 180, 25); laberPesoSuportavel.setBounds(180, 110, 180, 25);
-		 * valorPesoSuportavel.setBounds(180, 110, 180, 25); labelTipo.setBounds(180,
-		 * 110, 180, 25); valorTipo.setBounds(180, 110, 180, 25);
-		 * labelMaterial.setBounds(180, 110, 180, 25); valorMaterial.setBounds(180, 110,
-		 * 180, 25); labelQtdServico.setBounds(180, 110, 180, 25);
-		 * valorQtdServico.setBounds(180, 110, 180, 25); labelQtdGaveta.setBounds(180,
-		 * 110, 180, 25); valorQtdGaveta.setBounds(180, 110, 180, 25);
-		 * labelQtdPorta.setBounds(180, 110, 180, 25); valorQtdPorta.setBounds(180, 110,
-		 * 180, 25);
-		 */
+	
 		
 		//Coloca os campos relacionados a cadeira
 		if (op == 7 || op == 1 ) {
@@ -468,40 +449,40 @@ public class TelaDetalheProduto implements ActionListener{
 					novoDado[9] = valorTipo.getText();
 					novoDado[10] = valorPeso.getText();
 					novoDado[11] = valorPesoSuportavel.getText();
-					res = dados.inserirEditarCadeira(novoDado);
+					res = dados.cadastrarEditarCadeira(novoDado);
 				} else if (opcao == 2 || opcao == 8){//mesa
 					novoDado[8] =  valorMedidas.getText();
 					novoDado[9] =  valorPesoSuportavel.getText();
 					novoDado[10] =  valorTipo.getText();
 					novoDado[11] =  valorMaterial.getText();
 					novoDado[12] =  valorPeso.getText();
-					res = dados.inserirEditarMesa(novoDado);
+					res = dados.cadastrarEditarMesa(novoDado);
 				} else if (opcao == 3 || opcao == 9){//armario
 					novoDado[8] =  valorQtdGaveta.getText();
 					novoDado[9] =  valorMedidas.getText();
 					novoDado[10] =  valorTipo.getText();
 					novoDado[11] =  valorMaterial.getText();
 					novoDado[12] =  valorQtdPorta.getText();
-					res = dados.inserirEditarArmario(novoDado);
+					res = dados.cadastrarEditarArmario(novoDado);
 				} else if (opcao == 4 || opcao == 10){//geladeira
 					novoDado[8] =  valorVolume.getText();
 					novoDado[9] =  valorPeso.getText();
 					novoDado[10] =  valorVoltagem.getText();
 					novoDado[11] =  valorConsumodeEnergia.getText();
-					res = dados.inserirEditarGeladeira(novoDado);
+					res = dados.cadastrarEditarGeladeira(novoDado);
 				} else if (opcao == 5 || opcao == 11){//microondas
 					novoDado[8] =  valorVolume.getText();
 					novoDado[9] =  valorPeso.getText();
 					novoDado[10] =  valorVoltagem.getText();
 					novoDado[11] =  valorPotencia.getText();
 					novoDado[12] =  valorConsumodeEnergia.getText();
-					res = dados.inserirEditarMicroondas(novoDado);
+					res = dados.cadastrarEditarMicroondas(novoDado);
 				} else if (opcao == 6 || opcao == 12){//lava louças
 					novoDado[8] =  valorQtdServico.getText();
 					novoDado[9] =  valorPeso.getText();
 					novoDado[10] =  valorVoltagem.getText();
 					novoDado[11] =  valorConsumodeEnergia.getText();
-					res = dados.inserirEditarLavaLoucas(novoDado);
+					res = dados.cadastrarEditarLavaLoucas(novoDado);
 				}
 
 				if(res == true) {
@@ -520,37 +501,37 @@ public class TelaDetalheProduto implements ActionListener{
 			boolean res = false;
 
 			if (opcao == 7) {//exclui cadeira
-				res = dados.removerCadeira(posicao);
+				res = dados.deletarCadeira(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusao(); 
 			}
 				
 			if (opcao == 8){ //exclui mesa
-				res = dados.removerMesa(posicao);
+				res = dados.deletarMesa(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusao(); 
 			}
 			
 			if (opcao == 9){ //exclui armario
-				res = dados.removerArmario(posicao);
+				res = dados.deletarArmario(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusao(); 
 			}
 			
 			if (opcao == 10){ //exclui geladeira
-				res = dados.removerGeladeira(posicao);
+				res = dados.deletarGeladeira(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusao(); 
 			}
 			
 			if (opcao == 11){ //exclui microondas
-				res = dados.removerMicroondas(posicao);
+				res = dados.deletarMicroondas(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusao(); 
 			}
 			
 			if (opcao == 12){ //exclui lava louças
-				res = dados.removerLavaLoucas(posicao);
+				res = dados.deletarLavaLoucas(posicao);
 				if (res) mensagemSucessoExclusao(); 
 				else mensagemErroExclusao(); 
 			}
@@ -581,6 +562,5 @@ public class TelaDetalheProduto implements ActionListener{
 		 JOptionPane.showMessageDialog(null,"Ocorreu um erro ao excluir o dado.\n ",
 				 null, JOptionPane.ERROR_MESSAGE); 
 	 }
-	  
 	 
 }
