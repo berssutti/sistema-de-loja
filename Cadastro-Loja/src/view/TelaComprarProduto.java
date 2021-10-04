@@ -20,12 +20,12 @@ public class TelaComprarProduto implements ActionListener {
 	private JButton microondas;
 	private JButton geladeira;
 	private JButton lavaLoucas;
-	public ControlDados dados = new ControlDados();
-	
-	public void mostrarDados() {
+	private ControlDados dados = new ControlDados();
+	private int posicao;
+	public void mostrarDados(int posicao) {
 		
 		janela = new JFrame("Produtos");
-		titulo = new JLabel("Escolha um opção para ver os produtos");
+		titulo = new JLabel("Escolha um opção para ver os produtos para o " + dados.getCliente()[posicao].getNome());
 		cadeira = new JButton("Cadeira");
 		mesa = new JButton("Mesa");
 		armario = new JButton("Armario");
@@ -36,7 +36,7 @@ public class TelaComprarProduto implements ActionListener {
 		janela.setLayout(null);
 		
 		titulo.setFont(new Font("Calibri", Font.BOLD, 16));
-		titulo.setBounds(60, 10, 350, 40);
+		titulo.setBounds(60, 10, 550, 40);
 		cadeira.setBounds(130, 50, 135, 20);
 		mesa.setBounds(130, 80, 135, 20);
 		armario.setBounds(130, 110, 135, 20);
@@ -51,7 +51,7 @@ public class TelaComprarProduto implements ActionListener {
 		janela.add(microondas);
 		janela.add(geladeira);
 		janela.add(lavaLoucas);
-		janela.setSize(400, 300);
+		janela.setSize(700, 300);
 		janela.setVisible(true);
 		
 		cadeira.addActionListener(this);
@@ -70,27 +70,27 @@ public class TelaComprarProduto implements ActionListener {
 		
 		//Mostra tela do produto
 				if(e.getSource() == cadeira)
-					new TelaEscolherProduto().mostrarProdutos(dados,1);
+					new TelaEscolherProduto().mostrarProdutos(dados,1,posicao);
 				
 				//Mostra tela do produto
 				if(e.getSource() == mesa)
-					new TelaEscolherProduto().mostrarProdutos(dados,2);
+					new TelaEscolherProduto().mostrarProdutos(dados,2,posicao);
 				
 				//Mostra tela do produto
 				if(e.getSource() == armario)
-					new TelaEscolherProduto().mostrarProdutos(dados,3);
+					new TelaEscolherProduto().mostrarProdutos(dados,3,posicao);
 				
 				//Mostra tela do produto
 				if(e.getSource() == geladeira)
-					new TelaEscolherProduto().mostrarProdutos(dados,4);
+					new TelaEscolherProduto().mostrarProdutos(dados,4,posicao);
 				
 				//Mostra tela do produto
 				if(e.getSource() == microondas)
-					new TelaEscolherProduto().mostrarProdutos(dados,5);
+					new TelaEscolherProduto().mostrarProdutos(dados,5,posicao);
 				
 				//Mostra tela do produto
 				if(e.getSource() == lavaLoucas)
-					new TelaEscolherProduto().mostrarProdutos(dados,6);
+					new TelaEscolherProduto().mostrarProdutos(dados,6,posicao);
 		
 	}
 }

@@ -1,5 +1,7 @@
 package model;
 
+import java.util.*;
+
 public class Dados {
 	
 	private Cliente[] cliente = new Cliente[50];
@@ -26,7 +28,7 @@ public class Dados {
 
 		for(int i = 0; i < 5; i++) {
 			telefone[i] = new Telefone(Integer.toString((i+1)*10),Integer.toString((i+1)*1000000));
-			cliente[i] = new Cliente("Cliente"+i, "CPF"+i, "RG"+i, telefone[i]);
+			cliente[i] = new Cliente("Cliente"+i, "CPF"+i, "RG"+i, telefone[i], Arrays.asList(new Geladeira(5.3f, 288f, 34f, 45f), new Mesa("20x29", 24, "Gamer", "madeira", 90.6f)));
 			funcionario[i] = new Funcionario("Funcionario"+i, "CPF"+ i*2, "RG"+i*2, "Atendente",333.50f, telefone[i]);
 			armario[i] = new Armario(10, "209x10", "Gamer", "madeira", 4);
 			armario[i].setNome("Armario"+i);

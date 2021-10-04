@@ -60,7 +60,7 @@ public class TelaMenu implements ActionListener{
 			new TelaMenuProduto().mostrarProdutos();
 		 
 		 if(e.getSource() == carrinho) 
-				new TelaCarrinho().mostrarDados(dados);
+			new TelaCarrinho().mostrarDados(dados);
 		 
 	}
 

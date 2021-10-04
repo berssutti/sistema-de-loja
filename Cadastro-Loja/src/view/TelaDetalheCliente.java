@@ -7,13 +7,17 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import control.*;
+import model.Produto;
 
+import java.util.*;
 public class TelaDetalheCliente implements ActionListener{
 	
 	private JFrame janela;
+	private JList<String> produtosComprados;
 	private JLabel labelNome = new JLabel("Nome: ");
 	private JTextField valorNome;
 	private JLabel labelCPF = new JLabel("CPF: ");
@@ -27,9 +31,12 @@ public class TelaDetalheCliente implements ActionListener{
 	private JButton botaoSalvar = new JButton("Salvar");
 	private String[] novoDado = new String[9];
 	private ControlDados dados;
+	private List<String> listaNomes;
 	private int posicao;
 	private int opcao;
 	private String s;
+	private List<Produto> listaProdutos;
+	private String[] listaNomesProdutos;
 	
 	public void inserirEditar(int opcao, ControlDados dados, 
 			TelaCliente cliente, int posicao) {
@@ -45,6 +52,13 @@ public class TelaDetalheCliente implements ActionListener{
 		janela = new JFrame(s);
 		
 		if (opcao == 2) {
+			
+			listaProdutos = dados.getCliente()[posicao].getCarrinho();
+			listaProdutos.forEach(prod -> {
+				listaNomes.add(prod.getNome());
+			});
+			listaNomesProdutos = (String[]) listaNomes.toArray();
+			produtosComprados = new JList<String>(listaNomesProdutos);
 			valorNome = new JTextField(dados.getCliente()[posicao].getNome(), 200);
 			valorCPF = new JTextField(String.valueOf(dados.getCliente()[posicao].getCpf()), 200);
 			valorRG = new JTextField(String.valueOf(dados.getCliente()[posicao].getRg()), 200);
@@ -121,6 +135,7 @@ public class TelaDetalheCliente implements ActionListener{
 				novoDado[3] =  valorRG.getText();
 				novoDado[4] =  valorDDD.getText();
 				novoDado[5] =  valorTelefone.getText();
+				//novoDado[6] =  valorCompra.getText();
 				
 				if (opcao == 1 || opcao == 2) {
 					res = dados.inserirEditarCliente(novoDado);

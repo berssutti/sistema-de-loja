@@ -29,15 +29,22 @@ public class TelaEscolherProduto implements ListSelectionListener {
 	private JList<String> listaLavaLoucasCadastradas;
 	private ControlDados dados;
 	private String[] listaNomes = new String[50];
+	private int posicaoCliente;
+	private JList<String> listaProdutosCadastrados;
+	private int controlSelecionado;
 	
-	public void mostrarProdutos(ControlDados dados, int op) {
+	public void mostrarProdutos(ControlDados dados, int op, int posicaoCliente) {
 		
+		this.posicaoCliente = posicaoCliente;
 		this.dados = dados;
 		
 		switch (op) {
-		case 1:// Mostrar dados de Armarios cadastrados 
+		case 1:// Mostrar dados de cadeiras cadastrados
+			this.controlSelecionado = 1;
+			
 			listaNomes = new ControlCadeira(dados).getNomeCadeira();
 			listaCadeirasCadastradas = new JList<String>(listaNomes);
+			this.listaProdutosCadastrados = listaCadeirasCadastradas;
 			janela = new JFrame("Cadeiras");
 			titulo = new JLabel("Escolha uma cadeira");
 			
@@ -56,13 +63,16 @@ public class TelaEscolherProduto implements ListSelectionListener {
 			janela.setVisible(true);
 			
 			listaCadeirasCadastradas.addListSelectionListener(this);
-
+			
 			break;
 		case 2:// Mostrar dados de Mesas cadastradas
+			this.controlSelecionado = 2;
+
 			listaNomes = new ControlMesa(dados).getNomeMesa();
 			listaMesasCadastradas = new JList<String>(listaNomes);
-			janela = new JFrame("Mesaessores");
-			titulo = new JLabel("Mesaessores Cadastrados");
+			this.listaProdutosCadastrados = listaMesasCadastradas;
+			janela = new JFrame("Mesas");
+			titulo = new JLabel("Escolha uma Mesa");
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
 			listaMesasCadastradas.setBounds(20, 50, 350, 120);
@@ -79,11 +89,14 @@ public class TelaEscolherProduto implements ListSelectionListener {
 
 			listaMesasCadastradas.addListSelectionListener(this);
 			break;
-		case 3:
+		case 3:// Mostrar dados de Armarios cadastradas
+			this.controlSelecionado = 3;
+			
 			listaNomes = new ControlArmario(dados).getNomeArmario();
 			listaArmariosCadastrados = new JList<String>(listaNomes);
+			this.listaProdutosCadastrados = listaArmariosCadastrados;
 			janela = new JFrame("Armarios");
-			titulo = new JLabel("Armarios Cadastrados");	
+			titulo = new JLabel("Escolha um Armario");	
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
 			listaArmariosCadastrados.setBounds(20, 50, 350, 120);
@@ -100,11 +113,14 @@ public class TelaEscolherProduto implements ListSelectionListener {
 
 			listaArmariosCadastrados.addListSelectionListener(this);
 			break;
-		case 4:
+		case 4:// Mostrar dados de Geladeiras cadastradas
+			this.controlSelecionado = 4;
+			
 			listaNomes = new ControlGeladeira(dados).getNomeGeladeira();
 			listaGeladeirasCadastradas = new JList<String>(listaNomes);
+			this.listaProdutosCadastrados = listaGeladeirasCadastradas;
 			janela = new JFrame("Geladeiras");
-			titulo = new JLabel("Geladeiras Cadastrados");
+			titulo = new JLabel("Escolha uma Geladeira");
 		
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
@@ -124,11 +140,15 @@ public class TelaEscolherProduto implements ListSelectionListener {
 
 			listaGeladeirasCadastradas.addListSelectionListener(this);
 			break;
-		case 5:
+		case 5:// Mostrar dados de Microondas cadastradas
+			this.controlSelecionado = 5;
+			
 			listaNomes = new ControlMicroondas(dados).getNomeMicroondas();
 			listaMicroondasCadastrados = new JList<String>(listaNomes);
-			janela = new JFrame("Microondass");
-			titulo = new JLabel("Microondass Cadastrados");
+			this.listaProdutosCadastrados = listaMicroondasCadastrados;
+
+			janela = new JFrame("Microondas");
+			titulo = new JLabel("Escolha um Microondas");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
@@ -147,11 +167,14 @@ public class TelaEscolherProduto implements ListSelectionListener {
 
 			listaMicroondasCadastrados.addListSelectionListener(this);
 			break;
-		case 6:
+		case 6:// Mostrar dados de lava Louças cadastradas
+			this.controlSelecionado = 6;
+			
 			listaNomes = new ControlLavaLoucas(dados).getNomeLavaLoucas();
 			listaLavaLoucasCadastradas = new JList<String>(listaNomes);
+			this.listaProdutosCadastrados = listaLavaLoucasCadastradas;
 			janela = new JFrame("LavaLoucass");
-			titulo = new JLabel("LavaLoucass Cadastrados");
+			titulo = new JLabel("Escolha uma Lava Louças");
 
 			titulo.setFont(new Font("Arial", Font.BOLD, 20));
 			titulo.setBounds(90, 10, 250, 30);
@@ -181,7 +204,7 @@ public class TelaEscolherProduto implements ListSelectionListener {
 		
 		if(e.getValueIsAdjusting() &&( e.getSource() == listaCadeirasCadastradas || e.getSource() == listaArmariosCadastrados || e.getSource() == listaMesasCadastradas
 				|| e.getSource() == listaMicroondasCadastrados|| e.getSource() == listaGeladeirasCadastradas|| e.getSource() == listaLavaLoucasCadastradas)) {
-			new TelaConfirmacao().mostrarTela(2);
+			new TelaConfirmacao().mostrarTela(2,posicaoCliente,listaProdutosCadastrados.getSelectedIndex(), controlSelecionado);
 		}
 		
 	}

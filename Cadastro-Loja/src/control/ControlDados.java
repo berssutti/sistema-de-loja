@@ -1,7 +1,7 @@
 package control;
 
 import model.*;
-  
+
 public class ControlDados {
 	private Dados dados = new Dados();
 	  
@@ -16,7 +16,7 @@ public class ControlDados {
 			//return false;		
 		//} else {
 			Cliente c = new Cliente(dadosCliente[1], dadosCliente[2], dadosCliente[3], new
-			Telefone(dadosCliente[4], dadosCliente[5])); 
+			Telefone(dadosCliente[4], dadosCliente[5]), dadosCliente[6]); 
 			dados.inserirEditarCliente(c, Integer.parseInt(dadosCliente[0]));
 			  				 
 			return true;

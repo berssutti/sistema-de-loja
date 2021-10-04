@@ -47,7 +47,7 @@ public class TelaCarrinho implements ListSelectionListener {
 	public void valueChanged(ListSelectionEvent e) {
 
 		if(e.getValueIsAdjusting() && e.getSource() == listaClientesCadastrados) {
-			new TelaConfirmacao().mostrarTela(1);
+			new TelaConfirmacao().mostrarTela(1,listaClientesCadastrados.getSelectedIndex());
 		}
 
 		

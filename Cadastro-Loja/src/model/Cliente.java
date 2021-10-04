@@ -1,19 +1,27 @@
 package model;
 
+import java.util.*;
+
 public class Cliente {
 
 	private String nome;
 	private String cpf;
 	private String rg;
 	private Telefone numero;
+	private List<Produto> carrinho;
 
-	
-	public Cliente(String nome, String cpf, String rg, Telefone numero) {
+
+	public Cliente(String nome, String cpf, String rg, Telefone numero, List<Produto> carrinho) {
 		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;
 		this.numero = numero;
+		this.carrinho = carrinho;
+	}
+	
+	public void addCarrinho(Produto produto) {
+		this.carrinho.add(produto);
 	}
 	
 
@@ -47,6 +55,14 @@ public class Cliente {
 
 	public void setNumero(Telefone numero) {
 		this.numero = numero;
+	}
+	
+	public List<Produto> getCarrinho() {
+		return carrinho;
+	}
+
+	public void setCarrinho(List<Produto> carrinho) {
+		this.carrinho = carrinho;
 	}
 
 }
