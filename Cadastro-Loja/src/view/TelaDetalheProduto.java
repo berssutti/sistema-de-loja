@@ -11,7 +11,6 @@ import control.*;
 
 public class TelaDetalheProduto implements ActionListener{
 	
-	//produto
 	private JFrame janela;
 	private JLabel labelNome = new JLabel("Nome: ");
 	private JTextField valorNome;
@@ -25,61 +24,32 @@ public class TelaDetalheProduto implements ActionListener{
 	private JTextField valorID;
 	private JLabel labelMarca = new JLabel("Marca: ");
 	private JTextField valorMarca;
-	private JLabel labelPreco = new JLabel("Preço: ");
+	private JLabel labelPreco = new JLabel("Preço(R$): ");
 	private JTextField valorPreco;
-	
-	//microondas
-	private JLabel labelVolume = new JLabel("Volume: ");
+	private JLabel labelVolume = new JLabel("Volume(L): ");
 	private JTextField valorVolume;
-	private JLabel labelPeso = new JLabel("Peso: ");
+	private JLabel labelPeso = new JLabel("Peso(Kg): ");
 	private JTextField valorPeso;
-	private JLabel labelVoltagem = new JLabel("Voltagem: ");
+	private JLabel labelVoltagem = new JLabel("Voltagem(V): ");
 	private JTextField valorVoltagem;
-	private JLabel labelPotencia = new JLabel("Potencia: ");
+	private JLabel labelPotencia = new JLabel("Potencia(W): ");
 	private JTextField valorPotencia;
-	private JLabel labelConsumodeEnergia = new JLabel("Comsumo de Energia: ");
+	private JLabel labelConsumodeEnergia = new JLabel("Comsumo de Energia(Kw/h): ");
 	private JTextField valorConsumodeEnergia;
-
-	
-	//Mesa
-	private JLabel labelMedidas = new JLabel("Medidas: ");
+	private JLabel labelMedidas = new JLabel("Medidas(cmxcm): ");
 	private JTextField valorMedidas;
-	private JLabel laberPesoSuportavel = new JLabel("Peso Suportável: ");
+	private JLabel laberPesoSuportavel = new JLabel("Peso Suportável(Kg): ");
 	private JTextField valorPesoSuportavel;
 	private JLabel labelTipo = new JLabel("Tipo: ");
 	private JTextField valorTipo;
 	private JLabel labelMaterial = new JLabel("Material: ");
 	private JTextField valorMaterial;
-	//private JLabel peso;
-	
-	//lava loucas
 	private JLabel labelQtdServico =  new JLabel("Quantidade de Serviços: ");
 	private JTextField valorQtdServico;
-	//private JLabel peso;
-	//private JLabel voltagem;
-	//private JLabel consumodeEnergia;
-	
-	//geladeira
-	//private JLabel volume;
-	//private JLabel peso;
-	//private JLabel voltagem;
-	//private JLabel consumodeEnergia;
-	
-	//cadeira
-	//private JLabel medidas;
-	//private JLabel tipo;
-	//private JLabel peso;
-	//private JLabel pesoSuportavel;
-	
-	// armario
 	private JLabel labelQtdGaveta =  new JLabel("Quantidade de Gavetas: ");
 	private JTextField valorQtdGaveta;
-	//private JLabel medidas;
-	//private JLabel tipo;
-	//private JLabel material;
 	private JLabel labelQtdPorta =  new JLabel("Quantidade de Portas: ");
 	private JTextField valorQtdPorta;
-	
 	private JButton botaoExcluir = new JButton("Excluir");
 	private JButton botaoSalvar = new JButton("Salvar");
 	private String[] novoDado = new String[13];

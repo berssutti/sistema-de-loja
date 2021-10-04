@@ -2,9 +2,7 @@ package view;
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;
-
 import java.awt.event.ActionListener;
-
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -12,9 +10,7 @@ import javax.swing.JList;
 import javax.swing.JOptionPane;
 import javax.swing.JTextField;
 import control.*;
-import model.Produto;
 
-import java.util.*;
 public class TelaDetalheCliente implements ActionListener{
 	
 	private JFrame janela;

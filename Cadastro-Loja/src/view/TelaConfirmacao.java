@@ -7,6 +7,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 import control.*; 
 import model.*;
@@ -23,6 +24,7 @@ public class TelaConfirmacao implements ActionListener {
 	private int controlSelecionado;
 	private ControlDados dados = new ControlDados(); 
 	private Produto produtoComprado;
+	private int tipoProduto;
 	
 	//Para cliente
 	public void mostrarTela(int opcao, int clienteSelecionado ) {
@@ -36,26 +38,32 @@ public class TelaConfirmacao implements ActionListener {
 			case 1:
 				produtoComprado = dados.getCadeira()[produtoSelecionado];
 				perguntaProduto =  new JLabel("Deseja selecionar esse produto " + dados.getCadeira()[produtoSelecionado].getNome() + " ?");
+				tipoProduto = 1;
 				break;
 			case 2:
 				produtoComprado = dados.getMesa()[produtoSelecionado];
 				perguntaProduto =  new JLabel("Deseja selecionar esse produto " + dados.getMesa()[produtoSelecionado].getNome() + " ?");
+				tipoProduto = 2;
 				break;		
 			case 3:
 				produtoComprado = dados.getArmario()[produtoSelecionado];
 				perguntaProduto =  new JLabel("Deseja selecionar esse produto " + dados.getArmario()[produtoSelecionado].getNome() + " ?");
+				tipoProduto = 3;
 				break;
 			case 4:
 				produtoComprado = dados.getGeladeira()[produtoSelecionado];
 				perguntaProduto =  new JLabel("Deseja selecionar esse produto " + dados.getGeladeira()[produtoSelecionado].getNome() + " ?");
+				tipoProduto = 4;
 				break;
 			case 5:
 				produtoComprado = dados.getMicroondas()[produtoSelecionado];
 				perguntaProduto =  new JLabel("Deseja selecionar esse produto " + dados.getMicroondas()[produtoSelecionado].getNome() + " ?");
+				tipoProduto = 5;
 				break;
 			case 6:
 				produtoComprado = dados.getlavaLoucas()[produtoSelecionado];
 				perguntaProduto =  new JLabel("Deseja selecionar esse produto " + dados.getlavaLoucas()[produtoSelecionado].getNome() + " ?");
+				tipoProduto = 6;
 				break;
 		}
 		
@@ -115,9 +123,9 @@ public class TelaConfirmacao implements ActionListener {
 			dados.getCliente()[clienteSelecionado].addCarrinho(produtoComprado.getNome(),
 					dados.getCliente()[clienteSelecionado].getQtdProdutosCarrinho());
 			janela.dispose();
-			JOptionPane.showMessageDialog(null, "Compra finalizada com sucesso!", null, 
-					JOptionPane.INFORMATION_MESSAGE);
-			janela.dispose();
+			
+			new TelaQtdCompras().mostrarTela(produtoSelecionado, tipoProduto);
+				
 		}
 		
 		//Não
