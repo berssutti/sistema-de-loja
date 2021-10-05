@@ -18,7 +18,6 @@ public class TelaQtdCompras implements ActionListener{
 	private JTextField qtdCompras;
 	private JLabel perguntaCompras;
 	private JButton butao;
-	private int qtdComprado;
 	private ControlDados dados = new ControlDados(); 
 	int tipoProduto;
 	int resultado;
@@ -52,30 +51,35 @@ public class TelaQtdCompras implements ActionListener{
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		
-		qtdComprado = Integer.parseInt( qtdCompras.getText());
 		
 		if(tipoProduto == 1) { // cadeira
-			dados.getCadeira()[produtoSelecionado].setQuantidadeemEstoque(dados.getCadeira()[produtoSelecionado].getQuantidadeemEstoque() - qtdComprado);
+			dados.getCadeira()[produtoSelecionado].setQuantidadeemEstoque(dados.getCadeira()[produtoSelecionado].getQuantidadeemEstoque() -
+					Integer.parseInt( qtdCompras.getText()));
 			janela.dispose();
 		}
 		if(tipoProduto == 2) { // mesa
-			dados.getMesa()[produtoSelecionado].setQuantidadeemEstoque(dados.getMesa()[produtoSelecionado].getQuantidadeemEstoque() - qtdComprado);
+			dados.getMesa()[produtoSelecionado].setQuantidadeemEstoque(dados.getMesa()[produtoSelecionado].getQuantidadeemEstoque() -
+					Integer.parseInt( qtdCompras.getText()));
 			janela.dispose();
 		}
 		if(tipoProduto == 3) { // armario
-			dados.getArmario()[produtoSelecionado].setQuantidadeemEstoque(dados.getArmario()[produtoSelecionado].getQuantidadeemEstoque() - qtdComprado);
+			dados.getArmario()[produtoSelecionado].setQuantidadeemEstoque(dados.getArmario()[produtoSelecionado].getQuantidadeemEstoque() -
+					Integer.parseInt( qtdCompras.getText()));
 			janela.dispose();
 		}
 		if(tipoProduto == 4) { // geladeira
-			dados.getGeladeira()[produtoSelecionado].setQuantidadeemEstoque(dados.getGeladeira()[produtoSelecionado].getQuantidadeemEstoque() - qtdComprado);
+			dados.getGeladeira()[produtoSelecionado].setQuantidadeemEstoque(dados.getGeladeira()[produtoSelecionado].getQuantidadeemEstoque() -
+					Integer.parseInt( qtdCompras.getText()));
 			janela.dispose();
 		}
 		if(tipoProduto == 5) { // microondas
-			dados.getMicroondas()[produtoSelecionado].setQuantidadeemEstoque(dados.getMicroondas()[produtoSelecionado].getQuantidadeemEstoque() - qtdComprado);
+			dados.getMicroondas()[produtoSelecionado].setQuantidadeemEstoque(dados.getMicroondas()[produtoSelecionado].getQuantidadeemEstoque() -
+					Integer.parseInt( qtdCompras.getText()));
 			janela.dispose();
 		}
 		if(tipoProduto == 6) { // lava louças
-			dados.getlavaLoucas()[produtoSelecionado].setQuantidadeemEstoque(dados.getlavaLoucas()[produtoSelecionado].getQuantidadeemEstoque() - qtdComprado);
+			dados.getlavaLoucas()[produtoSelecionado].setQuantidadeemEstoque(dados.getlavaLoucas()[produtoSelecionado].getQuantidadeemEstoque() -
+					Integer.parseInt( qtdCompras.getText()));
 			janela.dispose();
 		}
 		

@@ -29,7 +29,7 @@ public class Dados {
 			produtosPreDefinidos[0] = "Cadeira0";
 			produtosPreDefinidos[1] = "Mesa0";
 			cliente[i] = new Cliente("Cliente"+i, "CPF"+i, "RG"+i, telefone[i], produtosPreDefinidos);
-			funcionario[i] = new Funcionario("Funcionario"+i, "CPF"+ i*2, "RG"+i*2, "Atendente",333.50f, telefone[i]);
+			funcionario[i] = new Funcionario("Funcionario"+i, "CPF"+ i+10, "RG"+i*2, "Atendente",333.50f, telefone[i]);
 			armario[i] = new Armario(10, "209x10", "Gamer", "madeira", 4);
 			armario[i].setNome("Armario"+i);
 			armario[i].setDescricao("Para jogos");
