@@ -386,10 +386,10 @@ public class TelaDetalheProduto implements ActionListener{
 
 
 	public void actionPerformed(ActionEvent e) {
-		Object src = e.getSource();
-		if(src == botaoSalvar) {
+		
+		if(e.getSource() == botaoSalvar) {
 			try {
-				boolean res = true;
+				boolean res = false;
 				
 				if(opcao == 1) //cadastro de nova cadeira
 					novoDado[0] = Integer.toString(dados.getQtdCadeira());
@@ -455,7 +455,7 @@ public class TelaDetalheProduto implements ActionListener{
 					res = dados.cadastrarEditarLavaLoucas(novoDado);
 				}
 
-				if(res == true) {
+				if(res) {
 					mensagemSucessoCadastro();
 				}
 				else mensagemErroCadastro();
@@ -467,7 +467,7 @@ public class TelaDetalheProduto implements ActionListener{
 			}
 		}
 
-		if(src == botaoExcluir) {
+		if(e.getSource() == botaoExcluir) {
 			boolean res = false;
 
 			if (opcao == 7) {//exclui cadeira

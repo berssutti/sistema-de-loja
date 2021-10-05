@@ -243,25 +243,27 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 	//Captura eventos relacionados aos botões da interface
 	public void actionPerformed(ActionEvent e) {
 		
-		//Cadastro de novo aluno
+		//Cadastro de nova cadeira
 		if(e.getSource() == cadastroCadeira)
 			new TelaDetalheProduto().cadastrarEditarProduto(1, dados, this, 0);
 
-		//Cadastro de novo professor
+		//Cadastro de nova mesa
 		if(e.getSource() == cadastroMesa)
 			new TelaDetalheProduto().cadastrarEditarProduto(2, dados, this, 0);
 		
+		//Cadastro de novo armario
 		if(e.getSource() == cadastroArmario)
 			new TelaDetalheProduto().cadastrarEditarProduto(3, dados, this, 0);
 
-		//Cadastro de novo professor
+		//Cadastro de nova geladeira
 		if(e.getSource() == cadastroGeladeira)
 			new TelaDetalheProduto().cadastrarEditarProduto(4, dados, this, 0);
 		
+		//Cadastro de nova microondas
 		if(e.getSource() == cadastroMicroondas)
 			new TelaDetalheProduto().cadastrarEditarProduto(5, dados, this, 0);
 
-		//Cadastro de novo professor
+		//Cadastro de novo lava louças
 		if(e.getSource() == cadastroLavaLoucas)
 			new TelaDetalheProduto().cadastrarEditarProduto(6, dados, this, 0);
 		

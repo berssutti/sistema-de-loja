@@ -27,7 +27,6 @@ public class TelaEscolherProduto implements ListSelectionListener {
 	private JList<String> listaMicroondasCadastrados;
 	private JList<String> listaGeladeirasCadastradas;
 	private JList<String> listaLavaLoucasCadastradas;
-	private ControlDados dados;
 	private String[] listaNomes = new String[50];
 	private int posicaoCliente;
 	private JList<String> listaProdutosCadastrados;
@@ -36,7 +35,6 @@ public class TelaEscolherProduto implements ListSelectionListener {
 	public void mostrarProdutos(ControlDados dados, int op, int posicaoCliente) {
 		
 		this.posicaoCliente = posicaoCliente;
-		this.dados = dados;
 		
 		switch (op) {
 		case 1:// Mostrar dados de cadeiras cadastrados
