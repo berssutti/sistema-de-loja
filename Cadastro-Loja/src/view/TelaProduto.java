@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface que mostra os produtos cadastrados no sistema
+ * @author Bernardo Pissutti
+ * @version 1.0
+ */
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -37,7 +41,12 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 	private JList<String> listaLavaLoucasCadastradas;
 	private ControlDados dados;
 	private String[] listaNomes = new String[50];
-
+	/**
+	 * Mostra os produtos cadastrados através de uma JList
+	 * @param dados, acessar os dados dos produtos
+	 * @param op, representa a opcao de tipo de produto escolhido pelo usuário
+	 * @return void
+	 */
 	public void mostrarProdutos(ControlDados dados, int op){
 		this.dados = dados;
 

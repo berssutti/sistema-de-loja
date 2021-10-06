@@ -1,8 +1,8 @@
 package view;
 /**
  * Implementa uma interface para confirmar a escolha do cliente e produto
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -28,7 +28,12 @@ public class TelaConfirmacao implements ActionListener {
 	private Produto produtoComprado;
 	private int tipoProduto;
 	
-	//Para cliente
+	/**
+	 * Confirma o cliente ou o produto selecionado 
+	 * @param opcao, representa se o usuário está escolhendo um produto ou cliente
+	 * @param clienteSelecionado, representa a posição do cliente escolhido no JList
+	 * @return void
+	 */
 	public void mostrarTela(int opcao, int clienteSelecionado ) {
 		this.clienteSelecionado = clienteSelecionado;
 		this.opcao = opcao;
@@ -101,7 +106,14 @@ public class TelaConfirmacao implements ActionListener {
 		
 	}
 	
-	//Para produto
+	/**
+	 * Confirma o produto selecionado
+	 * @param opcao, representa se o usuário está escolhendo um produto ou cliente
+	 * @param clienteSelecionado, presenta a posição do cliente escolhido na JList
+	 * @param produtoSelecionado, presenta a posição do produto escolhido na JList
+	 * @param controlSelecionado, representa o tipo de produto selecionado na TelaComprarProduto
+	 * @return void
+	 */
 	public void mostrarTela(int opcao, int clienteSelecionado, int produtoSelecionado, int controlSelecionado ) {
 		this.produtoSelecionado = produtoSelecionado;
 		this.controlSelecionado = controlSelecionado;

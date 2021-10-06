@@ -2,8 +2,8 @@ package view;
 
 /**
  * Implementa uma interface para buscar o cliente ou funcionario
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 
 import java.awt.Font;
@@ -29,7 +29,7 @@ public class TelaBuscas implements ActionListener{
 	 * @param opcao define se o usuario que procurar por um cliente ou um funcionario
 	 * (1) opcao = 1 cliente
 	 * (2) opcao = 2 funcionario
-	 * return void
+	 * @return void
 	 */
 	public void mostrarTela(int opcao){
 		// opcao 1 = cliente

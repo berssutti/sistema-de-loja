@@ -1,8 +1,8 @@
 package view;
 /**
  * Implementa uma interface para mostrar os detalhes de cada produto cadastrado, além de permitir a edição de dados já cadastrados
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

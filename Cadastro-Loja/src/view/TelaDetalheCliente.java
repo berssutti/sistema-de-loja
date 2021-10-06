@@ -2,8 +2,8 @@ package view;
 /**
  * Implementa uma interface para mostrar os detalhes de cada cliente cadastrados e permitir a edição desses dados, além de poder mostrar a interface de cadastro
  * de novo um cliente
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -38,7 +38,16 @@ public class TelaDetalheCliente implements ActionListener{
 	private int opcao;
 	private String s;
 	private String[] listaNomesProdutos;
-	
+	/**
+	 * adastra novos cliente e mostra detalhes dos já existentes, permitindo a edição desses dados
+	 * @param opcao, representa a opcao escolhida pelo usuário
+	 * (1) cadastro de cliente
+	 * (2) detalhe de cliente
+	 * @param dados, permite acesso aos dados dos clientes
+	 * @param cliente
+	 * @param posicao,posição do cliente escolhido na JList
+	 * @return void
+	 */
 	public void cadastrarEditar(int opcao, ControlDados dados, 
 			TelaCliente cliente, int posicao) {
 		

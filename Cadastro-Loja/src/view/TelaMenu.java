@@ -1,8 +1,8 @@
 package view;
 /**
  * Implementa uma interface que mostra o menu principal
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -21,8 +21,11 @@ public class TelaMenu implements ActionListener{
 	private static JButton buscaCliente = new JButton("Buscar Cliente");
 	private static JButton buscaFuncionario = new JButton("Buscar Funcionario");
 	private static ControlDados dados = new ControlDados();
-	
-	public TelaMenu() {
+	/**
+	 * Cria a tela do menu do sistema
+	 * @return void
+	 */
+	public void TelaMenu() {
 		titulo.setFont(new Font("Calibri", Font.BOLD, 20));
 		titulo.setBounds(140, 10, 150, 30);
 		cliente.setBounds(140, 50, 120, 30);
@@ -46,7 +49,11 @@ public class TelaMenu implements ActionListener{
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
 	}
-	
+	/**
+	 * Instacia os ActioListener para os butões do menu
+	 * @param args
+	 * @return void
+	 */
 	public static void main(String[] args) {
 		TelaMenu menu = new TelaMenu();
 		

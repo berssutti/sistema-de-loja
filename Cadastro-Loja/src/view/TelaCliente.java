@@ -1,8 +1,8 @@
 package view;
 /**
  * Implementa uma interface para mostrar os cliente cadastrados
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import control.*;
 
@@ -27,7 +27,11 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 	private JList<String> listaClientesCadastrados;
 	private String[] listaNomes = new String[50];
 
-	// mostrar clientes cadastrados
+	/**
+	 * Mostra os cliente cadastrados através de uma JList
+	 * @param dados, que permite o acesso aos dados do cliente
+	 * @return void
+	 */
 	public void mostrarDados(ControlDados dados){
 		
 		this.dados = dados;

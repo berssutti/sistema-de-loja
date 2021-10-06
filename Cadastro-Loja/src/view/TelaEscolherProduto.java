@@ -1,8 +1,8 @@
 package view;
 /**
  * Implementa uma interface para escolher o produto que será comprado 
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import java.awt.Font;
 
@@ -35,7 +35,13 @@ public class TelaEscolherProduto implements ListSelectionListener {
 	private int posicaoCliente;
 	private JList<String> listaProdutosCadastrados;
 	private int controlSelecionado;
-	
+	/**
+	 * Mostra a lista de produtos que podem ser comprados
+	 * @param dados, permite o acesso aos dados dos produtos
+	 * @param op, representa o produto selecionado
+	 * @param posicaoCliente, posição do cliente selecionado na JList
+	 * @return void
+	 */
 	public void mostrarProdutos(ControlDados dados, int op, int posicaoCliente) {
 		
 		this.posicaoCliente = posicaoCliente;

@@ -1,8 +1,8 @@
 package view;
 /**
  * Implementa uma interface para mostrar o resultado da busca, ou pelo cliente ou pelo funcionario
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -27,7 +27,14 @@ public class TelaMostrarBuscas {
 	private JTextField valorSalario;
 	private ControlDados dados;
 	private JList<String> produtosComprados;
-	
+	/**
+	 * Mostra o resultado da busca
+	 * @param opcao, representa a escolha feita pelo usuário
+	 * (1) Cliente
+	 * (2) Funcionario
+	 * @param CPF, representa o cpf digitado pelo usuário
+	 * @return void
+	 */
 	public void mostrarTela(int opcao, String CPF) {
 		
 		valorNome = new JTextField(dados.getFuncionario()[posicao].getNome(), 200);

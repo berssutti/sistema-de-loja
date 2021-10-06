@@ -1,8 +1,8 @@
 package view;
 /**
  * Implementa uma interface para mostrar os funcionario cadastrados
- * @autor Bernardo Pissutti
- * @versio 1.0
+ * @author Bernardo Pissutti
+ * @version 1.0
  */
 import control.*;
 import java.awt.Font;
@@ -26,7 +26,11 @@ public class TelaFuncionario implements ActionListener, ListSelectionListener {
 	private ControlDados dados;
 	private JList<String> listaFuncionariosCadastrados;
 	private String[] listaNomes = new String[50];
-
+	/**
+	 * Mostra os funcioanarios cadastrados através de uma JList
+	 * @param dados, que permite o acesso aos dados do funcionario
+	 * @return void
+	 */
 	public void mostrarDados(ControlDados dados){
 		
 		this.dados = dados;
