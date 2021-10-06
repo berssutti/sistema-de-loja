@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface que mostra o menu principal
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;

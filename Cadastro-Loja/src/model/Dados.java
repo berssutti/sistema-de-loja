@@ -1,5 +1,9 @@
 package model;
-
+/**
+ * Randomizar dados para serem pré-cadastrados no sistema
+ * @author Bernardo Pissutti
+ * @vesion 1.0 [Out 2021]
+ */
 public class Dados {
 	
 	private Cliente[] cliente = new Cliente[50];
@@ -22,7 +26,11 @@ public class Dados {
 	private int qtdlavaLoucas = 0;
 	
 	public void addDados() {
-
+		/**
+		 * Atribui uma informação para o respectivo objeto a cada iteração do for
+		 * @author Bernardo Pissutti
+		 * @vesion 1.0 [Out 2021]
+		 */
 		for(int i = 0; i < 5; i++) {
 			telefone[i] = new Telefone(Integer.toString((i+1)*10),Integer.toString((i+1)*1000000));
 			String[] produtosPreDefinidos = new String[50];

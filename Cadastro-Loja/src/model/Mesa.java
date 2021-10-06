@@ -1,5 +1,11 @@
 package model;
 
+/**
+ * Cria classe Mesa herdando da classe produto, com gets e sets
+ * @author Bernardo Pissutti
+ * @vesion 1.0 [Out 2021]
+ */
+
 public class Mesa extends Produto {
 	
 	private String medidas;

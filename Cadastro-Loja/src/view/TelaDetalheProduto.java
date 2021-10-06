@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface para mostrar os detalhes de cada produto cadastrado, além de permitir a edição de dados já cadastrados
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
@@ -57,7 +61,27 @@ public class TelaDetalheProduto implements ActionListener{
 	private int posicao;
 	private int opcao;
 	private String s;
-
+	
+	/**
+	 * Cadastra ou edita o produto escolhido pelo usuario 
+	 * @param op, é numero equivalente à operação que o usuario deseja fazer
+	 * (1) Cadastro de cadeira
+	 * (2) Cadastro de Mesa
+	 * (3) Cadastro de Armario
+	 * (4) Cadastro de Geladeia
+	 * (5) Cadastro de Microondas
+	 * (6) Cadastro de Lava Louças
+	 * (7) Detalhe de Cadeira
+	 * (8) Detalhe de Mesa
+	 * (9) Detalhe de Armario
+	 * (10) Detalhe de Geladeira
+	 * (11) Detalhe de Microondas
+	 * (12) Detalhe de Lava Louças
+	 * @param dados, para receber os dados dos produtos ja existentes
+	 * @param p
+	 * @param pos, é a posição do produto na JList
+	 * @return void
+	 */
 	public void cadastrarEditarProduto(int op, ControlDados dados, 
 			TelaProduto p, int pos) {
 

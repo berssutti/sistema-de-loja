@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface para mostrar o resultado da busca, ou pelo cliente ou pelo funcionario
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JList;

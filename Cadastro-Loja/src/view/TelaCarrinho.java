@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface para escolher o cliente que irá comprar um produto
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import java.awt.Font;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -16,7 +20,11 @@ public class TelaCarrinho implements ListSelectionListener {
 	private JList<String> listaClientesCadastrados;
 	private String[] listaNomes = new String[50];
 	
-	// mostra os cliente a serem escolhidos
+	/**
+	 * Mostra por meio de uma JList os cliente que poder ser escolhidos
+	 * @param dados para pegar os nomes dos clientes
+	 * return void
+	 */
 	public void mostrarDados(ControlDados dados){
 		
 		listaNomes = new ControlCliente(dados).getNomeCliente();

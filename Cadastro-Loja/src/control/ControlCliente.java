@@ -1,5 +1,9 @@
 package control;
-
+/**
+ * Controla a classe Cliente
+ * @author Bernardo Pissutti
+ * @vesion 1.0 [Out 2021]
+ */
 import model.*;
 
 public class ControlCliente {
@@ -13,7 +17,11 @@ public class ControlCliente {
 
 	}
 	
-	// Armazena os nomes em um vetor de string
+	/**
+	 * Armazena os nomes em um vetor de String
+	 * @param null
+	 * @return s, um vetor de string com os nomes
+	 */
 	public String[] getNomeCliente() {
 		String[] s = new String[qtdClientes];
 		for (int i = 0; i < qtdClientes; i++) {

@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface para mostrar os tipos de produtos cadastrados no sistema
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 
 import java.awt.Font;
 import java.awt.event.ActionEvent;

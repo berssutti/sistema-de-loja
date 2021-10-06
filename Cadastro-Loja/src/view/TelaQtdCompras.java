@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface para o usuario digitar a quantidade de produtos ele irá comprar
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import control.*;
 
 import java.awt.Font;

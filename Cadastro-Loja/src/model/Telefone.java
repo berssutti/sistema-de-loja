@@ -1,5 +1,11 @@
 package model;
 
+/**
+ * Cria classe Telefone que está assiciada com as classes Cliente e Funcionario
+ * @author Bernardo Pissutti
+ * @vesion 1.0 [Out 2021]
+ */
+
 public class Telefone {
 	
 	private String ddd;

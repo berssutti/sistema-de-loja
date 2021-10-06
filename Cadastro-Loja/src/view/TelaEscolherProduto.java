@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface para escolher o produto que será comprado 
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import java.awt.Font;
 
 import javax.swing.JFrame;

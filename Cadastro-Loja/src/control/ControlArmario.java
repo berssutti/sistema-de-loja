@@ -1,11 +1,18 @@
 package control;
 
+/**
+ * Controla a classe Armario
+ * @author Bernardo Pissutti
+ * @vesion 1.0 [Out 2021]
+ */
+
 import model.*;
 
 public class ControlArmario {
 
 	private Armario[] armario;
 	private int qtdArmarios;
+	
 
 	public ControlArmario(ControlDados dados) {
 		armario = dados.getArmario();
@@ -13,7 +20,11 @@ public class ControlArmario {
 
 	}
 	
-	// Armazena os nomes em um vetor de string
+	/**
+	 * Armazena os nomes em um vetor de String
+	 * @param null
+	 * @return s, um vetor de string com os nomes
+	 */
 	public String[] getNomeArmario() {
 		String[] s = new String[qtdArmarios];
 		for (int i = 0; i < qtdArmarios; i++) {

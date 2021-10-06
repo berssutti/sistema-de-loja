@@ -1,5 +1,11 @@
 package model;
 
+/**
+ * Cria classe Funcionario com gets e sets
+ * @author Bernardo Pissutti
+ * @vesion 1.0 [Out 2021]
+ */
+
 public class Funcionario{
 
 	private String nome;

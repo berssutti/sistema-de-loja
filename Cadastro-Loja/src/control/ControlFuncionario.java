@@ -1,5 +1,9 @@
 package control;
-
+/**
+ * Controla a classe Funcionario
+ * @author Bernardo Pissutti
+ * @vesion 1.0 [Out 2021]
+ */
 import model.*;
 
 public class ControlFuncionario {
@@ -13,7 +17,11 @@ public class ControlFuncionario {
 		this.qtdFuncionarios = dados.getQtdFuncionarios();
 	}
 	
-	// Armazena os nomes em um vetor de string
+	/**
+	 * Armazena os nomes em um vetor de String
+	 * @param null
+	 * @return s, um vetor de string com os nomes
+	 */
 	public String[] getNomeFuncionario() {
 		String[] s = new String[qtdFuncionarios];
 		for(int i = 0; i < qtdFuncionarios; i++) {

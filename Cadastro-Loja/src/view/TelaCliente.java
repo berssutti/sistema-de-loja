@@ -1,5 +1,9 @@
 package view;
-
+/**
+ * Implementa uma interface para mostrar os cliente cadastrados
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import control.*;
 
 import java.awt.*;

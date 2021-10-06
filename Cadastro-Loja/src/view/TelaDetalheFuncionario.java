@@ -1,5 +1,10 @@
 package view;
-
+/**
+ *  Implementa uma interface para mostrar os detalhes de cada funcionario cadastrados e permitir a edição desses dados, além de poder mostrar a interface de cadastro
+ * de novo um funcionario
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -12,6 +17,7 @@ import javax.swing.JTextField;
 import control.*;
 
 public class TelaDetalheFuncionario implements ActionListener {
+
 	private JFrame janela;
 	private JLabel labelNome = new JLabel("Nome: ");
 	private JTextField valorNome;

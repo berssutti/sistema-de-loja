@@ -1,5 +1,11 @@
 package view;
 
+/**
+ * Implementa uma interface para buscar o cliente ou funcionario
+ * @autor Bernardo Pissutti
+ * @versio 1.0
+ */
+
 import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,11 +24,17 @@ public class TelaBuscas implements ActionListener{
 	private JTextField valorCpfFuncionario;
 	private JButton butao;
 	int opcao;
-	
+	/**
+	 * Permite o usuario digitar o cpf que deseja procurar
+	 * @param opcao define se o usuario que procurar por um cliente ou um funcionario
+	 * (1) opcao = 1 cliente
+	 * (2) opcao = 2 funcionario
+	 * return void
+	 */
 	public void mostrarTela(int opcao){
 		// opcao 1 = cliente
 		// opcao 2 = funcionario
-		
+
 		this.opcao = opcao;
 		janela = new JFrame("Buscas");
 		tituloCliente = new JLabel("Digita o CPF do Cliente que deseja buscar");
@@ -60,10 +72,10 @@ public class TelaBuscas implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(opcao == 1) {
+		if(opcao == 1) { //mostra tela para busca de cliente
 			new TelaMostrarBuscas().mostrarTela(1,valorCpfCliente.getText());
 		}
-		else {
+		else { //mostra tela para busca de funcionario
 			new TelaMostrarBuscas().mostrarTela(2,valorCpfFuncionario.getText());
 		}
 		
