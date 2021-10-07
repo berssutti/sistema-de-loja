@@ -298,6 +298,8 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			listaGeladeirasCadastradas.setListData(new ControlGeladeira(dados).getNomeGeladeira());
 			listaGeladeirasCadastradas.updateUI();
 		}
+		
+		// Atualiza a lista de nomes de produtos mostrada no JList
 		if(e.getSource() == refreshMicroondas) {
 			listaMicroondasCadastrados.setListData(new ControlMicroondas(dados).getNomeMicroondas());			
 			listaMicroondasCadastrados.updateUI();

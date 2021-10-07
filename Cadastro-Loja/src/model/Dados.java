@@ -115,7 +115,7 @@ public class Dados {
 	}
 	
 	
-	public void inserirEditarCliente(Cliente cliente, int pos) {
+	public void cadastrarEditarCliente(Cliente cliente, int pos) {
 		this.cliente[pos] = cliente;
 	    if(pos == qtdClientes) qtdClientes++;
 	}
@@ -136,7 +136,7 @@ public class Dados {
 	}
 	
 	
-	public void inserirEditarFuncionario(Funcionario p, int pos) {
+	public void cadastrarEditarFuncionario(Funcionario p, int pos) {
 		this.funcionario[pos] = p;
 		if(pos == qtdAFuncionarios) qtdAFuncionarios++;
 	}
@@ -181,7 +181,7 @@ public class Dados {
 		this.armario = armario;
 	}
 	
-	public void inserirEditarArmario(Armario p, int pos) {
+	public void cadastrarEditarArmario(Armario p, int pos) {
 		this.armario[pos] = p;
 		if(pos == qtdArmarios) qtdArmarios++;
 	}
@@ -206,7 +206,7 @@ public class Dados {
 	}
 
 	
-	public void inserirEditarGeladeira(Geladeira p, int pos) {
+	public void cadastrarEditarGeladeira(Geladeira p, int pos) {
 		this.geladeira[pos] = p;
 		if(pos == qtdGeladeiras) qtdGeladeiras++;
 	}
@@ -231,7 +231,7 @@ public class Dados {
 		this.mesa = mesa;
 	}
 
-	public void inserirEditarMesa(Mesa p, int pos) {
+	public void cadastrarEditarMesa(Mesa p, int pos) {
 		this.mesa[pos] = p;
 		if(pos == qtdMesas) qtdMesas++;
 	}
@@ -256,7 +256,7 @@ public class Dados {
 	}
 
 	
-	public void inserirEditarMicroondas(Microondas p, int pos) {
+	public void cadastrarEditarMicroondas(Microondas p, int pos) {
 		this.microondas[pos] = p;
 		if(pos == qtdMicroondas) qtdMicroondas++;
 	}
@@ -282,7 +282,7 @@ public class Dados {
 	}
 
 	
-	public void inserirEditarCadeira(Cadeira p, int pos) {
+	public void cadastrarEditarCadeira(Cadeira p, int pos) {
 		this.cadeira[pos] = p;
 		if(pos == qtdCadeiras) qtdCadeiras++;
 	}
@@ -303,7 +303,7 @@ public class Dados {
 	}
 
 	
-	public void inserirEditarLavaLoucas(Lava_Loucas p, int pos) {
+	public void cadastrarEditarLavaLoucas(Lava_Loucas p, int pos) {
 		this.lavaLoucas[pos] = p;
 		if(pos == qtdlavaLoucas) qtdlavaLoucas++;
 	}

@@ -1,4 +1,5 @@
 package control;
+
 /**
  * Controla os dados atribuidos aos objetos na classe Dados
  * @author Bernardo Pissutti
@@ -26,7 +27,7 @@ public class ControlDados {
 //		} else {
 			Cliente c = new Cliente(dadosCliente[1], dadosCliente[2], dadosCliente[3], new
 			Telefone(dadosCliente[4], dadosCliente[5])); 
-			dados.inserirEditarCliente(c, Integer.parseInt(dadosCliente[0]));
+			dados.cadastrarEditarCliente(c, Integer.parseInt(dadosCliente[0]));
 			  				 
 			return true;
 //		}
@@ -74,7 +75,7 @@ public class ControlDados {
 				Funcionario p = new Funcionario(dadosFuncionario[1], dadosFuncionario[2],
 						dadosFuncionario[3],dadosFuncionario[4],Float.parseFloat(dadosFuncionario[5]), 
 						new Telefone(dadosFuncionario[6],dadosFuncionario[7]));
-					dados.inserirEditarFuncionario(p, Integer.parseInt(dadosFuncionario[0]));
+					dados.cadastrarEditarFuncionario(p, Integer.parseInt(dadosFuncionario[0]));
 					return true;
 //			}
 		}
@@ -121,7 +122,7 @@ public class ControlDados {
 						dadosGeladeira[3], dadosGeladeira[4], dadosGeladeira[5], Float.parseFloat(dadosGeladeira[6]),
 						dadosGeladeira[7], Float.parseFloat(dadosGeladeira[8]), Float.parseFloat(dadosGeladeira[9]),
 						Float.parseFloat(dadosGeladeira[10]),Float.parseFloat(dadosGeladeira[11]));
-				dados.inserirEditarGeladeira(a,Integer.parseInt(dadosGeladeira[0]));	  				 
+				dados.cadastrarEditarGeladeira(a,Integer.parseInt(dadosGeladeira[0]));	  				 
 				return true;
 //			}
 		}
@@ -166,7 +167,7 @@ public class ControlDados {
 	  				  dadosMicroondas[3], dadosMicroondas[4], dadosMicroondas[5], Float.parseFloat(dadosMicroondas[6]),
 	  				  dadosMicroondas[7], Float.parseFloat(dadosMicroondas[8]), Float.parseFloat(dadosMicroondas[9]),
 	  				  Float.parseFloat(dadosMicroondas[10]),Float.parseFloat(dadosMicroondas[11]), Float.parseFloat(dadosMicroondas[12]));
-			  dados.inserirEditarMicroondas(a,Integer.parseInt(dadosMicroondas[0]));	  				 
+			  dados.cadastrarEditarMicroondas(a,Integer.parseInt(dadosMicroondas[0]));	  				 
 			  return true;
 //			}
 		}
@@ -211,7 +212,7 @@ public class ControlDados {
 		  				  dadosLavaLoucas[3], dadosLavaLoucas[4], dadosLavaLoucas[5], Float.parseFloat(dadosLavaLoucas[6]),
 		  				  dadosLavaLoucas[7], Integer.parseInt(dadosLavaLoucas[8]), Float.parseFloat(dadosLavaLoucas[9]),
 		  				  Float.parseFloat(dadosLavaLoucas[10]),Float.parseFloat(dadosLavaLoucas[11]));
-				 dados.inserirEditarLavaLoucas(a,Integer.parseInt(dadosLavaLoucas[0]));
+				 dados.cadastrarEditarLavaLoucas(a,Integer.parseInt(dadosLavaLoucas[0]));
 				 return true;
 		}
 //			}
@@ -256,7 +257,7 @@ public class ControlDados {
 		  				  dadosMesa[3], dadosMesa[4], dadosMesa[5], Float.parseFloat(dadosMesa[6]),
 		  				  dadosMesa[7], dadosMesa[8], Float.parseFloat(dadosMesa[9]),
 		  				  dadosMesa[10],dadosMesa[11], Float.parseFloat(dadosMesa[12]));
-			dados.inserirEditarMesa(a, Integer.parseInt(dadosMesa[0]));
+			dados.cadastrarEditarMesa(a, Integer.parseInt(dadosMesa[0]));
 			return true;
 //				}
 		}
@@ -301,7 +302,7 @@ public class ControlDados {
 		  				  dadosCadeira[3], dadosCadeira[4], dadosCadeira[5], Float.parseFloat(dadosCadeira[6]),
 		  				  dadosCadeira[7], dadosCadeira[8],dadosCadeira[9],
 		  				 Float.parseFloat(dadosCadeira[10]), Float.parseFloat(dadosCadeira[11]));
-			dados.inserirEditarCadeira(a, Integer.parseInt(dadosCadeira[0]));
+			dados.cadastrarEditarCadeira(a, Integer.parseInt(dadosCadeira[0]));
 			return true;
 //				}
 			
@@ -347,7 +348,7 @@ public class ControlDados {
 		  				  dadosArmario[3], dadosArmario[4], dadosArmario[5], Float.parseFloat(dadosArmario[6]),
 		  				  dadosArmario[7], Integer.parseInt(dadosArmario[8]), dadosArmario[9],
 		  				  dadosArmario[10], dadosArmario[11], Integer.parseInt(dadosArmario[12]));
-			dados.inserirEditarArmario(a, Integer.parseInt(dadosArmario[0]));
+			dados.cadastrarEditarArmario(a, Integer.parseInt(dadosArmario[0]));
 			return true;
 //				}
 		}
@@ -377,6 +378,30 @@ public class ControlDados {
 				dados.setQtdArmarios(dados.getQtdArmarios() - 1);
 				return true;
 			}
+		}
+		
+		public int encontraCpfCliente(String CPF) {
+			int clienteEncontrado = 0;
+			for( int i = 0; i < dados.getQtdClientes(); i++) {
+				if(dados.getCliente()[i].getCpf().equals(CPF)) {
+					clienteEncontrado = i;
+					return clienteEncontrado;
+				}
+			}
+			
+			return 10000000;
+		}
+		
+		public int encontraCpfFuncionario(String CPF) {
+			int funcionarioEncontrado = 0;
+			for( int i = 0; i < dados.getQtdAFuncionarios(); i++) {
+				if(dados.getFuncionario()[i].getCpf().equals(CPF)) {
+					funcionarioEncontrado = i;
+					return funcionarioEncontrado;
+				}
+			}
+			
+			return 10000000;
 		}
 		
 		

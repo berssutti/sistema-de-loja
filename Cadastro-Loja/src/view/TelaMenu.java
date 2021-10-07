@@ -12,20 +12,20 @@ import control.ControlDados;
 
 public class TelaMenu implements ActionListener{
 
-	private static JFrame janela = new JFrame("Sistema Loja");
-	private static JLabel titulo = new JLabel("Menu Principal");
+	private JFrame janela = new JFrame("Sistema Loja");
+	private JLabel titulo = new JLabel("Menu Principal");
 	private static JButton cliente = new JButton("Cliente");
 	private static JButton funcionario = new JButton("Funcionario");
 	private static JButton produto = new JButton("Produto");
 	private static JButton carrinho = new JButton("Carrinho");
 	private static JButton buscaCliente = new JButton("Buscar Cliente");
 	private static JButton buscaFuncionario = new JButton("Buscar Funcionario");
-	private static ControlDados dados = new ControlDados();
+	private ControlDados dados = new ControlDados();
 	/**
 	 * Cria a tela do menu do sistema
 	 * @return void
 	 */
-	public void TelaMenu() {
+	public TelaMenu() {
 		titulo.setFont(new Font("Calibri", Font.BOLD, 20));
 		titulo.setBounds(140, 10, 150, 30);
 		cliente.setBounds(140, 50, 120, 30);
@@ -75,16 +75,16 @@ public class TelaMenu implements ActionListener{
 			new TelaFuncionario().mostrarDados(dados);
 		 
 		 if(e.getSource() == produto) 
-			new TelaMenuProduto().mostrarProdutos();
+			new TelaMenuProduto().mostrarProdutos(dados);
 		 
 		 if(e.getSource() == carrinho) 
 			new TelaCarrinho().mostrarDados(dados);
 		 
 		 if(e.getSource() == buscaCliente)
-			new TelaBuscas().mostrarTela(1);
+			new TelaBuscas().mostrarTela(1,dados);
 		 
 		 if(e.getSource() == buscaFuncionario)
-			 new TelaBuscas().mostrarTela(2);
+			 new TelaBuscas().mostrarTela(2,dados);
 		 
 		 
 		 

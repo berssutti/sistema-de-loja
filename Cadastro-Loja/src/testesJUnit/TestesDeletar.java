@@ -8,7 +8,7 @@ import control.*;
 
 public class TestesDeletar {
 	
-	ControlDados dado = new ControlDados();
+//	ControlDados dado = new ControlDados();
 //	 
 //	@Test
 //	void testDeletarCliente() {

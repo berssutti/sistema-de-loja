@@ -13,7 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
-
+import control.*;
 
 public class TelaBuscas implements ActionListener{
 	
@@ -23,6 +23,9 @@ public class TelaBuscas implements ActionListener{
 	private JTextField valorCpfCliente;
 	private JTextField valorCpfFuncionario;
 	private JButton butao;
+	private ControlDados dados;
+	private int cliente;
+	private int funcionario;
 	int opcao;
 	/**
 	 * Permite o usuario digitar o cpf que deseja procurar
@@ -31,10 +34,10 @@ public class TelaBuscas implements ActionListener{
 	 * (2) opcao = 2 funcionario
 	 * @return void
 	 */
-	public void mostrarTela(int opcao){
+	public void mostrarTela(int opcao, ControlDados dados){
 		// opcao 1 = cliente
 		// opcao 2 = funcionario
-
+		this.dados = dados;
 		this.opcao = opcao;
 		janela = new JFrame("Buscas");
 		tituloCliente = new JLabel("Digita o CPF do Cliente que deseja buscar");
@@ -72,11 +75,17 @@ public class TelaBuscas implements ActionListener{
 
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		if(opcao == 1) { //mostra tela para busca de cliente
-			new TelaMostrarBuscas().mostrarTela(1,valorCpfCliente.getText());
-		}
-		else { //mostra tela para busca de funcionario
-			new TelaMostrarBuscas().mostrarTela(2,valorCpfFuncionario.getText());
+		if(e.getSource() == butao) {
+			if(opcao == 1) { //mostra tela para busca de cliente
+				String cpfCliente = valorCpfCliente.getText();
+				cliente = dados.encontraCpfCliente(cpfCliente);
+				new TelaMostrarBuscas().mostrarTela(1,cliente,dados);
+			}
+			else { //mostra tela para busca de funcionario
+				String cpfFuncionario = valorCpfFuncionario.getText();
+				funcionario = dados.encontraCpfFuncionario(cpfFuncionario);
+				new TelaMostrarBuscas().mostrarTela(2,funcionario,dados);
+			}
 		}
 		
 	}

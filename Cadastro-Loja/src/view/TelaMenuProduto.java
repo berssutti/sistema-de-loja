@@ -23,13 +23,13 @@ public class TelaMenuProduto implements ActionListener {
 	private JButton microondas;
 	private JButton geladeira;
 	private JButton lavaLoucas;
-	public static ControlDados dados = new ControlDados();
+	private ControlDados dados; 
 	/**
 	 * Mostra a tela com os tipos de produto
 	 * @return void
 	 */
-	public void mostrarProdutos() {
-	
+	public void mostrarProdutos(ControlDados dados) {
+		this.dados = dados;
 	
 		janela = new JFrame("Produtos");
 		titulo = new JLabel("Tipos De Produtos Cadastrados");
