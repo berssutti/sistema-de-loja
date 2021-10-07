@@ -24,17 +24,20 @@ public class TelaConfirmacao implements ActionListener {
 	private int opcao;
 	private int produtoSelecionado;
 	private int controlSelecionado;
-	private ControlDados dados = new ControlDados(); 
+	private ControlDados dados; 
 	private Produto produtoComprado;
 	private int tipoProduto;
 	
 	/**
 	 * Confirma o cliente ou o produto selecionado 
 	 * @param opcao, representa se o usuário está escolhendo um produto ou cliente
+	 * (1) cliente
+	 * (2) produto
 	 * @param clienteSelecionado, representa a posição do cliente escolhido no JList
 	 * @return void
 	 */
-	public void mostrarTela(int opcao, int clienteSelecionado ) {
+	public void mostrarTela(int opcao, int clienteSelecionado, ControlDados dados ) {
+		this.dados = dados;
 		this.clienteSelecionado = clienteSelecionado;
 		this.opcao = opcao;
 		
@@ -109,15 +112,17 @@ public class TelaConfirmacao implements ActionListener {
 	/**
 	 * Confirma o produto selecionado
 	 * @param opcao, representa se o usuário está escolhendo um produto ou cliente
+	 * (1) cliente
+	 * (2) produto
 	 * @param clienteSelecionado, presenta a posição do cliente escolhido na JList
 	 * @param produtoSelecionado, presenta a posição do produto escolhido na JList
 	 * @param controlSelecionado, representa o tipo de produto selecionado na TelaComprarProduto
 	 * @return void
 	 */
-	public void mostrarTela(int opcao, int clienteSelecionado, int produtoSelecionado, int controlSelecionado ) {
+	public void mostrarTela(int opcao, int clienteSelecionado, int produtoSelecionado, int controlSelecionado , ControlDados dados) {
 		this.produtoSelecionado = produtoSelecionado;
 		this.controlSelecionado = controlSelecionado;
-		this.mostrarTela(opcao, clienteSelecionado);
+		this.mostrarTela(opcao, clienteSelecionado,dados);
 		
 	}
 	
@@ -129,7 +134,7 @@ public class TelaConfirmacao implements ActionListener {
 		if(e.getSource() == comprarProduto && opcao == 1) {
 			
 			janela.dispose();
-			new TelaComprarProduto().mostrarDados(clienteSelecionado);
+			new TelaComprarProduto().mostrarDados(clienteSelecionado,dados);
 		}
 		
 		//Sim, finaliza a compra
@@ -138,7 +143,7 @@ public class TelaConfirmacao implements ActionListener {
 					dados.getCliente()[clienteSelecionado].getQtdProdutosCarrinho());
 			janela.dispose();
 			
-			new TelaQtdCompras().mostrarTela(produtoSelecionado, tipoProduto);
+			new TelaQtdCompras().mostrarTela(produtoSelecionado, tipoProduto, dados);
 				
 		}
 		

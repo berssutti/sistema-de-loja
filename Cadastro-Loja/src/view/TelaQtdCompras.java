@@ -22,7 +22,7 @@ public class TelaQtdCompras implements ActionListener{
 	private JTextField qtdCompras;
 	private JLabel perguntaCompras;
 	private JButton butao;
-	private ControlDados dados = new ControlDados(); 
+	private ControlDados dados;
 	int tipoProduto;
 	int resultado;
 	int produtoSelecionado;
@@ -32,7 +32,8 @@ public class TelaQtdCompras implements ActionListener{
 	 * @param tipoProduto
 	 * @return void
 	 */
-	public void mostrarTela(int produtoSelecionado,int tipoProduto){
+	public void mostrarTela(int produtoSelecionado,int tipoProduto, ControlDados dados){
+		this.dados = dados;
 		this.produtoSelecionado = produtoSelecionado;
 		this.tipoProduto = tipoProduto;
 		

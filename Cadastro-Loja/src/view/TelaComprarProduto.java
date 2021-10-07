@@ -24,7 +24,7 @@ public class TelaComprarProduto implements ActionListener {
 	private JButton microondas;
 	private JButton geladeira;
 	private JButton lavaLoucas;
-	private ControlDados dados = new ControlDados();
+	private ControlDados dados;
 	private int posicao;
 	
 	/**
@@ -32,7 +32,10 @@ public class TelaComprarProduto implements ActionListener {
 	 * @param posicao, que representa a posição na JList do cliente escolhido
 	 * @return void
 	 */
-	public void mostrarDados(int posicao) {
+	public void mostrarDados(int posicao, ControlDados dados) {
+		
+		this.posicao = posicao;
+		this.dados = dados;
 		
 		janela = new JFrame("Produtos");
 		titulo = new JLabel("Escolha um opção para ver os produtos para o " + dados.getCliente()[posicao].getNome());

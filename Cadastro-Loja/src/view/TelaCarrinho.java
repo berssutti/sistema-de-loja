@@ -18,6 +18,7 @@ public class TelaCarrinho implements ListSelectionListener {
 	private JFrame janela;
 	private JLabel tituloCompra;
 	private JList<String> listaClientesCadastrados;
+	private ControlDados dados;
 	private String[] listaNomes = new String[50];
 	
 	/**
@@ -27,6 +28,7 @@ public class TelaCarrinho implements ListSelectionListener {
 	 */
 	public void mostrarDados(ControlDados dados){
 		
+		this.dados= dados;
 		listaNomes = new ControlCliente(dados).getNomeCliente();
 		listaClientesCadastrados = new JList<String>(listaNomes);
 		janela = new JFrame("Carrinho");
@@ -53,7 +55,7 @@ public class TelaCarrinho implements ListSelectionListener {
 	public void valueChanged(ListSelectionEvent e) {
 
 		if(e.getValueIsAdjusting() && e.getSource() == listaClientesCadastrados) 
-			new TelaConfirmacao().mostrarTela(1,listaClientesCadastrados.getSelectedIndex());
+			new TelaConfirmacao().mostrarTela(1,listaClientesCadastrados.getSelectedIndex(),dados);
 		
 	}
 

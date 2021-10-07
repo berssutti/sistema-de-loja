@@ -33,6 +33,7 @@ public class TelaEscolherProduto implements ListSelectionListener {
 	private JList<String> listaLavaLoucasCadastradas;
 	private String[] listaNomes = new String[50];
 	private int posicaoCliente;
+	private ControlDados dados;
 	private JList<String> listaProdutosCadastrados;
 	private int controlSelecionado;
 	/**
@@ -45,7 +46,7 @@ public class TelaEscolherProduto implements ListSelectionListener {
 	public void mostrarProdutos(ControlDados dados, int op, int posicaoCliente) {
 		
 		this.posicaoCliente = posicaoCliente;
-		
+		this.dados = dados;
 		switch (op) {
 		case 1:// Mostrar dados de cadeiras cadastrados
 			this.controlSelecionado = 1;
@@ -212,7 +213,7 @@ public class TelaEscolherProduto implements ListSelectionListener {
 		
 		if(e.getValueIsAdjusting() &&( e.getSource() == listaCadeirasCadastradas || e.getSource() == listaArmariosCadastrados || e.getSource() == listaMesasCadastradas
 				|| e.getSource() == listaMicroondasCadastrados|| e.getSource() == listaGeladeirasCadastradas|| e.getSource() == listaLavaLoucasCadastradas)) {
-			new TelaConfirmacao().mostrarTela(2,posicaoCliente,listaProdutosCadastrados.getSelectedIndex(), controlSelecionado);
+			new TelaConfirmacao().mostrarTela(2,posicaoCliente,listaProdutosCadastrados.getSelectedIndex(), controlSelecionado,dados);
 		}
 		
 	}
