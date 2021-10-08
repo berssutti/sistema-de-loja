@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para o usuario digitar a quantidade de produtos ele irá comprar
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import control.*;
 
@@ -30,7 +30,6 @@ public class TelaQtdCompras implements ActionListener{
 	 * Pergunta ao usuário quantas unidades do produto o usuário quer comprar, e diminui da quantidade em estoque do produto comprado
 	 * @param produtoSelecionado
 	 * @param tipoProduto
-	 * @return void
 	 */
 	public void mostrarTela(int produtoSelecionado,int tipoProduto, ControlDados dados){
 		this.dados = dados;

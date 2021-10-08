@@ -3,7 +3,7 @@ package view;
  *  Implementa uma interface para mostrar os detalhes de cada funcionario cadastrados e permitir a edição desses dados, além de poder mostrar a interface de cadastro
  * de novo um funcionario
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -47,7 +47,6 @@ public class TelaDetalheFuncionario implements ActionListener {
 	 * @param dados, permite acesso aos dados dos funcionarios
 	 * @param funcionario
 	 * @param posicao, posição do funcionario escolhido na JList
-	 * @return void
 	 */
 	public void inserirEditar(int opcao, ControlDados dados, 
 			TelaFuncionario funcionario, int posicao) {

@@ -46,7 +46,6 @@ public class TelaDetalheCliente implements ActionListener{
 	 * @param dados, permite acesso aos dados dos clientes
 	 * @param cliente
 	 * @param posicao,posição do cliente escolhido na JList
-	 * @return void
 	 */
 	public void cadastrarEditar(int opcao, ControlDados dados, 
 			TelaCliente cliente, int posicao) {

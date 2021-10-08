@@ -2,7 +2,7 @@ package model;
 /**
  * Cria classe Armario herdando da classe produto, com gets e sets
  * @author Bernardo Pissutti
- * @vesion 1.0 [Out 2021]
+ * @version 1.0 [Out 2021]
  */
 public class Armario extends Produto {
 
@@ -39,7 +39,6 @@ public class Armario extends Produto {
 		this.qtdPorta = qtdPorta;
 	}
 
-	
 	public int getQrdGaveta() {
 		return qrdGaveta;
 	}

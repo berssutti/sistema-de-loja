@@ -2,7 +2,7 @@ package model;
 /**
  * Cria classe pai Produto, com gets e sets
  * @author Bernardo Pissutti
- * @vesion 1.0 [Out 2021]
+ * @version 1.0 [Out 2021]
  */
 
 public abstract class Produto {

@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para escolher o cliente que irá comprar um produto
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import java.awt.Font;
 import javax.swing.JFrame;
@@ -24,7 +24,6 @@ public class TelaCarrinho implements ListSelectionListener {
 	/**
 	 * Mostra por meio de uma JList os cliente que poder ser escolhidos
 	 * @param dados para pegar os nomes dos clientes
-	 * @return void
 	 */
 	public void mostrarDados(ControlDados dados){
 		

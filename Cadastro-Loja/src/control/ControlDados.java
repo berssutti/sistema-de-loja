@@ -17,7 +17,7 @@ public class ControlDados {
 	/**
 	 * Cadastra novo cliente ou edita um ja existente
 	 * @param dadosCliente, que contem o cliente a ser inserido ou criado
-	 * @return verdadeiro, indicando que a operação foi bem sussedida
+	 * @return boolean, true indicando que a operação foi bem sussedida
 	 */
 	public boolean cadastrarEditarCliente(String[] dadosCliente) {
 		// Condição para editar e cadastrar cliente
@@ -36,7 +36,7 @@ public class ControlDados {
 	/**
 	 * Deleta o cliente escolhido
 	 * @param i, que indica a posicao do cliente no array
-	 * @return verdadeiro, indicando que a operação foi bem sussedida
+	 * @return boolean, true indicando que a operação foi bem sussedida
 	 */
 		public boolean deletarCliente(int i) {
 			String clienteRemovido = dados.getCliente()[i].getNome();
@@ -63,8 +63,8 @@ public class ControlDados {
 		
 		/**
 		 * Cadastra novo funcionario ou edita um ja existente
-		 * @param dadosCliente, que contem o funcionario e seus dados a serem editados ou criados
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @param dadosFuncionario, que contem o funcionario e seus dados a serem editados ou criados
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean cadastrarEditarFuncionario(String[] dadosFuncionario) {
 			// Condição para editar e cadastrar cliente
@@ -82,7 +82,7 @@ public class ControlDados {
 		/**
 		 * Deleta o funcionario escolhido
 		 * @param i, que indica a posicao do funcionario no array
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean deletarFuncionario(int i) {
 			String funcionarioRemovido = dados.getFuncionario()[i].getNome();
@@ -110,7 +110,7 @@ public class ControlDados {
 		/**
 		 * Cadastra nova geladeira ou edita um ja existente
 		 * @param dadosGeladeira, que contém a geladeirae seus dados e a serem editados ou criados
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean cadastrarEditarGeladeira(String[] dadosGeladeira) {
 //			if(!dadosGeladeira[2].matches("[0-9]+") || !dadosGeladeira[3].matches("[0-9]+") || 
@@ -129,7 +129,7 @@ public class ControlDados {
 		/**
 		 * Deleta a geladeira escolhida
 		 * @param i, que indica a posicao da geladeira no array
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean deletarGeladeira(int i) {
 			String GeladeiraRemovida = dados.getGeladeira()[i].getNome();
@@ -155,8 +155,8 @@ public class ControlDados {
 		}
 		/**
 		 * Cadastra novo microondas ou edita um ja existente
-		 * @param dadosCliente, que contém o microondas e seus dados a serem editados ou criados
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @param dadosMicroondas, que contém o microondas e seus dados a serem editados ou criados
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean cadastrarEditarMicroondas(String[] dadosMicroondas) {
 //			if(!dadosMicroondas[2].matches("[0-9]+") || !dadosMicroondas[3].matches("[0-9]+") || 
@@ -174,7 +174,7 @@ public class ControlDados {
 		/**
 		 * Deleta o microondas escolhido
 		 * @param i, que indica a posicao do microondas no array
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean deletarMicroondas(int i) {
 			String MicroondasRemovido = dados.getMicroondas()[i].getNome();
@@ -201,7 +201,7 @@ public class ControlDados {
 		/**
 		 * Cadastra novo lava louças ou edita uma ja existente
 		 * @param dadosLavaLoucas, que contém a lava louças e seus dados a serem editados ou criados
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean cadastrarEditarLavaLoucas(String[] dadosLavaLoucas) {
 //			if(!dadosLavaLoucas[2].matches("[0-9]+") || !dadosLavaLoucas[3].matches("[0-9]+") || 
@@ -219,7 +219,7 @@ public class ControlDados {
 		/**
 		 * Deleta a lava louças escolhida
 		 * @param i, que indica a posicao do lava louças no array
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean deletarLavaLoucas(int i) {
 			String LavaLoucasRemovido = dados.getLavaLoucas()[i].getNome();
@@ -246,7 +246,7 @@ public class ControlDados {
 		/**
 		 * Cadastra nova mesa ou edita uma ja existente
 		 * @param dadosMesa, que contém a mesa e seus dados a serem editados ou criados
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean cadastrarEditarMesa(String[] dadosMesa) {
 //			if(!dadosMesa[2].matches("[0-9]+") || !dadosMesa[3].matches("[0-9]+") || 
@@ -264,7 +264,7 @@ public class ControlDados {
 		/**
 		 * Deleta a mesa escolhida
 		 * @param i, que indica a posicao da mesa no array
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean deletarMesa(int i) {
 			String MesaRemovido = dados.getMesa()[i].getNome();
@@ -291,7 +291,7 @@ public class ControlDados {
 		/**
 		 * Cadastra nova cadeira ou edita uma ja existente
 		 * @param dadosCadeira, que contem o cadeira e seus dados a serem editados ou criados
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean cadastrarEditarCadeira(String[] dadosCadeira) {
 //			if(!dadosCadeira[2].matches("[0-9]+") || !dadosCadeira[3].matches("[0-9]+") || 
@@ -310,7 +310,7 @@ public class ControlDados {
 		/**
 		 * Deleta a cadeira escolhida
 		 * @param i, que indica a posicao da cadeira no array
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean deletarCadeira(int i) {
 			String CadeiraRemovido = dados.getCadeira()[i].getNome();
@@ -337,7 +337,7 @@ public class ControlDados {
 		/**
 		 * Cadastra novo armario ou edita um ja existente
 		 * @param dadosArmario, que contém o armario e seus dados a serem editados ou criados
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean cadastrarEditarArmario(String[] dadosArmario) {
 //			if(!dadosArmario[2].matches("[0-9]+") || !dadosArmario[3].matches("[0-9]+") || 
@@ -355,7 +355,7 @@ public class ControlDados {
 		/**
 		 * Deleta o armario escolhido
 		 * @param i, que indica a posicao do armario no array
-		 * @return verdadeiro, indicando que a operação foi bem sussedida
+		 * @return boolean, true indicando que a operação foi bem sussedida
 		 */
 		public boolean deletarArmario(int i) {
 			String ArmarioRemovido = dados.getArmario()[i].getNome();
@@ -379,7 +379,11 @@ public class ControlDados {
 				return true;
 			}
 		}
-		
+		/**
+		 * Compara o cpf recebido com os cadastrado para achar o nome do cliente
+		 * @param CPF, representa o cpf digitado pelo usuário
+		 * @return int, indica a posição do cliente com o cpf indicado
+		 */
 		public int encontraCpfCliente(String CPF) {
 			int clienteEncontrado = 0;
 			for( int i = 0; i < dados.getQtdClientes(); i++) {
@@ -391,7 +395,11 @@ public class ControlDados {
 			
 			return 10000000;
 		}
-		
+		/**
+		 * Compara o cpf recebido com os cadastrado para achar o nome do funcionario
+		 * @param CPF, representa o cpf digitado pelo usuário
+		 * @return int, indica a posição do funcionario com o cpf indicado
+		 */
 		public int encontraCpfFuncionario(String CPF) {
 			int funcionarioEncontrado = 0;
 			for( int i = 0; i < dados.getQtdAFuncionarios(); i++) {

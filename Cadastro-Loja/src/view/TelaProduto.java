@@ -45,7 +45,6 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 	 * Mostra os produtos cadastrados através de uma JList
 	 * @param dados, acessar os dados dos produtos
 	 * @param op, representa a opcao de tipo de produto escolhido pelo usuário
-	 * @return void
 	 */
 	public void mostrarProdutos(ControlDados dados, int op){
 		this.dados = dados;
@@ -55,7 +54,7 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 			listaNomes = new ControlCadeira(dados).getNomeCadeira();
 			listaCadeirasCadastradas = new JList<String>(listaNomes);
 			janela = new JFrame("Cadeiras");
-			titulo = new JLabel("Cadeiras Cadastrados");
+			titulo = new JLabel("Cadeiras Cadastradas");
 			cadastroCadeira = new JButton("Cadastrar");
 			refreshCadeira = new JButton("Atualizar");
 
@@ -87,8 +86,8 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 		case 2:// Mostrar dados de Mesas cadastradas 
 			listaNomes = new ControlMesa(dados).getNomeMesa();
 			listaMesasCadastradas = new JList<String>(listaNomes);
-			janela = new JFrame("Mesaessores");
-			titulo = new JLabel("Mesaessores Cadastrados");
+			janela = new JFrame("Mesas");
+			titulo = new JLabel("Mesas Cadastradas");
 			cadastroMesa = new JButton("Cadastrar");
 			refreshMesa = new JButton("Atualizar");
 
@@ -181,8 +180,8 @@ public class TelaProduto implements ActionListener, ListSelectionListener {
 		case 5:// Mostrar dados de Microondas cadastradas 
 			listaNomes = new ControlMicroondas(dados).getNomeMicroondas();
 			listaMicroondasCadastrados = new JList<String>(listaNomes);
-			janela = new JFrame("Microondass");
-			titulo = new JLabel("Microondass Cadastrados");
+			janela = new JFrame("Microondas");
+			titulo = new JLabel("Microondas Cadastrados");
 			cadastroMicroondas = new JButton("Cadastrar");
 			refreshMicroondas = new JButton("Atualizar");
 

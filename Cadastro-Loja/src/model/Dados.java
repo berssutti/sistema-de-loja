@@ -2,7 +2,7 @@ package model;
 /**
  * Randomizar dados para serem pré-cadastrados no sistema
  * @author Bernardo Pissutti
- * @vesion 1.0 [Out 2021]
+ * @version 1.0 [Out 2021]
  */
 public class Dados {
 	

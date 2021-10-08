@@ -19,8 +19,7 @@ public class ControlCadeira {
 	
 	/**
 	 * Armazena os nomes em um vetor de String
-	 * @param null
-	 * @return s, um vetor de string com os nomes
+	 * @return String, um vetor de string com os nomes
 	 */
 	public String[] getNomeCadeira() {
 		String[] s = new String[qtdCadeiras];

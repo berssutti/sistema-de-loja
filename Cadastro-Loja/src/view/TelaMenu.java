@@ -23,7 +23,6 @@ public class TelaMenu implements ActionListener{
 	private ControlDados dados = new ControlDados();
 	/**
 	 * Cria a tela do menu do sistema
-	 * @return void
 	 */
 	public TelaMenu() {
 		titulo.setFont(new Font("Calibri", Font.BOLD, 20));
@@ -52,7 +51,6 @@ public class TelaMenu implements ActionListener{
 	/**
 	 * Instacia os ActioListener para os butões do menu
 	 * @param args
-	 * @return void
 	 */
 	public static void main(String[] args) {
 		TelaMenu menu = new TelaMenu();

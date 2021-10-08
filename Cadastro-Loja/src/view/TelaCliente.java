@@ -30,7 +30,6 @@ public class TelaCliente implements ActionListener, ListSelectionListener {
 	/**
 	 * Mostra os cliente cadastrados através de uma JList
 	 * @param dados, que permite o acesso aos dados do cliente
-	 * @return void
 	 */
 	public void mostrarDados(ControlDados dados){
 		

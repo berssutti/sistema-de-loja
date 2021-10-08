@@ -80,7 +80,6 @@ public class TelaDetalheProduto implements ActionListener{
 	 * @param dados, para receber os dados dos produtos ja existentes
 	 * @param p
 	 * @param pos, é a posição do produto na JList
-	 * @return void
 	 */
 	public void cadastrarEditarProduto(int op, ControlDados dados, 
 			TelaProduto p, int pos) {

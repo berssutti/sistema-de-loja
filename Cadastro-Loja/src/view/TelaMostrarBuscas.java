@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para mostrar o resultado da busca, ou pelo cliente ou pelo funcionario
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,8 +30,8 @@ public class TelaMostrarBuscas {
 	 * @param opcao, representa a escolha feita pelo usuário
 	 * (1) Cliente
 	 * (2) Funcionario
-	 * @param CPF, representa o cpf digitado pelo usuário
-	 * @return void
+	 * @param posicao, representa a posição do funcionario
+	 * @param dados, permite acesso aos dados do funcionario
 	 */
 	public void mostrarTela(int opcao, int posicao, ControlDados dados) {
 		

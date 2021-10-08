@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para mostrar os tipos de produtos cadastrados no sistema
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 
 import java.awt.Font;
@@ -26,7 +26,6 @@ public class TelaMenuProduto implements ActionListener {
 	private ControlDados dados; 
 	/**
 	 * Mostra a tela com os tipos de produto
-	 * @return void
 	 */
 	public void mostrarProdutos(ControlDados dados) {
 		this.dados = dados;

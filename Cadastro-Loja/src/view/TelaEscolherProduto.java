@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para escolher o produto que será comprado 
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import java.awt.Font;
 
@@ -41,7 +41,6 @@ public class TelaEscolherProduto implements ListSelectionListener {
 	 * @param dados, permite o acesso aos dados dos produtos
 	 * @param op, representa o produto selecionado
 	 * @param posicaoCliente, posição do cliente selecionado na JList
-	 * @return void
 	 */
 	public void mostrarProdutos(ControlDados dados, int op, int posicaoCliente) {
 		

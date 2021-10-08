@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para mostrar os tipos de produtos que podem ser escolhidos para comprar
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import java.awt.Font;
 import java.awt.event.ActionEvent;
@@ -30,7 +30,6 @@ public class TelaComprarProduto implements ActionListener {
 	/**
 	 * Mostra os tipos de produtos para o cliente selecionado
 	 * @param posicao, que representa a posição na JList do cliente escolhido
-	 * @return void
 	 */
 	public void mostrarDados(int posicao, ControlDados dados) {
 		

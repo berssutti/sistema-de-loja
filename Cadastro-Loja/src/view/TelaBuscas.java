@@ -32,7 +32,7 @@ public class TelaBuscas implements ActionListener{
 	 * @param opcao define se o usuario que procurar por um cliente ou um funcionario
 	 * (1) opcao = 1 cliente
 	 * (2) opcao = 2 funcionario
-	 * @return void
+
 	 */
 	public void mostrarTela(int opcao, ControlDados dados){
 		// opcao 1 = cliente

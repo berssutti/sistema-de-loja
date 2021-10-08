@@ -19,8 +19,7 @@ public class ControlLavaLoucas {
 	}
 	/**
 	 * Armazena os nomes em um vetor de String
-	 * @param null
-	 * @return s, um vetor de string com os nomes
+	 * @return String, um vetor de string com os nomes
 	 */
 	public String[] getNomeLavaLoucas() {
 		String[] s = new String[qtdLavaLoucass];
