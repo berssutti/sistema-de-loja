@@ -14,7 +14,7 @@ public class Geladeira extends Produto {
 	private float consumodeEnergia;
 
 	public Geladeira(float volume, float peso, float voltagem, float consumodeEnergia) {
-		super();
+		
 		this.volume = volume;
 		this.peso = peso;
 		this.voltagem = voltagem;
@@ -23,8 +23,15 @@ public class Geladeira extends Produto {
 	}
 
 	public Geladeira(String nome, int quantidadeemEstoque, String garantia, String descriacao,
-			String Marca, float preco, String id, float volume, float peso, float voltagem, float consumodeEnergia) {
-		super();
+			String marca, float preco, String id, float volume, float peso, float voltagem, float consumodeEnergia) {
+		
+		this.setNome(nome);
+		this.setQuantidadeemEstoque(quantidadeemEstoque);
+		this.setGarantia(garantia);
+		this.setDescricao(descriacao);
+		this.setMarca(marca);
+		this.setPreco(preco);
+		this.setId(id);
 		this.volume = volume;
 		this.peso = peso;
 		this.voltagem = voltagem;

@@ -26,8 +26,15 @@ public class Mesa extends Produto {
 	
 
 	public Mesa(String nome, int quantidadeemEstoque, String garantia, String descriacao,
-			String Marca, float preco, String id, String medidas, float pesoSuportavel, String tipo, String material, float peso) {
-		super();
+			String marca, float preco, String id, String medidas, float pesoSuportavel, String tipo, String material, float peso) {
+		
+		this.setNome(nome);
+		this.setQuantidadeemEstoque(quantidadeemEstoque);
+		this.setGarantia(garantia);
+		this.setDescricao(descriacao);
+		this.setMarca(marca);
+		this.setPreco(preco);
+		this.setId(id);
 		this.medidas = medidas;
 		this.pesoSuportavel = pesoSuportavel;
 		this.tipo = tipo;

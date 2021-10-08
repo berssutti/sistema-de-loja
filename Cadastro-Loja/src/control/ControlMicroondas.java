@@ -8,7 +8,6 @@ import model.*;
 
 public class ControlMicroondas {
 
-	
 	private Microondas[] microondas;
 	private int qtdMicroondas;
 

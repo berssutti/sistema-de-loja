@@ -16,7 +16,6 @@ public class Cliente {
 
 
 	public Cliente(String nome, String cpf, String rg, Telefone numero, String[] carrinho) {
-		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;
@@ -25,7 +24,6 @@ public class Cliente {
 	}
 	
 	public Cliente(String nome, String cpf, String rg, Telefone numero) {
-		super();
 		this.nome = nome;
 		this.cpf = cpf;
 		this.rg = rg;

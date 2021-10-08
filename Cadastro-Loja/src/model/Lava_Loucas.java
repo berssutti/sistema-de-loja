@@ -11,12 +11,11 @@ public class Lava_Loucas extends Produto {
 	private int qtdServico;
 	private float peso;
 	private float voltagem;
-	private String descricao;
 	private float consumodeEnergia;
 
 
 	public Lava_Loucas(int qtdServico, float peso, float voltagem, float consumodeEnergia) {
-		super();
+
 		this.qtdServico = qtdServico;
 		this.peso = peso;
 		this.voltagem = voltagem;
@@ -24,8 +23,15 @@ public class Lava_Loucas extends Produto {
 	}
 	
 	public Lava_Loucas(String nome, int quantidadeemEstoque, String garantia, String descriacao,
-			String Marca, float preco, String id, int qtdServico, float peso, float voltagem, float consumodeEnergia) {
-		super();
+			String marca, float preco, String id, int qtdServico, float peso, float voltagem, float consumodeEnergia) {
+		
+		this.setNome(nome);
+		this.setQuantidadeemEstoque(quantidadeemEstoque);
+		this.setGarantia(garantia);
+		this.setDescricao(descriacao);
+		this.setMarca(marca);
+		this.setPreco(preco);
+		this.setId(id);
 		this.qtdServico = qtdServico;
 		this.peso = peso;
 		this.voltagem = voltagem;
@@ -55,14 +61,6 @@ public class Lava_Loucas extends Produto {
 
 	public void setVoltagem(int voltagem) {
 		this.voltagem = voltagem;
-	}
-
-	public String getDescricao() {
-		return descricao;
-	}
-
-	public void setDescricao(String descricao) {
-		this.descricao = descricao;
 	}
 
 	public float getConsumodeEnergia() {

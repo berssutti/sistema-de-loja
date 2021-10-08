@@ -3,7 +3,7 @@ package view;
 /**
  * Implementa uma interface para buscar o cliente ou funcionario
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 
 import java.awt.Font;

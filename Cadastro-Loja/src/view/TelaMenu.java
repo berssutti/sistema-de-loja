@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface que mostra o menu principal
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import java.awt.*;
 import java.awt.event.ActionEvent;

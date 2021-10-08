@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para mostrar os cliente cadastrados
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import control.*;
 

@@ -14,7 +14,6 @@ public class Cadeira extends Produto {
 	
 	
 	public Cadeira(String medidas, String tipo, float peso, float pesoSuportavel) {
-		super();
 		this.medidas = medidas;
 		this.tipo = tipo;
 		this.peso = peso;
@@ -22,12 +21,19 @@ public class Cadeira extends Produto {
 	}
 	
 	public Cadeira(String nome, int quantidadeemEstoque, String garantia, String descriacao,
-			String Marca, float preco, String id, String medidas, String tipo, float peso, float pesoSuportavel) {
-		super();
+			String marca, float preco, String id, String medidas, String tipo, float peso, float pesoSuportavel) {
+		this.setNome(nome);
+		this.setQuantidadeemEstoque(quantidadeemEstoque);
+		this.setGarantia(garantia);
+		this.setDescricao(descriacao);
+		this.setMarca(marca);
+		this.setPreco(preco);
+		this.setId(id);
 		this.medidas = medidas;
 		this.tipo = tipo;
 		this.peso = peso;
 		this.pesoSuportavel = pesoSuportavel;
+		
 	}
 	
 	

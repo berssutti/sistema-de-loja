@@ -3,7 +3,7 @@ package view;
  * Implementa uma interface para mostrar os detalhes de cada cliente cadastrados e permitir a edição desses dados, além de poder mostrar a interface de cadastro
  * de novo um cliente
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import java.awt.Font;
 import java.awt.event.ActionEvent;

@@ -8,14 +8,14 @@ package model;
 public abstract class Produto {
 	
 	private	String nome;
-	private int quantidadeemEstoque;
+	private	int quantidadeemEstoque;
 	private	String garantia;
 	private	String descricao;
 	private	String marca;
 	private	float preco;
 	private	String id;
 	
-
+	
 	public String getNome() {
 		return nome;
 	}

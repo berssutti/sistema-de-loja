@@ -14,7 +14,7 @@ public class Armario extends Produto {
 
 
 	public Armario(int qrdGaveta, String medidas, String tipo, String material, int qtdPorta) {
-		super();
+		
 		this.qrdGaveta = qrdGaveta;
 		this.medidas = medidas;
 		this.tipo = tipo;
@@ -23,8 +23,15 @@ public class Armario extends Produto {
 	}
 	
 	public Armario(String nome, int quantidadeemEstoque, String garantia, String descriacao,
-			String Marca, float preco, String id, int qrdGaveta, String medidas, String tipo, String material, int qtdPorta) {
-		super();
+			String marca, float preco, String id, int qrdGaveta, String medidas, String tipo, String material, int qtdPorta) {
+		
+		this.setNome(nome);
+		this.setQuantidadeemEstoque(quantidadeemEstoque);
+		this.setGarantia(garantia);
+		this.setDescricao(descriacao);
+		this.setMarca(marca);
+		this.setPreco(preco);
+		this.setId(id);
 		this.qrdGaveta = qrdGaveta;
 		this.medidas = medidas;
 		this.tipo = tipo;

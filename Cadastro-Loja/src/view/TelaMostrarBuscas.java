@@ -25,7 +25,6 @@ public class TelaMostrarBuscas {
 	private JTextField valorCargo;
 	private JLabel labelSalario = new JLabel("Salario: ");
 	private JTextField valorSalario;
-	private ControlDados dados;
 	/**
 	 * Mostra o resultado da busca
 	 * @param opcao, representa a escolha feita pelo usuário

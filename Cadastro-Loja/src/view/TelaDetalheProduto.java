@@ -2,7 +2,7 @@ package view;
 /**
  * Implementa uma interface para mostrar os detalhes de cada produto cadastrado, além de permitir a edição de dados já cadastrados
  * @author Bernardo Pissutti
- * @version 1.0
+ * @version 1.0 [out 2021]
  */
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -429,14 +429,14 @@ public class TelaDetalheProduto implements ActionListener{
 					novoDado[0] = Integer.toString(dados.getQtdlavaLoucas());
 				else // edicao de dado existente
 					novoDado[0] = Integer.toString(posicao);
-
+				
 				novoDado[1] =  valorNome.getText();
 				novoDado[2] =  valorQtdemEstoque.getText();
-				novoDado[3] =  valorDescricao.getText();
-				novoDado[4] =  valorID.getText();
+				novoDado[3] =  valorGarantia.getText();
+				novoDado[4] =  valorDescricao.getText();
 				novoDado[5] =  valorMarca.getText();
 				novoDado[6] =  valorPreco.getText();
-				novoDado[7] =  valorGarantia.getText();
+				novoDado[7] =  valorID.getText();
 
 				if (opcao == 1 || opcao == 7) {//cadeira
 					novoDado[8] =  valorMedidas.getText();
