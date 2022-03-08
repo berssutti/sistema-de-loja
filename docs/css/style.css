@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+nav{
+    text-align: right;
+    margin-top: 25px;
+}
+
+.ul_cabebalho{
+    display: inline;
+    margin-right: 15px;
+}
+
+.li_cabecalho{
+    display: inline;
+    list-style: none;
+}
+
+.a_cabecalho{
+    display: inline;
+    text-decoration: none;
+    color: #000000;
+    padding: 25px;
+}
+
+.a_cabecalho:hover{
+    color: #397de4;
+    transition: 0.6s;
+}
