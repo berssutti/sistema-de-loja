@@ -69,30 +69,20 @@ public class TelaMenu implements ActionListener{
 		if(e.getSource() == cliente)
 			new TelaCliente().mostrarDados(dados);
 		
-		 if(e.getSource() == funcionario) 
+		if(e.getSource() == funcionario)
 			new TelaFuncionario().mostrarDados(dados);
-		 
-		 if(e.getSource() == produto) 
+
+		if(e.getSource() == produto)
 			new TelaMenuProduto().mostrarProdutos(dados);
-		 
-		 if(e.getSource() == carrinho) 
+
+		if(e.getSource() == carrinho)
 			new TelaCarrinho().mostrarDados(dados);
-		 
-		 if(e.getSource() == buscaCliente)
+
+		if(e.getSource() == buscaCliente)
 			new TelaBuscas().mostrarTela(1,dados);
 		 
-		 if(e.getSource() == buscaFuncionario)
-			 new TelaBuscas().mostrarTela(2,dados);
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
+		if(e.getSource() == buscaFuncionario)
+			new TelaBuscas().mostrarTela(2,dados);
 	}
 
 }
