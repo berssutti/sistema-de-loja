@@ -20,6 +20,7 @@ public class TelaMenu implements ActionListener{
 	private static JButton carrinho = new JButton("Carrinho");
 	private static JButton buscaCliente = new JButton("Buscar Cliente");
 	private static JButton buscaFuncionario = new JButton("Buscar Funcionario");
+	private static JButton buscaProduto = new JButton("Buscar Produto");
 	private ControlDados dados = new ControlDados();
 	/**
 	 * Cria a tela do menu do sistema
@@ -33,6 +34,7 @@ public class TelaMenu implements ActionListener{
 		carrinho.setBounds(140, 200, 120, 30);
 		buscaFuncionario.setBounds(45, 250, 150, 30);
 		buscaCliente.setBounds(200, 250, 150, 30);
+		buscaProduto.setBounds(125, 285, 150, 30);
 		
 		janela.setLayout(null);
 		
@@ -43,8 +45,9 @@ public class TelaMenu implements ActionListener{
 		janela.add(carrinho);
 		janela.add(buscaCliente);
 		janela.add(buscaFuncionario);
+		janela.add(buscaProduto);
 		
-		janela.setSize(400, 360);
+		janela.setSize(400, 370);
 		janela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		janela.setVisible(true);
 	}
@@ -61,6 +64,7 @@ public class TelaMenu implements ActionListener{
 		carrinho.addActionListener(menu);
 		buscaCliente.addActionListener(menu);
 		buscaFuncionario.addActionListener(menu);
+		buscaProduto.addActionListener(menu);
 	}
 
 	@Override
@@ -83,6 +87,9 @@ public class TelaMenu implements ActionListener{
 		 
 		if(e.getSource() == buscaFuncionario)
 			new TelaBuscas().mostrarTela(2,dados);
+
+		if(e.getSource() == buscaProduto)
+			new TelaBuscas().mostrarTela(3,dados);
 	}
 
 }
